@@ -1,7 +1,7 @@
 const DASHBOARD_DATA = {
   "team_name": "NLSAA3 - Bombers",
   "team_id": "d72d96f1-df57-4a92-8b40-1cdf06723881",
-  "fetched_at": "2026-05-05T15:18:32.107452",
+  "fetched_at": "2026-05-05T15:30:26.011484",
   "stats": {
     "id": "d72d96f1-df57-4a92-8b40-1cdf06723881",
     "team_id": "d72d96f1-df57-4a92-8b40-1cdf06723881",
@@ -59910,14 +59910,591 @@ const DASHBOARD_DATA = {
     }
   },
   "hit_chart": {
+    "_version": "v2",
+    "6371d81f-bf4b-4967-9d55-345b1ff4fce4": [
+      {
+        "x": 160.0,
+        "y": 51.3,
+        "result": "single",
+        "type": "line_drive"
+      },
+      {
+        "x": 160.0,
+        "y": 51.3,
+        "result": "single",
+        "type": "line_drive"
+      },
+      {
+        "x": 47.9,
+        "y": 182.7,
+        "result": "single",
+        "type": "ground_ball"
+      },
+      {
+        "x": 224.0,
+        "y": 130.9,
+        "result": "single",
+        "type": "line_drive"
+      },
+      {
+        "x": 47.9,
+        "y": 182.7,
+        "result": "fielders_choice",
+        "type": "ground_ball"
+      },
+      {
+        "x": 48.0,
+        "y": 81.9,
+        "result": "double",
+        "type": "line_drive"
+      },
+      {
+        "x": 47.9,
+        "y": 182.7,
+        "result": "fielders_choice",
+        "type": "ground_ball"
+      },
+      {
+        "x": 47.9,
+        "y": 182.7,
+        "result": "single",
+        "type": "ground_ball"
+      },
+      {
+        "x": 160.0,
+        "y": 179.8,
+        "result": "batter_out",
+        "type": "fly_ball"
+      },
+      {
+        "x": 160.0,
+        "y": 179.8,
+        "result": "batter_out_advance_runners",
+        "type": "ground_ball"
+      },
+      {
+        "x": 48.0,
+        "y": 81.9,
+        "result": "single",
+        "type": "line_drive"
+      },
+      {
+        "x": 47.9,
+        "y": 182.7,
+        "result": "fielders_choice",
+        "type": "ground_ball"
+      }
+    ],
+    "771b26b8-bb36-471b-a124-7e5393c7a4d4": [
+      {
+        "x": 47.9,
+        "y": 182.7,
+        "result": "batter_out",
+        "type": "fly_ball"
+      },
+      {
+        "x": 160.0,
+        "y": 51.3,
+        "result": "single",
+        "type": "fly_ball"
+      },
+      {
+        "x": 160.0,
+        "y": 179.8,
+        "result": "batter_out",
+        "type": "line_drive"
+      },
+      {
+        "x": 160.0,
+        "y": 51.3,
+        "result": "single",
+        "type": "line_drive"
+      },
+      {
+        "x": 160.0,
+        "y": 179.8,
+        "result": "batter_out_advance_runners",
+        "type": "ground_ball"
+      },
+      {
+        "x": 224.0,
+        "y": 130.9,
+        "result": "fielders_choice",
+        "type": "ground_ball"
+      },
+      {
+        "x": 96.0,
+        "y": 130.9,
+        "result": "fielders_choice",
+        "type": "ground_ball"
+      },
+      {
+        "x": 160.0,
+        "y": 179.8,
+        "result": "batter_out_advance_runners",
+        "type": "ground_ball"
+      },
+      {
+        "x": 160.0,
+        "y": 51.3,
+        "result": "single",
+        "type": "ground_ball"
+      }
+    ],
+    "fdcea478-cdf0-484d-bde3-27626486b770": [
+      {
+        "x": 160.0,
+        "y": 51.3,
+        "result": "double",
+        "type": "line_drive"
+      },
+      {
+        "x": 48.0,
+        "y": 81.9,
+        "result": "double",
+        "type": "line_drive"
+      },
+      {
+        "x": 48.0,
+        "y": 81.9,
+        "result": "double",
+        "type": "fly_ball"
+      },
+      {
+        "x": 160.0,
+        "y": 179.8,
+        "result": "batter_out_advance_runners",
+        "type": "ground_ball"
+      },
+      {
+        "x": 224.0,
+        "y": 130.9,
+        "result": "single",
+        "type": "ground_ball"
+      },
+      {
+        "x": 272.1,
+        "y": 182.7,
+        "result": "batter_out",
+        "type": "fly_ball"
+      },
+      {
+        "x": 160.0,
+        "y": 179.8,
+        "result": "batter_out",
+        "type": "line_drive"
+      },
+      {
+        "x": 160.0,
+        "y": 51.3,
+        "result": "single",
+        "type": "pop_fly"
+      },
+      {
+        "x": 96.0,
+        "y": 130.9,
+        "result": "batter_out",
+        "type": "line_drive"
+      },
+      {
+        "x": 160.0,
+        "y": 179.8,
+        "result": "batter_out_advance_runners",
+        "type": "ground_ball"
+      }
+    ],
+    "8791eb65-daaf-41aa-831a-15e6be6dc4a1": [
+      {
+        "x": 272.0,
+        "y": 81.9,
+        "result": "double",
+        "type": "line_drive"
+      },
+      {
+        "x": 96.0,
+        "y": 130.9,
+        "result": "batter_out_advance_runners",
+        "type": "ground_ball"
+      },
+      {
+        "x": 48.0,
+        "y": 81.9,
+        "result": "single",
+        "type": "line_drive"
+      },
+      {
+        "x": 160.0,
+        "y": 51.3,
+        "result": "single",
+        "type": "fly_ball"
+      },
+      {
+        "x": 96.0,
+        "y": 130.9,
+        "result": "single",
+        "type": "ground_ball"
+      },
+      {
+        "x": 160.0,
+        "y": 179.8,
+        "result": "batter_out",
+        "type": "pop_fly"
+      },
+      {
+        "x": 48.0,
+        "y": 83.0,
+        "result": "single",
+        "type": "hard_ground_ball"
+      }
+    ],
+    "5f8a2391-4542-4f28-9e2c-75da06a7c63e": [
+      {
+        "x": 272.1,
+        "y": 182.7,
+        "result": "batter_out",
+        "type": "fly_ball"
+      },
+      {
+        "x": 224.0,
+        "y": 130.9,
+        "result": "single",
+        "type": "ground_ball"
+      },
+      {
+        "x": 48.0,
+        "y": 81.9,
+        "result": "single",
+        "type": "line_drive"
+      },
+      {
+        "x": 96.0,
+        "y": 130.9,
+        "result": "batter_out",
+        "type": "line_drive"
+      },
+      {
+        "x": 160.0,
+        "y": 179.8,
+        "result": "batter_out_advance_runners",
+        "type": "ground_ball"
+      },
+      {
+        "x": 47.9,
+        "y": 182.7,
+        "result": "single",
+        "type": "ground_ball"
+      },
+      {
+        "x": 96.0,
+        "y": 130.9,
+        "result": "error",
+        "type": "ground_ball"
+      },
+      {
+        "x": 48.0,
+        "y": 81.9,
+        "result": "single",
+        "type": "line_drive"
+      },
+      {
+        "x": 48.6,
+        "y": 183.4,
+        "result": "fielders_choice",
+        "type": "ground_ball"
+      }
+    ],
+    "c98c25ab-e9c0-4fda-8cb9-9410644ba51a": [
+      {
+        "x": 160.0,
+        "y": 51.3,
+        "result": "single",
+        "type": "line_drive"
+      },
+      {
+        "x": 224.0,
+        "y": 130.9,
+        "result": "batter_out",
+        "type": "line_drive"
+      },
+      {
+        "x": 48.0,
+        "y": 81.9,
+        "result": "single",
+        "type": "fly_ball"
+      },
+      {
+        "x": 96.0,
+        "y": 130.9,
+        "result": "single",
+        "type": "fly_ball"
+      },
+      {
+        "x": 160.0,
+        "y": 179.8,
+        "result": "fielders_choice",
+        "type": "ground_ball"
+      },
+      {
+        "x": 48.0,
+        "y": 81.9,
+        "result": "double",
+        "type": "line_drive"
+      }
+    ],
+    "b68e5fca-a3c5-4f18-a64e-7584e3b0ce1d": [
+      {
+        "x": 96.0,
+        "y": 130.9,
+        "result": "single",
+        "type": "ground_ball"
+      },
+      {
+        "x": 272.0,
+        "y": 81.9,
+        "result": "single",
+        "type": "fly_ball"
+      },
+      {
+        "x": 224.0,
+        "y": 130.9,
+        "result": "single",
+        "type": "hard_ground_ball"
+      },
+      {
+        "x": 96.0,
+        "y": 130.9,
+        "result": "single",
+        "type": "ground_ball"
+      },
+      {
+        "x": 47.9,
+        "y": 182.7,
+        "result": "fielders_choice",
+        "type": "ground_ball"
+      },
+      {
+        "x": 160.0,
+        "y": 329.6,
+        "result": "single",
+        "type": "ground_ball"
+      }
+    ],
+    "bdb1ec35-ec8e-40b7-a1e5-396c34e90486": [
+      {
+        "x": 96.0,
+        "y": 130.9,
+        "result": "batter_out_advance_runners",
+        "type": "ground_ball"
+      },
+      {
+        "x": 272.1,
+        "y": 182.7,
+        "result": "batter_out",
+        "type": "fly_ball"
+      },
+      {
+        "x": 224.0,
+        "y": 130.9,
+        "result": "batter_out",
+        "type": "fly_ball"
+      },
+      {
+        "x": 96.0,
+        "y": 130.9,
+        "result": "single",
+        "type": "ground_ball"
+      },
+      {
+        "x": 96.0,
+        "y": 130.9,
+        "result": "fielders_choice",
+        "type": "ground_ball"
+      },
+      {
+        "x": 272.1,
+        "y": 182.7,
+        "result": "batter_out_advance_runners",
+        "type": "ground_ball"
+      },
+      {
+        "x": 160.0,
+        "y": 179.8,
+        "result": "single",
+        "type": "ground_ball"
+      },
+      {
+        "x": 96.0,
+        "y": 130.9,
+        "result": "batter_out_advance_runners",
+        "type": "ground_ball"
+      }
+    ],
+    "b8cce4cb-d808-4429-bbff-7fab1c5004ca": [
+      {
+        "x": 160.0,
+        "y": 179.8,
+        "result": "batter_out_advance_runners",
+        "type": "ground_ball"
+      },
+      {
+        "x": 96.0,
+        "y": 130.9,
+        "result": "batter_out_advance_runners",
+        "type": "ground_ball"
+      },
+      {
+        "x": 96.0,
+        "y": 130.9,
+        "result": "single",
+        "type": "ground_ball"
+      },
+      {
+        "x": 160.0,
+        "y": 51.3,
+        "result": "fielders_choice",
+        "type": "line_drive"
+      },
+      {
+        "x": 160.0,
+        "y": 179.8,
+        "result": "fielders_choice",
+        "type": "ground_ball"
+      },
+      {
+        "x": 48.0,
+        "y": 81.9,
+        "result": "double",
+        "type": "line_drive"
+      },
+      {
+        "x": 96.0,
+        "y": 130.9,
+        "result": "batter_out",
+        "type": "fly_ball"
+      }
+    ],
+    "c974aadb-12da-45c8-980b-fb50349314f4": [
+      {
+        "x": 96.0,
+        "y": 130.9,
+        "result": "batter_out",
+        "type": "line_drive"
+      },
+      {
+        "x": 272.1,
+        "y": 182.7,
+        "result": "batter_out_advance_runners",
+        "type": "ground_ball"
+      },
+      {
+        "x": 160.0,
+        "y": 51.3,
+        "result": "single",
+        "type": "line_drive"
+      },
+      {
+        "x": 48.0,
+        "y": 81.9,
+        "result": "double",
+        "type": "line_drive"
+      },
+      {
+        "x": 272.0,
+        "y": 81.9,
+        "result": "double",
+        "type": "line_drive"
+      },
+      {
+        "x": 271.4,
+        "y": 183.4,
+        "result": "batter_out_advance_runners",
+        "type": "ground_ball"
+      },
+      {
+        "x": 48.6,
+        "y": 183.4,
+        "result": "single",
+        "type": "ground_ball"
+      },
+      {
+        "x": 272.1,
+        "y": 182.7,
+        "result": "batter_out_advance_runners",
+        "type": "ground_ball"
+      },
+      {
+        "x": 160.0,
+        "y": 179.8,
+        "result": "batter_out_advance_runners",
+        "type": "ground_ball"
+      }
+    ],
+    "43d251ac-24d4-4de2-89ee-f368d39505c6": [
+      {
+        "x": 224.0,
+        "y": 130.9,
+        "result": "batter_out",
+        "type": "pop_fly"
+      },
+      {
+        "x": 272.1,
+        "y": 182.7,
+        "result": "batter_out_advance_runners",
+        "type": "ground_ball"
+      },
+      {
+        "x": 96.0,
+        "y": 130.9,
+        "result": "single",
+        "type": "ground_ball"
+      }
+    ],
+    "42093418-4894-406f-8cd9-826470a96e7b": [
+      {
+        "x": 224.0,
+        "y": 130.9,
+        "result": "single",
+        "type": "fly_ball"
+      },
+      {
+        "x": 272.1,
+        "y": 182.7,
+        "result": "single",
+        "type": "fly_ball"
+      },
+      {
+        "x": 224.0,
+        "y": 130.9,
+        "result": "batter_out_advance_runners",
+        "type": "ground_ball"
+      },
+      {
+        "x": 272.0,
+        "y": 81.9,
+        "result": "single",
+        "type": "line_drive"
+      },
+      {
+        "x": 224.0,
+        "y": 130.9,
+        "result": "batter_out_advance_runners",
+        "type": "ground_ball"
+      },
+      {
+        "x": 160.0,
+        "y": 51.3,
+        "result": "double",
+        "type": "line_drive"
+      }
+    ],
     "_fetched_streams": [
-      "14cea890-7d37-4ee6-b5bb-5abf01925077",
-      "593377e0-5706-47c6-8bad-01cd52e85f3b",
-      "0cbe4d75-dd69-4113-80b4-65869319407f",
       "122dfed3-ae5f-4557-b38f-6dabdd6bce4d",
-      "c90676d2-db37-40dc-bbbc-eb2e1fdebf9a",
+      "14cea890-7d37-4ee6-b5bb-5abf01925077",
+      "9e1c337c-dbc3-4b56-9184-f50c32f9c954",
       "21663cdf-5bd2-4400-9e70-c246dcbe433d",
-      "9e1c337c-dbc3-4b56-9184-f50c32f9c954"
+      "c90676d2-db37-40dc-bbbc-eb2e1fdebf9a",
+      "593377e0-5706-47c6-8bad-01cd52e85f3b",
+      "0cbe4d75-dd69-4113-80b4-65869319407f"
     ]
   }
 };
