@@ -1,7 +1,7 @@
 const DASHBOARD_DATA = {
   "team_name": "NLSAA3 - Bombers",
   "team_id": "d72d96f1-df57-4a92-8b40-1cdf06723881",
-  "fetched_at": "2026-05-05T14:37:11.130889",
+  "fetched_at": "2026-05-05T14:46:33.261859",
   "stats": {
     "id": "d72d96f1-df57-4a92-8b40-1cdf06723881",
     "team_id": "d72d96f1-df57-4a92-8b40-1cdf06723881",
@@ -9119,13 +9119,195 @@ const DASHBOARD_DATA = {
     }
   ],
   "game_results": [
-    {"event_id":"d52e5fc4-6a9d-4ded-ad24-79bf18f8ebce","owning_team_score":10,"opponent_team_score":5,"game_status":"completed","home_away":"away"},
-    {"event_id":"a72c4872-4dad-4883-8ef5-5f001ad23f79","owning_team_score":10,"opponent_team_score":4,"game_status":"completed","home_away":"home"},
-    {"event_id":"a6d78970-9cbc-400f-8935-926f25fdca1e","owning_team_score":9,"opponent_team_score":5,"game_status":"completed","home_away":"away"},
-    {"event_id":"064288f0-7650-44d3-b17e-238732d535f2","owning_team_score":4,"opponent_team_score":6,"game_status":"completed","home_away":"home"},
-    {"event_id":"ec534f0f-3cc8-4349-a739-449bf7981c04","owning_team_score":13,"opponent_team_score":3,"game_status":"completed","home_away":"home"},
-    {"event_id":"fc1d4f4b-244c-4783-b5ca-41af64727935","owning_team_score":18,"opponent_team_score":5,"game_status":"completed","home_away":"away"},
-    {"event_id":"0db63175-3860-4937-a3ec-591e12dbbcb3","owning_team_score":7,"opponent_team_score":8,"game_status":"completed","home_away":"away"}
+    {
+      "event_id": "d52e5fc4-6a9d-4ded-ad24-79bf18f8ebce",
+      "game_stream": {
+        "id": "593377e0-5706-47c6-8bad-01cd52e85f3b",
+        "game_id": "d52e5fc4-6a9d-4ded-ad24-79bf18f8ebce",
+        "game_status": "completed",
+        "home_away": "away",
+        "is_archived": false,
+        "opponent_id": "8aad0a67-c204-463a-af0a-3c99854a4c56",
+        "sabertooth_major_version": 4,
+        "scoring_user_id": "95e361c6-4a5e-4473-90f7-9d4e356bb23e"
+      },
+      "last_scoring_update": "2026-04-11T15:55:44.352Z",
+      "opponent_team_score": 5,
+      "owning_team_score": 10,
+      "home_away": "away",
+      "game_status": "completed",
+      "sport_specific": {
+        "bats": {
+          "total_outs": 36,
+          "inning_details": {
+            "inning": 7,
+            "half": "top"
+          }
+        }
+      }
+    },
+    {
+      "event_id": "a72c4872-4dad-4883-8ef5-5f001ad23f79",
+      "game_stream": {
+        "id": "9e1c337c-dbc3-4b56-9184-f50c32f9c954",
+        "game_id": "a72c4872-4dad-4883-8ef5-5f001ad23f79",
+        "game_status": "completed",
+        "home_away": "home",
+        "is_archived": false,
+        "opponent_id": "f2cdea92-b99e-4595-bd8b-ae66eaefa435",
+        "sabertooth_major_version": 4,
+        "scoring_user_id": "95e361c6-4a5e-4473-90f7-9d4e356bb23e"
+      },
+      "last_scoring_update": "2026-04-15T00:41:30.345Z",
+      "opponent_team_score": 4,
+      "owning_team_score": 10,
+      "home_away": "home",
+      "game_status": "completed",
+      "sport_specific": {
+        "bats": {
+          "total_outs": 27,
+          "inning_details": {
+            "inning": 5,
+            "half": "bottom"
+          }
+        }
+      }
+    },
+    {
+      "event_id": "a6d78970-9cbc-400f-8935-926f25fdca1e",
+      "game_stream": {
+        "id": "21663cdf-5bd2-4400-9e70-c246dcbe433d",
+        "game_id": "a6d78970-9cbc-400f-8935-926f25fdca1e",
+        "game_status": "completed",
+        "home_away": "away",
+        "is_archived": false,
+        "opponent_id": "f5e1b457-b39b-4fcc-8f50-888205156226",
+        "sabertooth_major_version": 4,
+        "scoring_user_id": "95e361c6-4a5e-4473-90f7-9d4e356bb23e"
+      },
+      "last_scoring_update": "2026-04-18T18:16:24.691Z",
+      "opponent_team_score": 5,
+      "owning_team_score": 9,
+      "home_away": "away",
+      "game_status": "completed",
+      "sport_specific": {
+        "bats": {
+          "total_outs": 36,
+          "inning_details": {
+            "inning": 7,
+            "half": "top"
+          }
+        }
+      }
+    },
+    {
+      "event_id": "064288f0-7650-44d3-b17e-238732d535f2",
+      "game_stream": {
+        "id": "14cea890-7d37-4ee6-b5bb-5abf01925077",
+        "game_id": "064288f0-7650-44d3-b17e-238732d535f2",
+        "game_status": "completed",
+        "home_away": "home",
+        "is_archived": false,
+        "opponent_id": "7e901e85-dd0e-491d-8325-173085cac64e",
+        "sabertooth_major_version": 4,
+        "scoring_user_id": "95e361c6-4a5e-4473-90f7-9d4e356bb23e"
+      },
+      "last_scoring_update": "2026-04-22T00:48:53.116Z",
+      "opponent_team_score": 6,
+      "owning_team_score": 4,
+      "home_away": "home",
+      "game_status": "completed",
+      "sport_specific": {
+        "bats": {
+          "total_outs": 36,
+          "inning_details": {
+            "inning": 7,
+            "half": "top"
+          }
+        }
+      }
+    },
+    {
+      "event_id": "ec534f0f-3cc8-4349-a739-449bf7981c04",
+      "game_stream": {
+        "id": "c90676d2-db37-40dc-bbbc-eb2e1fdebf9a",
+        "game_id": "ec534f0f-3cc8-4349-a739-449bf7981c04",
+        "game_status": "completed",
+        "home_away": "home",
+        "is_archived": false,
+        "opponent_id": "e56d747a-c602-477e-9723-89ac02ee16cd",
+        "sabertooth_major_version": 4,
+        "scoring_user_id": "95e361c6-4a5e-4473-90f7-9d4e356bb23e"
+      },
+      "last_scoring_update": "2026-04-25T15:45:58.184Z",
+      "opponent_team_score": 3,
+      "owning_team_score": 13,
+      "home_away": "home",
+      "game_status": "completed",
+      "sport_specific": {
+        "bats": {
+          "total_outs": 29,
+          "inning_details": {
+            "inning": 5,
+            "half": "bottom"
+          }
+        }
+      }
+    },
+    {
+      "event_id": "fc1d4f4b-244c-4783-b5ca-41af64727935",
+      "game_stream": {
+        "id": "122dfed3-ae5f-4557-b38f-6dabdd6bce4d",
+        "game_id": "fc1d4f4b-244c-4783-b5ca-41af64727935",
+        "game_status": "completed",
+        "home_away": "away",
+        "is_archived": false,
+        "opponent_id": "f2cdea92-b99e-4595-bd8b-ae66eaefa435",
+        "sabertooth_major_version": 4,
+        "scoring_user_id": "c3ac9727-b549-4210-a86e-b6ee62d87d2d"
+      },
+      "last_scoring_update": "2026-05-01T00:54:11.399Z",
+      "opponent_team_score": 5,
+      "owning_team_score": 18,
+      "home_away": "away",
+      "game_status": "completed",
+      "sport_specific": {
+        "bats": {
+          "total_outs": 24,
+          "inning_details": {
+            "inning": 5,
+            "half": "top"
+          }
+        }
+      }
+    },
+    {
+      "event_id": "0db63175-3860-4937-a3ec-591e12dbbcb3",
+      "game_stream": {
+        "id": "0cbe4d75-dd69-4113-80b4-65869319407f",
+        "game_id": "0db63175-3860-4937-a3ec-591e12dbbcb3",
+        "game_status": "completed",
+        "home_away": "away",
+        "is_archived": false,
+        "opponent_id": "66764afc-2bdc-430e-b145-1c63ae9a7ef6",
+        "sabertooth_major_version": 4,
+        "scoring_user_id": "95e361c6-4a5e-4473-90f7-9d4e356bb23e"
+      },
+      "last_scoring_update": "2026-05-02T18:16:52.568Z",
+      "opponent_team_score": 8,
+      "owning_team_score": 7,
+      "home_away": "away",
+      "game_status": "completed",
+      "sport_specific": {
+        "bats": {
+          "total_outs": 33,
+          "inning_details": {
+            "inning": 6,
+            "half": "bottom"
+          }
+        }
+      }
+    }
   ],
   "opponent_data": {
     "8aad0a67-c204-463a-af0a-3c99854a4c56": {
