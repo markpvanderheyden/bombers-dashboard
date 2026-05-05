@@ -103,15 +103,27 @@
     .streak-det{font-size:12px;color:var(--muted);flex:1}
 
     /* ── Scouting ── */
-    .scout-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:16px}
-    .scout-card{background:var(--surface);border-radius:12px;padding:18px;box-shadow:0 1px 4px rgba(0,0,0,.07)}
-    .scout-card h3{font-size:14px;font-weight:700;color:var(--navy);margin-bottom:3px}
-    .scout-date{font-size:11px;color:var(--muted);margin-bottom:12px}
-    .scout-section{margin-top:11px}
-    .scout-section h4{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.6px;color:var(--text);margin-bottom:5px}
-    .scout-notes{font-size:12px;color:var(--text);background:var(--bg);border-radius:7px;padding:9px 11px;min-height:50px;line-height:1.55;white-space:pre-wrap}
+    .scout-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:20px}
+    .scout-card{background:var(--surface);border-radius:12px;padding:20px;box-shadow:0 1px 4px rgba(0,0,0,.07)}
+    .scout-card h3{font-size:15px;font-weight:700;color:var(--navy);margin-bottom:3px}
+    .scout-date{font-size:11px;color:var(--muted);margin-bottom:14px}
+    .scout-section{margin-top:14px}
+    .scout-section h4{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.6px;color:var(--text);margin-bottom:6px}
+    .scout-notes{font-size:12px;color:var(--text);background:var(--bg);border-radius:7px;padding:9px 11px;min-height:44px;line-height:1.55;white-space:pre-wrap}
     .no-scout{font-size:12px;color:var(--muted);font-style:italic}
     .empty{padding:16px;color:var(--muted);font-size:13px}
+    .opp-stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:10px}
+    .opp-stat{background:var(--bg);border-radius:8px;padding:8px;text-align:center}
+    .opp-stat .v{font-size:16px;font-weight:800;color:var(--navy)}
+    .opp-stat .l{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.4px;margin-top:2px}
+    .opp-table{width:100%;border-collapse:collapse;font-size:12px;margin-top:6px}
+    .opp-table th{background:#f0f3f8;color:var(--navy);padding:5px 8px;text-align:right;font-size:10px;font-weight:700}
+    .opp-table th:first-child{text-align:left}
+    .opp-table td{padding:5px 8px;text-align:right;border-bottom:1px solid var(--border)}
+    .opp-table td:first-child{text-align:left;font-weight:600}
+    .opp-table tr:last-child td{border-bottom:none}
+    .opp-table tr:hover td{background:#f8fafc}
+    .no-data{font-size:12px;color:var(--muted);font-style:italic;padding:8px 0}
   </style>
 </head>
 <body>
@@ -508,18 +520,89 @@ document.getElementById('upcomingList').innerHTML=nextGames.length?nextGames.map
 
 // ── SCOUTING ──────────────────────────────────────────────────
 const SD = typeof SCOUTING_DATA!=='undefined' ? SCOUTING_DATA : {};
-document.getElementById('scoutGrid').innerHTML=nextGames.slice(0,10).map(g=>{
-  const opp=stripLeague(g.opponent);
-  const r=SD[g.id]||{};
-  const hasReport=r.pitching||r.hitting||r.defense||r.general;
+const oppData = DASHBOARD_DATA.opponent_data || {};
+
+function oppStatsHTML(oppId) {
+  const opp = oppData[oppId];
+  if (!opp?.stats) return `<div class="no-data">Stats not yet fetched — run refresh.command to load opponent data.</div>`;
+
+  const players = {};
+  (opp.roster||[]).forEach(p => { players[p.id] = `${p.first_name} ${p.last_name}`; });
+
+  const rawP = opp.stats?.stats_data?.players || {};
+  const teamOff = opp.stats?.stats_data?.stats?.offense || {};
+  const teamDef = opp.stats?.stats_data?.stats?.defense || {};
+
+  // Team stat cards
+  const cardHTML = `
+    <div class="opp-stats-grid">
+      <div class="opp-stat"><div class="v">${ba(teamOff.AVG)}</div><div class="l">Team AVG</div></div>
+      <div class="opp-stat"><div class="v">${ba(teamOff.OBP)}</div><div class="l">Team OBP</div></div>
+      <div class="opp-stat"><div class="v">${dec(teamDef.ERA)}</div><div class="l">Team ERA</div></div>
+      <div class="opp-stat"><div class="v">${teamOff.SB||0}</div><div class="l">Stolen Bases</div></div>
+    </div>`;
+
+  // Top hitters (min 5 AB, sorted by AVG)
+  const batters = Object.entries(rawP).map(([pid, d]) => {
+    const off = d.stats?.offense || {};
+    return { name: players[pid]||'Unknown', ab: off.AB||0, h: off.H||0, avg: off.AVG||0, obp: off.OBP||0, ops: off.OPS||0, rbi: off.RBI||0, sb: off.SB||0 };
+  }).filter(r => r.ab >= 3).sort((a,b) => b.avg - a.avg).slice(0,5);
+
+  const batHTML = batters.length ? `
+    <div class="scout-section">
+      <h4>🏏 Top Hitters</h4>
+      <table class="opp-table">
+        <thead><tr><th>Player</th><th>AB</th><th>AVG</th><th>OBP</th><th>OPS</th><th>RBI</th><th>SB</th></tr></thead>
+        <tbody>${batters.map(r=>`<tr>
+          <td>${r.name}</td><td>${r.ab}</td><td>${ba(r.avg)}</td><td>${ba(r.obp)}</td><td>${ba(r.ops)}</td><td>${r.rbi}</td><td>${r.sb}</td>
+        </tr>`).join('')}</tbody>
+      </table>
+    </div>` : '';
+
+  // Pitchers
+  const pitchers = Object.entries(rawP).map(([pid, d]) => {
+    const def = d.stats?.defense || {};
+    return { name: players[pid]||'Unknown', ip: def.IP||0, era: def.ERA||0, whip: def.WHIP||0, k: def.SO||0, bb: def.BB||0, w: def.W||0, l: def.L||0 };
+  }).filter(r => r.ip > 0).sort((a,b) => b.ip - a.ip).slice(0,4);
+
+  const pitHTML = pitchers.length ? `
+    <div class="scout-section">
+      <h4>⚾ Pitchers</h4>
+      <table class="opp-table">
+        <thead><tr><th>Player</th><th>IP</th><th>ERA</th><th>WHIP</th><th>K</th><th>BB</th></tr></thead>
+        <tbody>${pitchers.map(r=>`<tr>
+          <td>${r.name}</td><td>${ip(r.ip)}</td><td>${dec(r.era)}</td><td>${dec(r.whip)}</td><td>${r.k}</td><td>${r.bb}</td>
+        </tr>`).join('')}</tbody>
+      </table>
+    </div>` : '';
+
+  return cardHTML + batHTML + pitHTML;
+}
+
+// Find opponent_id for each upcoming game from the schedule
+const gameOpponentMap = {};
+(DASHBOARD_DATA.events||[]).forEach(item => {
+  const pre = item.pregame_data || {};
+  if (pre.opponent_id) gameOpponentMap[item.event?.id] = pre.opponent_id;
+});
+
+const seenOpponents = new Set();
+document.getElementById('scoutGrid').innerHTML = nextGames.slice(0,12).map(g => {
+  const opp = stripLeague(g.opponent);
+  const r = SD[g.id] || {};
+  const hasNotes = r.pitching||r.hitting||r.defense||r.general;
+  const oppId = gameOpponentMap[g.id];
+  const alreadyShown = oppId && seenOpponents.has(oppId);
+  if (oppId) seenOpponents.add(oppId);
+
   return `<div class="scout-card">
     <h3>${opp}</h3>
     <div class="scout-date">${g.home_away==='home'?'🏠 Home':'✈️ Away'} · ${fmtDate(g.date,g.tz)} at ${fmtTime(g.date,g.tz)}</div>
-    ${r.pitching?`<div class="scout-section"><h4>⚾ Pitching</h4><div class="scout-notes">${r.pitching}</div></div>`:''}
-    ${r.hitting?`<div class="scout-section"><h4>🏏 Hitting</h4><div class="scout-notes">${r.hitting}</div></div>`:''}
-    ${r.defense?`<div class="scout-section"><h4>🧤 Defense</h4><div class="scout-notes">${r.defense}</div></div>`:''}
-    ${r.general?`<div class="scout-section"><h4>📋 Notes</h4><div class="scout-notes">${r.general}</div></div>`:''}
-    ${!hasReport?`<div class="no-scout">No report yet — add notes to scouting.js using event id:<br><code style="font-size:10px">${g.id}</code></div>`:''}
+    ${alreadyShown ? '' : (oppId ? oppStatsHTML(oppId) : '<div class="no-data">Opponent ID not found in schedule.</div>')}
+    ${r.pitching?`<div class="scout-section"><h4>📋 Pitching Notes</h4><div class="scout-notes">${r.pitching}</div></div>`:''}
+    ${r.hitting?`<div class="scout-section"><h4>📋 Hitting Notes</h4><div class="scout-notes">${r.hitting}</div></div>`:''}
+    ${r.general?`<div class="scout-section"><h4>📋 General Notes</h4><div class="scout-notes">${r.general}</div></div>`:''}
+    ${!hasNotes?`<div class="scout-section"><div class="no-scout">Add notes in scouting.js · event id: <code style="font-size:10px">${g.id}</code></div></div>`:''}
   </div>`;
 }).join('');
 
