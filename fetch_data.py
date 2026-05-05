@@ -55,16 +55,17 @@ def main():
     except Exception:
         pass
 
-    # Try to fetch new game scores from API
-    for candidate in ["/games", "/game-streams", "/game-results"]:
-        result = fetch_silent(f"{BASE}/teams/{TEAM_ID}{candidate}", headers)
-        if result and isinstance(result, list) and result:
-            for g in result:
-                eid = g.get("event_id") or g.get("id")
-                if eid:
-                    existing_scores[eid] = g
-            print(f"✓ Game scores updated")
-            break
+    # Fetch game scores
+    print("Fetching game scores...", end=" ", flush=True)
+    result = fetch_silent(f"{BASE}/teams/{TEAM_ID}/game-summaries", headers)
+    if result and isinstance(result, list):
+        for g in result:
+            eid = g.get("event_id")
+            if eid:
+                existing_scores[eid] = g
+        print("✓")
+    else:
+        print("(using cached scores)")
 
     game_results = list(existing_scores.values())
 
