@@ -52,9 +52,8 @@ def main():
             print(f"✓ Game scores fetched")
             break
 
-    # Extract upcoming opponents from schedule
-    now = datetime.now(timezone.utc)
-    upcoming_opponents = {}
+    # Extract all opponents from schedule (past and upcoming)
+    all_opponents = {}
     for item in schedule:
         ev = item.get("event", item)
         if ev.get("event_type") != "game":
@@ -62,15 +61,9 @@ def main():
         pre = item.get("pregame_data", {})
         opponent_id = pre.get("opponent_id")
         opponent_name = pre.get("opponent_name", "")
-        start = ev.get("start", {}).get("datetime", "")
-        if not opponent_id or not start:
-            continue
-        try:
-            game_time = datetime.fromisoformat(start.replace("Z", "+00:00"))
-        except Exception:
-            continue
-        if game_time > now and opponent_id not in upcoming_opponents:
-            upcoming_opponents[opponent_id] = opponent_name
+        if opponent_id and opponent_id not in all_opponents:
+            all_opponents[opponent_id] = opponent_name
+    upcoming_opponents = all_opponents
 
     # Fetch each upcoming opponent's stats and roster
     opponent_data = {}

@@ -241,9 +241,9 @@
 
   <!-- SCOUTING -->
   <div id="tab-scouting" class="tab">
-    <div class="sh">Scouting Reports — Upcoming Opponents</div>
+    <div class="sh">Scouting Reports — All League Teams</div>
     <p style="font-size:12px;color:var(--muted);margin-bottom:18px">
-      Edit <code>scouting.js</code> to add notes for each upcoming game.
+      Stats pulled automatically from GameChanger. Add written notes in <code>scouting.js</code>.
     </p>
     <div class="scout-grid" id="scoutGrid"></div>
   </div>
@@ -579,30 +579,43 @@ function oppStatsHTML(oppId) {
   return cardHTML + batHTML + pitHTML;
 }
 
-// Find opponent_id for each upcoming game from the schedule
-const gameOpponentMap = {};
+// Build full opponent map from schedule (all teams, past + upcoming)
+const allOpponents = {};
 (DASHBOARD_DATA.events||[]).forEach(item => {
   const pre = item.pregame_data || {};
-  if (pre.opponent_id) gameOpponentMap[item.event?.id] = pre.opponent_id;
+  if (pre.opponent_id && pre.opponent_name && !allOpponents[pre.opponent_id]) {
+    allOpponents[pre.opponent_id] = pre.opponent_name;
+  }
 });
 
-const seenOpponents = new Set();
-document.getElementById('scoutGrid').innerHTML = nextGames.slice(0,12).map(g => {
-  const opp = stripLeague(g.opponent);
-  const r = SD[g.id] || {};
+// Build upcoming game dates per opponent for reference
+const oppNextGame = {};
+nextGames.forEach(g => {
+  const pre = (DASHBOARD_DATA.events||[]).find(e => e.event?.id === g.id)?.pregame_data || {};
+  if (pre.opponent_id && !oppNextGame[pre.opponent_id]) oppNextGame[pre.opponent_id] = g;
+});
+
+// Sort teams alphabetically by short name
+const sortedOpponents = Object.entries(allOpponents)
+  .sort((a,b) => stripLeague(a[1]).localeCompare(stripLeague(b[1])));
+
+document.getElementById('scoutGrid').innerHTML = sortedOpponents.map(([oppId, oppName]) => {
+  const opp = stripLeague(oppName);
+  const r = SD[oppId] || {};
   const hasNotes = r.pitching||r.hitting||r.defense||r.general;
-  const oppId = gameOpponentMap[g.id];
-  const alreadyShown = oppId && seenOpponents.has(oppId);
-  if (oppId) seenOpponents.add(oppId);
+  const nextG = oppNextGame[oppId];
+  const nextLabel = nextG
+    ? `<span style="background:#e8f5e9;color:#2e7d32;padding:2px 8px;border-radius:10px;font-size:10px;font-weight:600;margin-left:6px">Next: ${fmtDate(nextG.date, nextG.tz)}</span>`
+    : `<span style="background:var(--border);color:var(--muted);padding:2px 8px;border-radius:10px;font-size:10px;font-weight:600;margin-left:6px">Season complete</span>`;
 
   return `<div class="scout-card">
-    <h3>${opp}</h3>
-    <div class="scout-date">${g.home_away==='home'?'🏠 Home':'✈️ Away'} · ${fmtDate(g.date,g.tz)} at ${fmtTime(g.date,g.tz)}</div>
-    ${alreadyShown ? '' : (oppId ? oppStatsHTML(oppId) : '<div class="no-data">Opponent ID not found in schedule.</div>')}
+    <h3>${opp} ${nextLabel}</h3>
+    <div class="scout-date" style="margin-bottom:10px">${oppName}</div>
+    ${oppStatsHTML(oppId)}
     ${r.pitching?`<div class="scout-section"><h4>📋 Pitching Notes</h4><div class="scout-notes">${r.pitching}</div></div>`:''}
     ${r.hitting?`<div class="scout-section"><h4>📋 Hitting Notes</h4><div class="scout-notes">${r.hitting}</div></div>`:''}
     ${r.general?`<div class="scout-section"><h4>📋 General Notes</h4><div class="scout-notes">${r.general}</div></div>`:''}
-    ${!hasNotes?`<div class="scout-section"><div class="no-scout">Add notes in scouting.js · event id: <code style="font-size:10px">${g.id}</code></div></div>`:''}
+    ${!hasNotes?`<div class="scout-section"><div class="no-scout">Add notes in scouting.js using opponent id: <code style="font-size:10px">${oppId}</code></div></div>`:''}
   </div>`;
 }).join('');
 
