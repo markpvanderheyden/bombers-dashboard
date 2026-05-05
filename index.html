@@ -125,19 +125,6 @@
     .opp-table tr:hover td{background:#f8fafc}
     .no-data{font-size:12px;color:var(--muted);font-style:italic;padding:8px 0}
 
-    /* ── Spray chart ── */
-    .spray-wrap{display:flex;gap:20px;align-items:flex-start;flex-wrap:wrap}
-    .spray-controls{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:16px}
-    .spray-controls label{font-size:13px;font-weight:600;color:var(--navy)}
-    .spray-controls select{padding:6px 10px;border:1px solid var(--border);border-radius:7px;font-size:13px;background:white;cursor:pointer}
-    #spray-count{font-size:12px;color:var(--muted)}
-    .spray-svg-box{flex:1;min-width:280px;max-width:560px}
-    .spray-svg-box svg{border-radius:10px;box-shadow:0 2px 8px rgba(0,0,0,.12)}
-    .spray-legend{background:var(--surface);border-radius:12px;padding:16px;box-shadow:0 1px 4px rgba(0,0,0,.07);min-width:160px}
-    .spray-legend .leg-title{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.6px;color:var(--navy);margin-bottom:10px}
-    .leg-item{display:flex;align-items:center;gap:8px;margin-bottom:7px;font-size:12px}
-    .leg-dot{width:11px;height:11px;border-radius:50%;border:1.5px solid rgba(0,0,0,.15);flex-shrink:0}
-    .spray-no-data{padding:30px;color:var(--muted);font-size:13px;line-height:1.6;background:var(--surface);border-radius:12px;box-shadow:0 1px 4px rgba(0,0,0,.07)}
   </style>
 </head>
 <body>
@@ -162,7 +149,6 @@
   <button onclick="showTab('pitching',this)">Pitching</button>
   <button onclick="showTab('schedule',this)">Schedule</button>
   <button onclick="showTab('scouting',this)">Scouting</button>
-  <button onclick="showTab('spray',this);initSprayChart()">Spray Chart</button>
 </nav>
 
 <main>
@@ -252,28 +238,6 @@
     <div class="game-list" id="completedList"></div>
     <div class="sh">Upcoming Schedule</div>
     <div class="game-list" id="upcomingList"></div>
-  </div>
-
-  <!-- SPRAY CHART -->
-  <div id="tab-spray" class="tab">
-    <div class="sh">Hitting Spray Chart</div>
-    <p style="font-size:12px;color:var(--muted);margin-bottom:14px">Ball-in-play locations from GameChanger game streams. Hover a dot for play details.</p>
-    <div class="spray-controls">
-      <label for="spraySelect">Player:</label>
-      <select id="spraySelect" onchange="renderSpray(this.value)"></select>
-      <span id="spray-count"></span>
-    </div>
-    <div class="spray-wrap">
-      <div class="spray-svg-box" id="spraySvgBox"></div>
-      <div class="spray-legend">
-        <div class="leg-title">Legend</div>
-        <div class="leg-item"><div class="leg-dot" style="background:#22c55e"></div>Single</div>
-        <div class="leg-item"><div class="leg-dot" style="background:#3b82f6"></div>Double</div>
-        <div class="leg-item"><div class="leg-dot" style="background:#a855f7"></div>Triple</div>
-        <div class="leg-item"><div class="leg-dot" style="background:#f59e0b"></div>Home Run</div>
-        <div class="leg-item"><div class="leg-dot" style="background:#ef4444"></div>Out / Error</div>
-      </div>
-    </div>
   </div>
 
   <!-- SCOUTING -->
@@ -659,115 +623,6 @@ document.getElementById('scoutGrid').innerHTML = sortedOpponents.map(([oppId, op
 // ── Init sort on all tables ───────────────────────────────────
 ['tBat','tPit'].forEach(initSort);
 
-// ── SPRAY CHART ───────────────────────────────────────────────
-const HIT_COLOR = {
-  single:   '#22c55e',
-  double:   '#3b82f6',
-  triple:   '#a855f7',
-  home_run: '#f59e0b',
-};
-function hitColor(result) {
-  const r = (result||'').toLowerCase();
-  if (r.includes('single'))   return HIT_COLOR.single;
-  if (r.includes('double'))   return HIT_COLOR.double;
-  if (r.includes('triple'))   return HIT_COLOR.triple;
-  if (r.includes('home_run') || r.includes('homer')) return HIT_COLOR.home_run;
-  return '#ef4444'; // out / error
-}
-
-function fieldSVG(dots) {
-  // Coordinate system matches GameChanger game-stream data:
-  //   x: 0–320 (left→right), y: 0→ small = outfield, y→large = home plate area
-  //   Home plate ≈ (160, 295), 1B ≈ (272,183), 2B ≈ (160,71), 3B ≈ (48,183)
-  //   Outfield arc: radius 240 centered at home plate, passes through CF ≈ (160,55)
-  return `<svg viewBox="0 0 320 310" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block">
-  <defs><clipPath id="fc"><rect width="320" height="310"/></clipPath></defs>
-  <!-- Foul territory background -->
-  <rect width="320" height="310" fill="#3d6b40"/>
-  <!-- Fair territory wedge: home plate → left foul line → outfield arc → right foul line -->
-  <path d="M 160 295 L 0 135 L 0 116 A 240 240 0 0 0 320 116 L 320 135 Z" fill="#5a9060" clip-path="url(#fc)"/>
-  <!-- Infield dirt circle + diamond fill -->
-  <circle cx="160" cy="183" r="66" fill="#c4a070"/>
-  <polygon points="160,295 272,183 160,71 48,183" fill="#c4a070"/>
-  <!-- Foul lines -->
-  <line x1="160" y1="295" x2="0"   y2="135" stroke="white" stroke-width="1" opacity="0.55"/>
-  <line x1="160" y1="295" x2="320" y2="135" stroke="white" stroke-width="1" opacity="0.55"/>
-  <!-- Outfield wall arc -->
-  <path d="M 0 116 A 240 240 0 0 0 320 116" stroke="white" stroke-width="1.5" fill="none" clip-path="url(#fc)"/>
-  <!-- Base paths -->
-  <line x1="160" y1="295" x2="272" y2="183" stroke="white" stroke-width="1.5"/>
-  <line x1="272" y1="183" x2="160" y2="71"  stroke="white" stroke-width="1.5"/>
-  <line x1="160" y1="71"  x2="48"  y2="183" stroke="white" stroke-width="1.5"/>
-  <line x1="48"  y1="183" x2="160" y2="295" stroke="white" stroke-width="1.5"/>
-  <!-- Pitcher's mound -->
-  <circle cx="160" cy="183" r="8" fill="#b08855"/>
-  <!-- Bases (rotated squares) -->
-  <rect x="266" y="177" width="12" height="12" fill="white" transform="rotate(45,272,183)"/>
-  <rect x="154" y="65"  width="12" height="12" fill="white" transform="rotate(45,160,71)"/>
-  <rect x="42"  y="177" width="12" height="12" fill="white" transform="rotate(45,48,183)"/>
-  <!-- Home plate -->
-  <polygon points="160,305 168,296 168,286 152,286 152,296" fill="white"/>
-  <!-- Field labels -->
-  <text x="160" y="48"  text-anchor="middle" fill="rgba(255,255,255,0.45)" font-size="9" font-family="sans-serif">CF</text>
-  <text x="36"  y="108" text-anchor="middle" fill="rgba(255,255,255,0.45)" font-size="9" font-family="sans-serif">LF</text>
-  <text x="284" y="108" text-anchor="middle" fill="rgba(255,255,255,0.45)" font-size="9" font-family="sans-serif">RF</text>
-  <!-- Hit dots -->
-  ${dots}
-</svg>`;
-}
-
-function renderSpray(selectedPid) {
-  const hitChart = DASHBOARD_DATA.hit_chart || {};
-  const hits = [];
-
-  Object.entries(hitChart).forEach(([pid, playerHits]) => {
-    if (pid === '_fetched_streams' || !Array.isArray(playerHits)) return;
-    if (selectedPid !== 'all' && pid !== selectedPid) return;
-    const player = playerMap[pid];
-    playerHits.forEach(h => hits.push({...h, playerName: player?.name || 'Unknown'}));
-  });
-
-  const box = document.getElementById('spraySvgBox');
-  if (hits.length === 0) {
-    box.innerHTML = `<div class="spray-no-data">
-      No spray chart data yet.<br><br>
-      Run <strong>refresh.command</strong> to fetch game stream data from GameChanger.<br>
-      Hit locations will appear here after the first successful refresh.
-    </div>`;
-    document.getElementById('spray-count').textContent = '';
-    return;
-  }
-
-  const dots = hits.map(h => {
-    const color = hitColor(h.result);
-    const label = `${h.playerName}: ${(h.result||'out').replace(/_/g,' ')}${h.type ? ' ('+h.type.replace(/_/g,' ')+')' : ''}`;
-    return `<circle cx="${h.x}" cy="${h.y}" r="5.5" fill="${color}" stroke="white" stroke-width="1" opacity="0.85"><title>${label}</title></circle>`;
-  }).join('');
-
-  box.innerHTML = fieldSVG(dots);
-  const hCount = hits.filter(h => !hitColor(h.result).includes('ef4444')).length;
-  document.getElementById('spray-count').textContent =
-    `${hits.length} batted balls · ${hCount} hits`;
-}
-
-function initSprayChart() {
-  const hitChart = DASHBOARD_DATA.hit_chart || {};
-  const sel = document.getElementById('spraySelect');
-
-  // Collect players who have data
-  const players = [];
-  Object.entries(hitChart).forEach(([pid, arr]) => {
-    if (pid === '_fetched_streams' || !Array.isArray(arr) || arr.length === 0) return;
-    const p = playerMap[pid];
-    if (p) players.push({pid, name: p.name, num: parseInt(p.num)||99});
-  });
-  players.sort((a,b) => a.num - b.num);
-
-  sel.innerHTML = `<option value="all">All Players</option>` +
-    players.map(p => `<option value="${p.pid}">${p.name}</option>`).join('');
-
-  renderSpray('all');
-}
 
 </script>
 </body>
