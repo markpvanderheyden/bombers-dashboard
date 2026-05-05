@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NLSAA3 – Bombers Dashboard</title>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    :root{
+      --navy:#1B3A6B;--navy-dark:#0f2547;--red:#C8102E;
+      --bg:#F4F6F9;--surface:#fff;--border:#E4E8EE;
+      --muted:#8A96A8;--text:#1F2937;
+      --green:#10B981;--loss:#EF4444;
+    }
+    body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--bg);color:var(--text);min-height:100vh}
+
+    /* ── Header ── */
+    header{background:linear-gradient(135deg,var(--navy),var(--navy-dark));color:#fff;padding:18px 24px;display:flex;align-items:center;justify-content:space-between;gap:12px;box-shadow:0 2px 8px rgba(0,0,0,.2)}
+    .h-left{display:flex;align-items:center;gap:14px}
+    .logo{width:52px;height:52px;background:var(--red);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0;box-shadow:0 2px 6px rgba(0,0,0,.3)}
+    .team-title h1{font-size:20px;font-weight:700;letter-spacing:-.3px}
+    .team-title .sub{font-size:12px;color:rgba(255,255,255,.6);margin-top:3px}
+    .h-right{text-align:right}
+    .record{background:var(--red);padding:7px 18px;border-radius:20px;font-weight:800;font-size:18px;display:inline-block}
+    .updated{font-size:11px;color:rgba(255,255,255,.45);margin-top:4px}
+
+    /* ── Nav ── */
+    nav{background:var(--navy);display:flex;padding:0 20px;overflow-x:auto;gap:0}
+    nav button{background:none;border:none;border-bottom:3px solid transparent;color:rgba(255,255,255,.6);padding:12px 18px;font-size:13px;font-weight:500;cursor:pointer;white-space:nowrap;transition:color .15s}
+    nav button:hover{color:#fff}
+    nav button.active{color:#fff;border-bottom-color:var(--red)}
+
+    /* ── Layout ── */
+    main{max-width:1200px;margin:0 auto;padding:24px}
+    .tab{display:none}.tab.active{display:block}
+
+    /* ── Cards grid ── */
+    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:14px;margin-bottom:22px}
+    .card{background:var(--surface);border-radius:12px;padding:16px;text-align:center;box-shadow:0 1px 4px rgba(0,0,0,.07)}
+    .card .val{font-size:28px;font-weight:800;color:var(--navy);line-height:1}
+    .card .lbl{font-size:11px;color:var(--muted);margin-top:5px;text-transform:uppercase;letter-spacing:.5px}
+    .card.red .val{color:var(--red)}
+
+    /* ── Section headers ── */
+    .sh{font-size:15px;font-weight:700;color:var(--navy);margin:22px 0 10px;padding-bottom:7px;border-bottom:2px solid var(--border)}
+
+    /* ── Tables ── */
+    .tw{background:var(--surface);border-radius:12px;overflow:hidden;overflow-x:auto;box-shadow:0 1px 4px rgba(0,0,0,.07)}
+    table{width:100%;border-collapse:collapse;font-size:13px}
+    thead th{background:var(--navy);color:#fff;padding:9px 13px;text-align:right;font-size:11px;font-weight:600;cursor:pointer;user-select:none;white-space:nowrap}
+    thead th:first-child,thead th:nth-child(2){text-align:left}
+    thead th:hover{background:#243d6e}
+    thead th.asc::after{content:' ↑'}
+    thead th.desc::after{content:' ↓'}
+    tbody tr{border-bottom:1px solid var(--border);transition:background .1s}
+    tbody tr:last-child{border-bottom:none}
+    tbody tr:hover{background:#f8fafc}
+    tbody td{padding:9px 13px;text-align:right}
+    tbody td:first-child{text-align:center;color:var(--muted);font-size:11px;font-weight:700;width:34px}
+    tbody td:nth-child(2){text-align:left;font-weight:600}
+    .bold{color:var(--navy);font-weight:700}
+
+    /* ── Two-col ── */
+    .two{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    @media(max-width:640px){.two{grid-template-columns:1fr};header{flex-direction:column};.h-left{flex-direction:column;text-align:center};main{padding:14px}}
+
+    /* ── Game rows ── */
+    .game-list{background:var(--surface);border-radius:12px;box-shadow:0 1px 4px rgba(0,0,0,.07);overflow:hidden}
+    .game-row{display:flex;align-items:center;gap:12px;padding:11px 15px;border-bottom:1px solid var(--border)}
+    .game-row:last-child{border-bottom:none}
+    .result-dot{width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:13px;flex-shrink:0}
+    .dot-w{background:#d1fae5;color:var(--green)}
+    .dot-l{background:#fee2e2;color:var(--loss)}
+    .dot-u{background:var(--border);color:var(--muted);font-size:10px}
+    .g-info{flex:1}
+    .g-opp{font-weight:600;font-size:13px}
+    .g-meta{font-size:11px;color:var(--muted);margin-top:2px}
+    .g-score{font-weight:700;font-size:15px;flex-shrink:0}
+    .sc-w{color:var(--green)}.sc-l{color:var(--loss)}.sc-u{color:var(--muted)}
+
+    /* ── Leaders ── */
+    .leaders{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:22px}
+    @media(max-width:560px){.leaders{grid-template-columns:1fr}}
+    .leader{background:var(--surface);border-radius:12px;padding:16px;box-shadow:0 1px 4px rgba(0,0,0,.07)}
+    .leader .cat{font-size:10px;text-transform:uppercase;letter-spacing:.8px;color:var(--muted);font-weight:600}
+    .leader .ln{font-size:17px;font-weight:700;color:var(--navy);margin:5px 0 2px}
+    .leader .lv{font-size:26px;font-weight:800;color:var(--red)}
+    .leader .ru{font-size:11px;color:var(--muted);margin-top:6px}
+
+    /* ── Next game ── */
+    .next-card{background:linear-gradient(135deg,var(--navy),var(--navy-dark));color:#fff;border-radius:12px;padding:18px 20px;margin-bottom:18px;box-shadow:0 2px 8px rgba(0,0,0,.15)}
+    .next-label{font-size:10px;text-transform:uppercase;letter-spacing:1px;color:rgba(255,255,255,.55);margin-bottom:6px}
+    .next-opp{font-size:19px;font-weight:700;margin-bottom:5px}
+    .next-det{font-size:12px;color:rgba(255,255,255,.7)}
+    .ha-pill{display:inline-block;background:var(--red);padding:2px 9px;border-radius:10px;font-size:10px;font-weight:700;margin-right:6px;text-transform:uppercase}
+
+    /* ── Streaks ── */
+    .streak-list{background:var(--surface);border-radius:12px;box-shadow:0 1px 4px rgba(0,0,0,.07);overflow:hidden}
+    .streak-row{display:flex;align-items:center;gap:10px;padding:10px 15px;border-bottom:1px solid var(--border)}
+    .streak-row:last-child{border-bottom:none}
+    .streak-badge{background:#fef3c7;color:#d97706;padding:2px 9px;border-radius:10px;font-size:11px;font-weight:600;white-space:nowrap}
+    .streak-name{font-weight:600;font-size:13px;min-width:80px}
+    .streak-det{font-size:12px;color:var(--muted);flex:1}
+
+    /* ── Scouting ── */
+    .scout-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:16px}
+    .scout-card{background:var(--surface);border-radius:12px;padding:18px;box-shadow:0 1px 4px rgba(0,0,0,.07)}
+    .scout-card h3{font-size:14px;font-weight:700;color:var(--navy);margin-bottom:3px}
+    .scout-date{font-size:11px;color:var(--muted);margin-bottom:12px}
+    .scout-section{margin-top:11px}
+    .scout-section h4{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.6px;color:var(--text);margin-bottom:5px}
+    .scout-notes{font-size:12px;color:var(--text);background:var(--bg);border-radius:7px;padding:9px 11px;min-height:50px;line-height:1.55;white-space:pre-wrap}
+    .no-scout{font-size:12px;color:var(--muted);font-style:italic}
+    .empty{padding:16px;color:var(--muted);font-size:13px}
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="h-left">
+    <div class="logo">⚾</div>
+    <div class="team-title">
+      <h1 id="teamName">NLSAA3 – Bombers</h1>
+      <div class="sub" id="seasonSub">2026 Spring · Naperville, IL</div>
+    </div>
+  </div>
+  <div class="h-right">
+    <div class="record" id="recordBadge">–</div>
+    <div class="updated" id="updatedTime"></div>
+  </div>
+</header>
+
+<nav>
+  <button class="active" onclick="showTab('overview',this)">Overview</button>
+  <button onclick="showTab('batting',this)">Batting</button>
+  <button onclick="showTab('pitching',this)">Pitching</button>
+  <button onclick="showTab('schedule',this)">Schedule</button>
+  <button onclick="showTab('scouting',this)">Scouting</button>
+</nav>
+
+<main>
+
+  <!-- OVERVIEW -->
+  <div id="tab-overview" class="tab active">
+    <div class="cards" id="overviewCards"></div>
+    <div id="nextGameWrap"></div>
+    <div class="leaders" id="leadersGrid"></div>
+    <div class="two">
+      <div>
+        <div class="sh">Recent Results</div>
+        <div class="game-list" id="recentGames"></div>
+      </div>
+      <div>
+        <div class="sh">Hot Streaks 🔥</div>
+        <div class="streak-list" id="streakList"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BATTING -->
+  <div id="tab-batting" class="tab">
+    <div class="sh">Season Batting Statistics</div>
+    <div class="tw">
+      <table id="tBat">
+        <thead><tr>
+          <th data-col="0" data-text>№</th>
+          <th data-col="1" data-text>Player</th>
+          <th data-col="2">GP</th>
+          <th data-col="3">AB</th>
+          <th data-col="4">H</th>
+          <th data-col="5">2B</th>
+          <th data-col="6">R</th>
+          <th data-col="7">RBI</th>
+          <th data-col="8">BB</th>
+          <th data-col="9">SO</th>
+          <th data-col="10">SB</th>
+          <th data-col="11">AVG</th>
+          <th data-col="12">OBP</th>
+          <th data-col="13">SLG</th>
+          <th data-col="14">OPS</th>
+          <th data-col="15">QAB%</th>
+        </tr></thead>
+        <tbody id="tBatBody"></tbody>
+      </table>
+    </div>
+    <div class="sh" style="margin-top:24px">Team Totals</div>
+    <div class="tw">
+      <table id="tTeam">
+        <thead><tr>
+          <th>GP</th><th>AB</th><th>H</th><th>2B</th><th>R</th><th>RBI</th>
+          <th>BB</th><th>SO</th><th>SB</th><th>AVG</th><th>OBP</th><th>SLG</th><th>OPS</th>
+        </tr></thead>
+        <tbody id="tTeamBody"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- PITCHING -->
+  <div id="tab-pitching" class="tab">
+    <div class="sh">Season Pitching Statistics</div>
+    <div class="tw">
+      <table id="tPit">
+        <thead><tr>
+          <th data-col="0" data-text>№</th>
+          <th data-col="1" data-text>Pitcher</th>
+          <th data-col="2">GP</th>
+          <th data-col="3">IP</th>
+          <th data-col="4">W</th>
+          <th data-col="5">L</th>
+          <th data-col="6">ERA</th>
+          <th data-col="7">WHIP</th>
+          <th data-col="8">K</th>
+          <th data-col="9">BB</th>
+          <th data-col="10">K/BB</th>
+          <th data-col="11">BAA</th>
+        </tr></thead>
+        <tbody id="tPitBody"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- SCHEDULE -->
+  <div id="tab-schedule" class="tab">
+    <div class="sh">Completed Games</div>
+    <div class="game-list" id="completedList"></div>
+    <div class="sh">Upcoming Schedule</div>
+    <div class="game-list" id="upcomingList"></div>
+  </div>
+
+  <!-- SCOUTING -->
+  <div id="tab-scouting" class="tab">
+    <div class="sh">Scouting Reports — Upcoming Opponents</div>
+    <p style="font-size:12px;color:var(--muted);margin-bottom:18px">
+      Edit <code>scouting.js</code> to add notes for each upcoming game.
+    </p>
+    <div class="scout-grid" id="scoutGrid"></div>
+  </div>
+
+</main>
+
+<script src="data.js"></script>
+<script src="scouting.js"></script>
+<script>
+// ── Formatters ────────────────────────────────────────────────
+const ba = n => (n == null || isNaN(n)) ? '—' : (n < 1 ? n.toFixed(3).replace('0.','.') : n.toFixed(3));
+const dec = (n, d=2) => (n == null || isNaN(n)) ? '—' : n.toFixed(d);
+const pct = n => (n == null || isNaN(n)) ? '—' : (n*100).toFixed(1)+'%';
+const ip  = n => { if (!n) return '0.0'; const f=Math.floor(n); return f+'.'+(Math.round((n-f)*3)); };
+
+function fmtDate(iso, tz) {
+  return new Date(iso).toLocaleDateString('en-US',{timeZone:tz||'America/Chicago',weekday:'short',month:'short',day:'numeric'});
+}
+function fmtTime(iso, tz) {
+  return new Date(iso).toLocaleTimeString('en-US',{timeZone:tz||'America/Chicago',hour:'numeric',minute:'2-digit'});
+}
+function stripLeague(name) {
+  return (name||'').replace(/^[A-Z]+SAA\d+\s*[-–]\s*/i,'').trim();
+}
+
+// ── Tab switching ─────────────────────────────────────────────
+function showTab(id, btn) {
+  document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+  document.querySelectorAll('nav button').forEach(b=>b.classList.remove('active'));
+  document.getElementById('tab-'+id).classList.add('active');
+  if(btn) btn.classList.add('active');
+}
+
+// ── Table sort ────────────────────────────────────────────────
+const sortState = {};
+function initSort(tableId) {
+  const tbl = document.getElementById(tableId);
+  tbl.querySelectorAll('thead th').forEach(th => {
+    th.style.cursor = 'pointer';
+    th.addEventListener('click', () => {
+      const col = +th.dataset.col;
+      const isText = th.hasAttribute('data-text');
+      const key = tableId+col;
+      const asc = sortState[key] !== 'asc';
+      sortState[key] = asc ? 'asc' : 'desc';
+      tbl.querySelectorAll('thead th').forEach(h=>h.classList.remove('asc','desc'));
+      th.classList.add(asc?'asc':'desc');
+      const tbody = tbl.querySelector('tbody');
+      const rows = [...tbody.querySelectorAll('tr')];
+      rows.sort((a,b)=>{
+        const av = a.cells[col]?.dataset.v ?? a.cells[col]?.textContent ?? '';
+        const bv = b.cells[col]?.dataset.v ?? b.cells[col]?.textContent ?? '';
+        if(isText) return asc ? av.localeCompare(bv) : bv.localeCompare(av);
+        return asc ? +av - +bv : +bv - +av;
+      });
+      rows.forEach(r=>tbody.appendChild(r));
+    });
+  });
+}
+
+// ── Build player map ─────────────────────────────────────────
+const playerMap = {};
+DASHBOARD_DATA.roster.forEach(p=>{
+  playerMap[p.id]={name:`${p.first_name} ${p.last_name}`,num:p.number,first:p.first_name};
+});
+
+// ── Build game scores map ─────────────────────────────────────
+const scoreMap = {};
+(DASHBOARD_DATA.game_results||[]).forEach(g=>{
+  scoreMap[g.event_id]={us:g.owning_team_score,them:g.opponent_team_score,status:g.game_status};
+});
+
+// ── Parse schedule ────────────────────────────────────────────
+const now = new Date();
+const doneGames=[], nextGames=[];
+
+(DASHBOARD_DATA.events||[]).forEach(item=>{
+  const ev = item.event || item;
+  if((ev.event_type||ev.type) !== 'game') return;
+  const pre = item.pregame_data || {};
+  const score = scoreMap[ev.id];
+  const date = new Date(ev.start?.datetime || ev.start);
+  const entry = {
+    id: ev.id, date, tz: ev.timezone,
+    opponent: pre.opponent_name || ev.title || '',
+    home_away: pre.home_away || ev.home_away || 'away',
+    location: ev.location?.name || '',
+    score,
+  };
+  if(score?.status==='completed' || (!score && date<now)) doneGames.push(entry);
+  else nextGames.push(entry);
+});
+doneGames.sort((a,b)=>a.date-b.date);
+nextGames.sort((a,b)=>a.date-b.date);
+
+// ── Parse stats ───────────────────────────────────────────────
+const rawP = DASHBOARD_DATA.stats?.stats_data?.players || {};
+const teamOff = DASHBOARD_DATA.stats?.stats_data?.stats?.offense || {};
+const rawStreaks = DASHBOARD_DATA.stats?.stats_data?.streaks || {};
+
+const batRows=[], pitRows=[];
+
+Object.entries(rawP).forEach(([pid, data])=>{
+  const p = playerMap[pid]; if(!p) return;
+  const off = data.stats?.offense||{};
+  const def = data.stats?.defense||{};
+  const gen = data.stats?.general||{};
+  batRows.push({
+    num: parseInt(p.num)||99, name:p.name,
+    gp:off.GP||gen.GP||0, ab:off.AB||0, h:off.H||0,
+    d2:off['2B']||0, r:off.R||0, rbi:off.RBI||0,
+    bb:off.BB||0, so:off.SO||0, sb:off.SB||0,
+    avg:off.AVG||0, obp:off.OBP||0, slg:off.SLG||0, ops:off.OPS||0,
+    qab:off['QAB%']||0,
+  });
+  if((def['GP:P']||0)>0 || (def.IP||0)>0) {
+    pitRows.push({
+      num:parseInt(p.num)||99, name:p.name,
+      gp:def['GP:P']||0, ip:def.IP||0,
+      w:def.W||0, l:def.L||0,
+      era:def.ERA||0, whip:def.WHIP||0,
+      k:def.SO||0, bb:def.BB||0,
+      kbb:def['K/BB']||0, baa:def.BAA||0,
+    });
+  }
+});
+batRows.sort((a,b)=>a.num-b.num);
+pitRows.sort((a,b)=>a.era-b.era);
+
+// ── Parse streaks ─────────────────────────────────────────────
+const streaks=[];
+Object.entries(rawStreaks).forEach(([pid,data])=>{
+  const p=playerMap[pid]; if(!p) return;
+  if(data.streak_H) {
+    const gp=data.streak_H.general?.GP||0;
+    streaks.push({name:p.name,badge:'Hit Streak',detail:`${gp}-game hitting streak`});
+  }
+  if(data.streak_RBI) {
+    const gp=data.streak_RBI.general?.GP||0;
+    const rbi=data.streak_RBI.offense?.RBI||0;
+    streaks.push({name:p.name,badge:'RBI Streak',detail:`${rbi} RBI in last ${gp} games`});
+  }
+});
+
+// ── Render helpers ────────────────────────────────────────────
+function gameRowHTML(g) {
+  const win = g.score ? g.score.us > g.score.them : null;
+  const dc = win===null?'dot-u':win?'dot-w':'dot-l';
+  const sc = win===null?'sc-u':win?'sc-w':'sc-l';
+  const lbl = win===null?'–':win?'W':'L';
+  const score = g.score ? `${g.score.us}–${g.score.them}` : fmtTime(g.date,g.tz);
+  const ha = g.home_away==='home' ? '🏠 Home' : `✈️ ${g.location||'Away'}`;
+  return `<div class="game-row">
+    <div class="result-dot ${dc}">${lbl}</div>
+    <div class="g-info">
+      <div class="g-opp">${stripLeague(g.opponent)}</div>
+      <div class="g-meta">${fmtDate(g.date,g.tz)} · ${ha}</div>
+    </div>
+    <div class="g-score ${sc}">${score}</div>
+  </div>`;
+}
+
+// ── OVERVIEW ─────────────────────────────────────────────────
+const wins = doneGames.filter(g=>g.score&&g.score.us>g.score.them).length;
+const losses = doneGames.filter(g=>g.score&&g.score.us<g.score.them).length;
+const rs = doneGames.reduce((s,g)=>s+(g.score?.us||0),0);
+const ra = doneGames.reduce((s,g)=>s+(g.score?.them||0),0);
+
+if(DASHBOARD_DATA.fetched_at) {
+  const d=new Date(DASHBOARD_DATA.fetched_at);
+  document.getElementById('updatedTime').textContent =
+    'Updated '+d.toLocaleString('en-US',{month:'short',day:'numeric',hour:'numeric',minute:'2-digit'});
+}
+document.getElementById('teamName').textContent = DASHBOARD_DATA.team_name || 'Bombers';
+document.getElementById('recordBadge').textContent = `${wins}–${losses}`;
+
+document.getElementById('overviewCards').innerHTML = [
+  {v:`${wins}–${losses}`,l:'Record',red:true},
+  {v:rs,l:'Runs Scored'},
+  {v:ra,l:'Runs Allowed'},
+  {v:ba(teamOff.AVG),l:'Team AVG'},
+  {v:ba(teamOff.OBP),l:'Team OBP'},
+  {v:teamOff.SB||0,l:'Stolen Bases'},
+  {v:`${((teamOff['SB%']||1)*100).toFixed(0)}%`,l:'SB Success'},
+].map(c=>`<div class="card${c.red?' red':''}"><div class="val">${c.v}</div><div class="lbl">${c.l}</div></div>`).join('');
+
+// Next game
+const next = nextGames[0];
+document.getElementById('nextGameWrap').innerHTML = next ? `
+  <div class="next-card">
+    <div class="next-label">⚾ Next Game</div>
+    <div class="next-opp">${stripLeague(next.opponent)}</div>
+    <div class="next-det">
+      <span class="ha-pill">${next.home_away==='home'?'Home':'Away'}</span>
+      ${fmtDate(next.date,next.tz)} at ${fmtTime(next.date,next.tz)}
+      ${next.location?' · '+next.location:''}
+    </div>
+  </div>` : '';
+
+// Leaders
+const qual = batRows.filter(r=>r.ab>=5);
+[
+  {cat:'Batting Avg',rows:[...qual].sort((a,b)=>b.avg-a.avg),val:r=>ba(r.avg)},
+  {cat:'RBI',rows:[...batRows].sort((a,b)=>b.rbi-a.rbi),val:r=>r.rbi},
+  {cat:'OPS',rows:[...qual].sort((a,b)=>b.ops-a.ops),val:r=>ba(r.ops)},
+].forEach(({cat,rows,val})=>{
+  const [top,...rest]=rows;
+  document.getElementById('leadersGrid').innerHTML+=`
+    <div class="leader">
+      <div class="cat">${cat}</div>
+      <div class="ln">${top?.name||'—'}</div>
+      <div class="lv">${top?val(top):'—'}</div>
+      <div class="ru">${rest.slice(0,2).map(r=>`${r.name}: ${val(r)}`).join(' · ')}</div>
+    </div>`;
+});
+
+// Recent + streaks
+const recent=[...doneGames].reverse().slice(0,4);
+document.getElementById('recentGames').innerHTML=recent.length?recent.map(gameRowHTML).join(''):`<div class="empty">No completed games yet</div>`;
+document.getElementById('streakList').innerHTML=streaks.length?streaks.slice(0,6).map(s=>`
+  <div class="streak-row">
+    <div class="streak-name">${s.name}</div>
+    <div class="streak-det">${s.detail}</div>
+    <div class="streak-badge">${s.badge}</div>
+  </div>`).join(''):`<div class="empty">No active streaks</div>`;
+
+// ── BATTING ───────────────────────────────────────────────────
+document.getElementById('tBatBody').innerHTML=batRows.map(r=>`<tr>
+  <td data-v="${r.num}">${r.num}</td>
+  <td>${r.name}</td>
+  <td data-v="${r.gp}">${r.gp}</td>
+  <td data-v="${r.ab}">${r.ab}</td>
+  <td data-v="${r.h}">${r.h}</td>
+  <td data-v="${r.d2}">${r.d2}</td>
+  <td data-v="${r.r}">${r.r}</td>
+  <td data-v="${r.rbi}" class="bold">${r.rbi}</td>
+  <td data-v="${r.bb}">${r.bb}</td>
+  <td data-v="${r.so}">${r.so}</td>
+  <td data-v="${r.sb}">${r.sb}</td>
+  <td data-v="${r.avg}" class="bold">${ba(r.avg)}</td>
+  <td data-v="${r.obp}">${ba(r.obp)}</td>
+  <td data-v="${r.slg}">${ba(r.slg)}</td>
+  <td data-v="${r.ops}" class="bold">${ba(r.ops)}</td>
+  <td data-v="${r.qab}">${pct(r.qab)}</td>
+</tr>`).join('');
+
+const t=teamOff;
+document.getElementById('tTeamBody').innerHTML=`<tr>
+  <td>${t.GP||0}</td><td>${t.AB||0}</td><td>${t.H||0}</td><td>${t['2B']||0}</td>
+  <td>${t.R||0}</td><td>${t.RBI||0}</td><td>${t.BB||0}</td><td>${t.SO||0}</td>
+  <td>${t.SB||0}</td><td class="bold">${ba(t.AVG)}</td><td class="bold">${ba(t.OBP)}</td>
+  <td>${ba(t.SLG)}</td><td class="bold">${ba(t.OPS)}</td>
+</tr>`;
+
+// ── PITCHING ──────────────────────────────────────────────────
+document.getElementById('tPitBody').innerHTML=pitRows.map(r=>`<tr>
+  <td data-v="${r.num}">${r.num}</td>
+  <td>${r.name}</td>
+  <td data-v="${r.gp}">${r.gp}</td>
+  <td data-v="${r.ip}">${ip(r.ip)}</td>
+  <td data-v="${r.w}">${r.w}</td>
+  <td data-v="${r.l}">${r.l}</td>
+  <td data-v="${r.era}" class="bold">${dec(r.era)}</td>
+  <td data-v="${r.whip}">${dec(r.whip)}</td>
+  <td data-v="${r.k}">${r.k}</td>
+  <td data-v="${r.bb}">${r.bb}</td>
+  <td data-v="${r.kbb}">${dec(r.kbb,1)}</td>
+  <td data-v="${r.baa}">${ba(r.baa)}</td>
+</tr>`).join('');
+
+// ── SCHEDULE ──────────────────────────────────────────────────
+document.getElementById('completedList').innerHTML=doneGames.length?doneGames.map(gameRowHTML).join(''):`<div class="empty">No completed games</div>`;
+document.getElementById('upcomingList').innerHTML=nextGames.length?nextGames.map(gameRowHTML).join(''):`<div class="empty">No upcoming games scheduled</div>`;
+
+// ── SCOUTING ──────────────────────────────────────────────────
+const SD = typeof SCOUTING_DATA!=='undefined' ? SCOUTING_DATA : {};
+document.getElementById('scoutGrid').innerHTML=nextGames.slice(0,10).map(g=>{
+  const opp=stripLeague(g.opponent);
+  const r=SD[g.id]||{};
+  const hasReport=r.pitching||r.hitting||r.defense||r.general;
+  return `<div class="scout-card">
+    <h3>${opp}</h3>
+    <div class="scout-date">${g.home_away==='home'?'🏠 Home':'✈️ Away'} · ${fmtDate(g.date,g.tz)} at ${fmtTime(g.date,g.tz)}</div>
+    ${r.pitching?`<div class="scout-section"><h4>⚾ Pitching</h4><div class="scout-notes">${r.pitching}</div></div>`:''}
+    ${r.hitting?`<div class="scout-section"><h4>🏏 Hitting</h4><div class="scout-notes">${r.hitting}</div></div>`:''}
+    ${r.defense?`<div class="scout-section"><h4>🧤 Defense</h4><div class="scout-notes">${r.defense}</div></div>`:''}
+    ${r.general?`<div class="scout-section"><h4>📋 Notes</h4><div class="scout-notes">${r.general}</div></div>`:''}
+    ${!hasReport?`<div class="no-scout">No report yet — add notes to scouting.js using event id:<br><code style="font-size:10px">${g.id}</code></div>`:''}
+  </div>`;
+}).join('');
+
+// ── Init sort on all tables ───────────────────────────────────
+['tBat','tPit'].forEach(initSort);
+</script>
+</body>
+</html>
