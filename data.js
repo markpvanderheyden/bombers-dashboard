@@ -9118,7 +9118,15 @@ const DASHBOARD_DATA = {
       }
     }
   ],
-  "game_results": [],
+  "game_results": [
+    {"event_id":"d52e5fc4-6a9d-4ded-ad24-79bf18f8ebce","owning_team_score":10,"opponent_team_score":5,"game_status":"completed","home_away":"away"},
+    {"event_id":"a72c4872-4dad-4883-8ef5-5f001ad23f79","owning_team_score":10,"opponent_team_score":4,"game_status":"completed","home_away":"home"},
+    {"event_id":"a6d78970-9cbc-400f-8935-926f25fdca1e","owning_team_score":9,"opponent_team_score":5,"game_status":"completed","home_away":"away"},
+    {"event_id":"064288f0-7650-44d3-b17e-238732d535f2","owning_team_score":4,"opponent_team_score":6,"game_status":"completed","home_away":"home"},
+    {"event_id":"ec534f0f-3cc8-4349-a739-449bf7981c04","owning_team_score":13,"opponent_team_score":3,"game_status":"completed","home_away":"home"},
+    {"event_id":"fc1d4f4b-244c-4783-b5ca-41af64727935","owning_team_score":18,"opponent_team_score":5,"game_status":"completed","home_away":"away"},
+    {"event_id":"0db63175-3860-4937-a3ec-591e12dbbcb3","owning_team_score":7,"opponent_team_score":8,"game_status":"completed","home_away":"away"}
+  ],
   "opponent_data": {
     "8aad0a67-c204-463a-af0a-3c99854a4c56": {
       "name": "CLSAA4 - John Greene Real Estate",

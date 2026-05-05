@@ -43,14 +43,30 @@ def main():
     schedule = fetch(f"{BASE}/teams/{TEAM_ID}/schedule?fetch_place_details=true", headers)
     print("✓")
 
-    # Try to fetch completed game scores
-    game_results = []
+    # Load existing game scores so we never lose them
+    existing_scores = {}
+    try:
+        with open("data.js", "r") as f:
+            import re
+            content = f.read().replace("const DASHBOARD_DATA = ", "").rstrip(";")
+            existing = json.loads(content)
+            for g in existing.get("game_results", []):
+                existing_scores[g["event_id"]] = g
+    except Exception:
+        pass
+
+    # Try to fetch new game scores from API
     for candidate in ["/games", "/game-streams", "/game-results"]:
         result = fetch_silent(f"{BASE}/teams/{TEAM_ID}{candidate}", headers)
-        if result:
-            game_results = result
-            print(f"✓ Game scores fetched")
+        if result and isinstance(result, list) and result:
+            for g in result:
+                eid = g.get("event_id") or g.get("id")
+                if eid:
+                    existing_scores[eid] = g
+            print(f"✓ Game scores updated")
             break
+
+    game_results = list(existing_scores.values())
 
     # Extract all opponents from schedule (past and upcoming)
     all_opponents = {}
