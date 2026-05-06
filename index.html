@@ -7,8 +7,8 @@
   <style>
     *{box-sizing:border-box;margin:0;padding:0}
     :root{
-      --navy:#1B3A6B;--navy-dark:#0f2547;--red:#C8102E;
-      --bg:#F4F6F9;--surface:#fff;--border:#E4E8EE;
+      --navy:#C8102E;--navy-dark:#8B0D1E;--red:#C8102E;
+      --bg:#EFEFEF;--surface:#fff;--border:#E0E0E0;
       --muted:#8A96A8;--text:#1F2937;
       --green:#10B981;--loss:#EF4444;
     }
@@ -21,14 +21,14 @@
     .team-title h1{font-size:20px;font-weight:700;letter-spacing:-.3px}
     .team-title .sub{font-size:12px;color:rgba(255,255,255,.6);margin-top:3px}
     .h-right{text-align:right}
-    .record{background:var(--red);padding:7px 18px;border-radius:20px;font-weight:800;font-size:18px;display:inline-block}
+    .record{background:#fff;color:var(--navy);padding:7px 18px;border-radius:20px;font-weight:800;font-size:18px;display:inline-block}
     .updated{font-size:11px;color:rgba(255,255,255,.45);margin-top:4px}
 
     /* ── Nav ── */
     nav{background:var(--navy);display:flex;padding:0 20px;overflow-x:auto;gap:0}
     nav button{background:none;border:none;border-bottom:3px solid transparent;color:rgba(255,255,255,.6);padding:12px 18px;font-size:13px;font-weight:500;cursor:pointer;white-space:nowrap;transition:color .15s}
     nav button:hover{color:#fff}
-    nav button.active{color:#fff;border-bottom-color:var(--red)}
+    nav button.active{color:#fff;border-bottom-color:#fff}
 
     /* ── Layout ── */
     main{max-width:1200px;margin:0 auto;padding:24px}
@@ -92,7 +92,7 @@
     .next-label{font-size:10px;text-transform:uppercase;letter-spacing:1px;color:rgba(255,255,255,.55);margin-bottom:6px}
     .next-opp{font-size:19px;font-weight:700;margin-bottom:5px}
     .next-det{font-size:12px;color:rgba(255,255,255,.7)}
-    .ha-pill{display:inline-block;background:var(--red);padding:2px 9px;border-radius:10px;font-size:10px;font-weight:700;margin-right:6px;text-transform:uppercase}
+    .ha-pill{display:inline-block;background:rgba(255,255,255,0.22);border:1px solid rgba(255,255,255,0.5);padding:2px 9px;border-radius:10px;font-size:10px;font-weight:700;margin-right:6px;text-transform:uppercase}
 
     /* ── Streaks ── */
     .streak-list{background:var(--surface);border-radius:12px;box-shadow:0 1px 4px rgba(0,0,0,.07);overflow:hidden}
