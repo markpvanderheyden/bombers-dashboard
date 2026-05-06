@@ -38,19 +38,19 @@
     /* ── Cards grid ── */
     .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:14px;margin-bottom:22px}
     .card{background:var(--surface);border-radius:12px;padding:16px;text-align:center;box-shadow:0 1px 4px rgba(0,0,0,.07)}
-    .card .val{font-size:28px;font-weight:800;color:var(--navy);line-height:1}
+    .card .val{font-size:28px;font-weight:800;color:#111;line-height:1}
     .card .lbl{font-size:11px;color:var(--muted);margin-top:5px;text-transform:uppercase;letter-spacing:.5px}
-    .card.red .val{color:var(--red)}
+    .card.red .val{color:#111}
 
     /* ── Section headers ── */
-    .sh{font-size:15px;font-weight:700;color:var(--navy);margin:22px 0 10px;padding-bottom:7px;border-bottom:2px solid var(--border)}
+    .sh{font-size:15px;font-weight:700;color:#111;margin:22px 0 10px;padding-bottom:7px;border-bottom:2px solid var(--border)}
 
     /* ── Tables ── */
     .tw{background:var(--surface);border-radius:12px;overflow:hidden;overflow-x:auto;box-shadow:0 1px 4px rgba(0,0,0,.07)}
     table{width:100%;border-collapse:collapse;font-size:13px}
     thead th{background:var(--navy);color:#fff;padding:9px 13px;text-align:right;font-size:11px;font-weight:600;cursor:pointer;user-select:none;white-space:nowrap}
     thead th:first-child,thead th:nth-child(2){text-align:left}
-    thead th:hover{background:#243d6e}
+    thead th:hover{background:#a50e24}
     thead th.asc::after{content:' ↑'}
     thead th.desc::after{content:' ↓'}
     tbody tr{border-bottom:1px solid var(--border);transition:background .1s}
@@ -59,7 +59,7 @@
     tbody td{padding:9px 13px;text-align:right}
     tbody td:first-child{text-align:center;color:var(--muted);font-size:11px;font-weight:700;width:34px}
     tbody td:nth-child(2){text-align:left;font-weight:600}
-    .bold{color:var(--navy);font-weight:700}
+    .bold{color:#111;font-weight:700}
 
     /* ── Two-col ── */
     .two{display:grid;grid-template-columns:1fr 1fr;gap:16px}
@@ -84,8 +84,8 @@
     @media(max-width:560px){.leaders{grid-template-columns:1fr}}
     .leader{background:var(--surface);border-radius:12px;padding:16px;box-shadow:0 1px 4px rgba(0,0,0,.07)}
     .leader .cat{font-size:10px;text-transform:uppercase;letter-spacing:.8px;color:var(--muted);font-weight:600}
-    .leader .ln{font-size:17px;font-weight:700;color:var(--navy);margin:5px 0 2px}
-    .leader .lv{font-size:26px;font-weight:800;color:var(--red)}
+    .leader .ln{font-size:17px;font-weight:700;color:#111;margin:5px 0 2px}
+    .leader .lv{font-size:26px;font-weight:800;color:#111}
     .leader .ru{font-size:11px;color:var(--muted);margin-top:6px}
 
     /* ── Next game ── */
@@ -106,7 +106,7 @@
     /* ── Scouting ── */
     .scout-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:20px}
     .scout-card{background:var(--surface);border-radius:12px;padding:20px;box-shadow:0 1px 4px rgba(0,0,0,.07)}
-    .scout-card h3{font-size:15px;font-weight:700;color:var(--navy);margin-bottom:3px}
+    .scout-card h3{font-size:15px;font-weight:700;color:#111;margin-bottom:3px}
     .scout-date{font-size:11px;color:var(--muted);margin-bottom:14px}
     .scout-section{margin-top:14px}
     .scout-section h4{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.6px;color:var(--text);margin-bottom:6px}
@@ -115,10 +115,10 @@
     .empty{padding:16px;color:var(--muted);font-size:13px}
     .opp-stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:10px}
     .opp-stat{background:var(--bg);border-radius:8px;padding:8px;text-align:center}
-    .opp-stat .v{font-size:16px;font-weight:800;color:var(--navy)}
+    .opp-stat .v{font-size:16px;font-weight:800;color:#111}
     .opp-stat .l{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.4px;margin-top:2px}
     .opp-table{width:100%;border-collapse:collapse;font-size:12px;margin-top:6px}
-    .opp-table th{background:#f0f3f8;color:var(--navy);padding:5px 8px;text-align:right;font-size:10px;font-weight:700}
+    .opp-table th{background:#f0f3f8;color:#111;padding:5px 8px;text-align:right;font-size:10px;font-weight:700}
     .opp-table th:first-child{text-align:left}
     .opp-table td{padding:5px 8px;text-align:right;border-bottom:1px solid var(--border)}
     .opp-table td:first-child{text-align:left;font-weight:600}
