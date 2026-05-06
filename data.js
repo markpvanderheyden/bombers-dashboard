@@ -1,7 +1,7 @@
 const DASHBOARD_DATA = {
   "team_name": "NLSAA3 - Bombers",
   "team_id": "d72d96f1-df57-4a92-8b40-1cdf06723881",
-  "fetched_at": "2026-05-06T09:46:17.192486",
+  "fetched_at": "2026-05-06T09:57:03.593866",
   "stats": {
     "id": "d72d96f1-df57-4a92-8b40-1cdf06723881",
     "team_id": "d72d96f1-df57-4a92-8b40-1cdf06723881",
@@ -58733,7 +58733,8 @@ const DASHBOARD_DATA = {
         "bb": 7,
         "k": 5,
         "hbp": 0,
-        "sf": 0
+        "sf": 0,
+        "g": 4
       },
       "66a6fa77-86da-442f-9890-297935c7195f": {
         "pa": 15,
@@ -58745,7 +58746,8 @@ const DASHBOARD_DATA = {
         "bb": 2,
         "k": 3,
         "hbp": 0,
-        "sf": 0
+        "sf": 0,
+        "g": 5
       },
       "7c35c955-3ffd-4c53-8bad-1d78002dae5b": {
         "pa": 15,
@@ -58757,7 +58759,8 @@ const DASHBOARD_DATA = {
         "bb": 2,
         "k": 4,
         "hbp": 0,
-        "sf": 0
+        "sf": 0,
+        "g": 5
       },
       "1037e357-7c53-4fd6-aa87-bf19f729790f": {
         "pa": 12,
@@ -58769,7 +58772,8 @@ const DASHBOARD_DATA = {
         "bb": 0,
         "k": 5,
         "hbp": 0,
-        "sf": 0
+        "sf": 0,
+        "g": 4
       },
       "fb476fc3-3f1a-4503-aa1e-3b1008a8f18b": {
         "pa": 14,
@@ -58781,7 +58785,8 @@ const DASHBOARD_DATA = {
         "bb": 1,
         "k": 6,
         "hbp": 0,
-        "sf": 0
+        "sf": 0,
+        "g": 5
       },
       "9dfd70d7-97ff-4730-9d3f-6d92934e06e5": {
         "pa": 17,
@@ -58793,7 +58798,8 @@ const DASHBOARD_DATA = {
         "bb": 2,
         "k": 3,
         "hbp": 0,
-        "sf": 0
+        "sf": 0,
+        "g": 5
       },
       "1b3d70c9-84a6-4070-a417-63089bf9cb14": {
         "pa": 14,
@@ -58805,7 +58811,8 @@ const DASHBOARD_DATA = {
         "bb": 2,
         "k": 4,
         "hbp": 0,
-        "sf": 0
+        "sf": 0,
+        "g": 5
       },
       "d14ae687-0948-432c-a68e-b4a5375e37aa": {
         "pa": 12,
@@ -58817,7 +58824,8 @@ const DASHBOARD_DATA = {
         "bb": 2,
         "k": 3,
         "hbp": 0,
-        "sf": 0
+        "sf": 0,
+        "g": 5
       },
       "560fbac6-1c49-42a9-a0e9-9692e96a17ee": {
         "pa": 12,
@@ -58829,7 +58837,8 @@ const DASHBOARD_DATA = {
         "bb": 0,
         "k": 4,
         "hbp": 0,
-        "sf": 0
+        "sf": 0,
+        "g": 5
       },
       "ad7bae24-10ec-429e-835a-47e314437043": {
         "pa": 11,
@@ -58841,7 +58850,8 @@ const DASHBOARD_DATA = {
         "bb": 1,
         "k": 3,
         "hbp": 0,
-        "sf": 0
+        "sf": 0,
+        "g": 5
       },
       "eacd44cd-bb4f-4a71-abd1-9289788d7c7e": {
         "pa": 10,
@@ -58853,7 +58863,8 @@ const DASHBOARD_DATA = {
         "bb": 2,
         "k": 4,
         "hbp": 0,
-        "sf": 0
+        "sf": 0,
+        "g": 5
       },
       "ef3a5973-af33-4938-9c5e-f76a508f19e3": {
         "pa": 7,
@@ -58865,7 +58876,8 @@ const DASHBOARD_DATA = {
         "bb": 3,
         "k": 2,
         "hbp": 0,
-        "sf": 0
+        "sf": 0,
+        "g": 3
       }
     },
     "f2cdea92-b99e-4595-bd8b-ae66eaefa435": {
@@ -58879,7 +58891,8 @@ const DASHBOARD_DATA = {
         "bb": 2,
         "k": 1,
         "hbp": 0,
-        "sf": 0
+        "sf": 0,
+        "g": 3
       },
       "6c6e75fd-7f7b-4bf3-9bf0-c4272e77d1c5": {
         "pa": 10,
@@ -58891,7 +58904,8 @@ const DASHBOARD_DATA = {
         "bb": 4,
         "k": 2,
         "hbp": 0,
-        "sf": 0
+        "sf": 0,
+        "g": 3
       },
       "4cf0339f-c86b-421a-bf90-ad1a604573e3": {
         "pa": 8,
@@ -58903,7 +58917,8 @@ const DASHBOARD_DATA = {
         "bb": 1,
         "k": 0,
         "hbp": 0,
-        "sf": 0
+        "sf": 0,
+        "g": 3
       },
       "81553699-d297-4292-88ba-fa453ebbbbee": {
         "pa": 8,
@@ -58915,7 +58930,8 @@ const DASHBOARD_DATA = {
         "bb": 3,
         "k": 1,
         "hbp": 0,
-        "sf": 0
+        "sf": 0,
+        "g": 3
       },
       "3783d55d-f67d-4f21-98f2-a88bbf08c24c": {
         "pa": 7,
@@ -58927,7 +58943,8 @@ const DASHBOARD_DATA = {
         "bb": 2,
         "k": 0,
         "hbp": 0,
-        "sf": 0
+        "sf": 0,
+        "g": 3
       },
       "4dbcec35-58ab-44b4-8017-a78aa1e54a36": {
         "pa": 6,
@@ -58939,7 +58956,8 @@ const DASHBOARD_DATA = {
         "bb": 2,
         "k": 1,
         "hbp": 0,
-        "sf": 0
+        "sf": 0,
+        "g": 3
       },
       "2d96e40f-15a1-44d7-b28d-faf75f4df3ef": {
         "pa": 7,
@@ -58951,7 +58969,8 @@ const DASHBOARD_DATA = {
         "bb": 0,
         "k": 6,
         "hbp": 0,
-        "sf": 0
+        "sf": 0,
+        "g": 3
       },
       "11930c92-ed75-4956-b823-ce67bf4d01f9": {
         "pa": 7,
@@ -58963,7 +58982,8 @@ const DASHBOARD_DATA = {
         "bb": 3,
         "k": 2,
         "hbp": 0,
-        "sf": 0
+        "sf": 0,
+        "g": 3
       },
       "db9a51bf-b90e-40d6-8947-e96f02092d87": {
         "pa": 5,
@@ -58975,7 +58995,8 @@ const DASHBOARD_DATA = {
         "bb": 2,
         "k": 2,
         "hbp": 0,
-        "sf": 0
+        "sf": 0,
+        "g": 3
       },
       "84557836-8689-4207-90d6-058d20942369": {
         "pa": 6,
@@ -58987,7 +59008,8 @@ const DASHBOARD_DATA = {
         "bb": 1,
         "k": 2,
         "hbp": 0,
-        "sf": 0
+        "sf": 0,
+        "g": 3
       },
       "bfbc256c-3416-41f2-8c0b-9047a388f139": {
         "pa": 5,
@@ -58999,7 +59021,8 @@ const DASHBOARD_DATA = {
         "bb": 1,
         "k": 3,
         "hbp": 0,
-        "sf": 0
+        "sf": 0,
+        "g": 3
       },
       "3448bd74-2d75-4144-8c16-1884494f5b7a": {
         "pa": 5,
@@ -59011,7 +59034,8 @@ const DASHBOARD_DATA = {
         "bb": 1,
         "k": 0,
         "hbp": 0,
-        "sf": 0
+        "sf": 0,
+        "g": 2
       }
     },
     "f5e1b457-b39b-4fcc-8f50-888205156226": {
@@ -59025,7 +59049,8 @@ const DASHBOARD_DATA = {
         "bb": 3,
         "k": 6,
         "hbp": 0,
-        "sf": 0
+        "sf": 0,
+        "g": 5
       },
       "41480d38-c429-40b2-85c4-1ba3c3486d74": {
         "pa": 12,
@@ -59037,7 +59062,8 @@ const DASHBOARD_DATA = {
         "bb": 4,
         "k": 4,
         "hbp": 0,
-        "sf": 0
+        "sf": 0,
+        "g": 4
       },
       "de1cfe7d-43a7-41f6-ad99-23dd9dd9fcce": {
         "pa": 6,
@@ -59049,7 +59075,8 @@ const DASHBOARD_DATA = {
         "bb": 1,
         "k": 1,
         "hbp": 0,
-        "sf": 0
+        "sf": 0,
+        "g": 3
       },
       "789fa1c4-bd7b-4a42-9ac9-edc46d02d29f": {
         "pa": 17,
@@ -59061,7 +59088,8 @@ const DASHBOARD_DATA = {
         "bb": 2,
         "k": 4,
         "hbp": 0,
-        "sf": 0
+        "sf": 0,
+        "g": 5
       },
       "d9efa12e-3d1d-4563-ba28-a6986ac3834e": {
         "pa": 14,
@@ -59073,7 +59101,8 @@ const DASHBOARD_DATA = {
         "bb": 3,
         "k": 7,
         "hbp": 0,
-        "sf": 0
+        "sf": 0,
+        "g": 5
       },
       "34de90ea-8cc4-4c73-a6c7-917b542e7039": {
         "pa": 8,
@@ -59085,7 +59114,8 @@ const DASHBOARD_DATA = {
         "bb": 2,
         "k": 1,
         "hbp": 0,
-        "sf": 0
+        "sf": 0,
+        "g": 4
       },
       "a45c3233-dcdd-45bd-9738-0e839352ffb4": {
         "pa": 13,
@@ -59097,7 +59127,8 @@ const DASHBOARD_DATA = {
         "bb": 4,
         "k": 4,
         "hbp": 0,
-        "sf": 0
+        "sf": 0,
+        "g": 5
       },
       "47999c58-ec48-426b-9a08-703d7ca6bc52": {
         "pa": 13,
@@ -59109,7 +59140,8 @@ const DASHBOARD_DATA = {
         "bb": 1,
         "k": 6,
         "hbp": 0,
-        "sf": 0
+        "sf": 0,
+        "g": 5
       },
       "dda3de77-d661-47e4-8aba-f40b5b06062c": {
         "pa": 14,
@@ -59121,7 +59153,8 @@ const DASHBOARD_DATA = {
         "bb": 2,
         "k": 6,
         "hbp": 0,
-        "sf": 0
+        "sf": 0,
+        "g": 5
       },
       "e29ae7f7-15f6-4a73-a43f-ce67b20d9c29": {
         "pa": 11,
@@ -59133,7 +59166,8 @@ const DASHBOARD_DATA = {
         "bb": 2,
         "k": 3,
         "hbp": 0,
-        "sf": 0
+        "sf": 0,
+        "g": 5
       },
       "8601cb1c-d121-49d1-abcf-2f1c17e8f8e0": {
         "pa": 8,
@@ -59145,7 +59179,8 @@ const DASHBOARD_DATA = {
         "bb": 0,
         "k": 4,
         "hbp": 0,
-        "sf": 0
+        "sf": 0,
+        "g": 5
       },
       "68e76d69-2da2-4162-8008-e4b12e0c78b1": {
         "pa": 8,
@@ -59157,7 +59192,8 @@ const DASHBOARD_DATA = {
         "bb": 2,
         "k": 2,
         "hbp": 0,
-        "sf": 0
+        "sf": 0,
+        "g": 4
       },
       "264e7c5c-c0b6-43c7-b0ff-b88ab12f62fd": {
         "pa": 3,
@@ -59169,7 +59205,8 @@ const DASHBOARD_DATA = {
         "bb": 2,
         "k": 1,
         "hbp": 0,
-        "sf": 0
+        "sf": 0,
+        "g": 1
       },
       "3e0c497e-aa71-4327-8ad1-3142e392605d": {
         "pa": 2,
@@ -59181,7 +59218,8 @@ const DASHBOARD_DATA = {
         "bb": 1,
         "k": 1,
         "hbp": 0,
-        "sf": 0
+        "sf": 0,
+        "g": 1
       }
     },
     "7e901e85-dd0e-491d-8325-173085cac64e": {
@@ -59195,7 +59233,8 @@ const DASHBOARD_DATA = {
         "bb": 5,
         "k": 4,
         "hbp": 0,
-        "sf": 0
+        "sf": 0,
+        "g": 5
       },
       "1ec8f661-c112-4732-ae07-048fb5a6bfa9": {
         "pa": 15,
@@ -59207,7 +59246,8 @@ const DASHBOARD_DATA = {
         "bb": 2,
         "k": 1,
         "hbp": 0,
-        "sf": 0
+        "sf": 0,
+        "g": 5
       },
       "7c444a40-dc14-4520-affd-dfa22052eaa2": {
         "pa": 13,
@@ -59219,7 +59259,8 @@ const DASHBOARD_DATA = {
         "bb": 3,
         "k": 5,
         "hbp": 0,
-        "sf": 0
+        "sf": 0,
+        "g": 5
       },
       "12e41391-2096-457a-9142-a4083795ba51": {
         "pa": 14,
@@ -59231,7 +59272,8 @@ const DASHBOARD_DATA = {
         "bb": 5,
         "k": 2,
         "hbp": 0,
-        "sf": 0
+        "sf": 0,
+        "g": 5
       },
       "4eeb6762-b2a0-4348-8d99-4d4734f930a0": {
         "pa": 12,
@@ -59243,7 +59285,8 @@ const DASHBOARD_DATA = {
         "bb": 6,
         "k": 5,
         "hbp": 0,
-        "sf": 0
+        "sf": 0,
+        "g": 5
       },
       "665619a1-a2ed-4bd0-912f-82c05a5d38df": {
         "pa": 13,
@@ -59255,7 +59298,8 @@ const DASHBOARD_DATA = {
         "bb": 4,
         "k": 3,
         "hbp": 0,
-        "sf": 0
+        "sf": 0,
+        "g": 5
       },
       "8290b39e-d6e3-4255-9cf2-adab1cbb9a5d": {
         "pa": 13,
@@ -59267,7 +59311,8 @@ const DASHBOARD_DATA = {
         "bb": 4,
         "k": 3,
         "hbp": 0,
-        "sf": 0
+        "sf": 0,
+        "g": 5
       },
       "300c775a-a188-4529-bcf0-73b2ff32dc8d": {
         "pa": 13,
@@ -59279,7 +59324,8 @@ const DASHBOARD_DATA = {
         "bb": 5,
         "k": 4,
         "hbp": 0,
-        "sf": 0
+        "sf": 0,
+        "g": 5
       },
       "21fabe50-53b9-462f-9ccb-53dc067b2ada": {
         "pa": 10,
@@ -59291,7 +59337,8 @@ const DASHBOARD_DATA = {
         "bb": 2,
         "k": 5,
         "hbp": 0,
-        "sf": 0
+        "sf": 0,
+        "g": 4
       },
       "19ca4179-3dd7-4f14-b1f6-bdf574e6473f": {
         "pa": 12,
@@ -59303,7 +59350,8 @@ const DASHBOARD_DATA = {
         "bb": 4,
         "k": 2,
         "hbp": 0,
-        "sf": 0
+        "sf": 0,
+        "g": 5
       },
       "15a1692d-bb73-44dc-b09d-4f5129e280f1": {
         "pa": 8,
@@ -59315,7 +59363,8 @@ const DASHBOARD_DATA = {
         "bb": 2,
         "k": 3,
         "hbp": 0,
-        "sf": 0
+        "sf": 0,
+        "g": 4
       },
       "6f624eb1-58e1-4b6e-a571-972f9bb83841": {
         "pa": 9,
@@ -59327,7 +59376,8 @@ const DASHBOARD_DATA = {
         "bb": 4,
         "k": 3,
         "hbp": 0,
-        "sf": 0
+        "sf": 0,
+        "g": 3
       },
       "a77ac516-07fe-4e3a-9565-ea1fd2d5f9de": {
         "pa": 3,
@@ -59339,7 +59389,8 @@ const DASHBOARD_DATA = {
         "bb": 3,
         "k": 0,
         "hbp": 0,
-        "sf": 0
+        "sf": 0,
+        "g": 1
       }
     },
     "e56d747a-c602-477e-9723-89ac02ee16cd": {
@@ -59353,7 +59404,8 @@ const DASHBOARD_DATA = {
         "bb": 0,
         "k": 2,
         "hbp": 0,
-        "sf": 0
+        "sf": 0,
+        "g": 3
       },
       "ef2347de-e636-4a6a-a378-b49dc11d606d": {
         "pa": 7,
@@ -59365,7 +59417,8 @@ const DASHBOARD_DATA = {
         "bb": 1,
         "k": 2,
         "hbp": 0,
-        "sf": 0
+        "sf": 0,
+        "g": 3
       },
       "09feed40-e334-40b8-b185-e684622d2c98": {
         "pa": 8,
@@ -59377,7 +59430,8 @@ const DASHBOARD_DATA = {
         "bb": 3,
         "k": 2,
         "hbp": 0,
-        "sf": 0
+        "sf": 0,
+        "g": 3
       },
       "467d1e1d-bfe6-4d23-a6eb-8e00c9aa74ff": {
         "pa": 8,
@@ -59389,7 +59443,8 @@ const DASHBOARD_DATA = {
         "bb": 1,
         "k": 5,
         "hbp": 0,
-        "sf": 0
+        "sf": 0,
+        "g": 3
       },
       "6f40c537-4b8c-4dd6-a5d8-f99eced87187": {
         "pa": 4,
@@ -59401,7 +59456,8 @@ const DASHBOARD_DATA = {
         "bb": 1,
         "k": 2,
         "hbp": 0,
-        "sf": 0
+        "sf": 0,
+        "g": 2
       },
       "0c158a4d-c557-41c4-b789-a8b89aa4d2fa": {
         "pa": 8,
@@ -59413,7 +59469,8 @@ const DASHBOARD_DATA = {
         "bb": 1,
         "k": 1,
         "hbp": 0,
-        "sf": 0
+        "sf": 0,
+        "g": 3
       },
       "6cec070d-6747-440d-8d2a-1b5f941e5e78": {
         "pa": 4,
@@ -59425,7 +59482,8 @@ const DASHBOARD_DATA = {
         "bb": 0,
         "k": 4,
         "hbp": 0,
-        "sf": 0
+        "sf": 0,
+        "g": 2
       },
       "f06e7b87-2e24-4d82-96af-a2951e8ad095": {
         "pa": 7,
@@ -59437,7 +59495,8 @@ const DASHBOARD_DATA = {
         "bb": 1,
         "k": 6,
         "hbp": 0,
-        "sf": 0
+        "sf": 0,
+        "g": 3
       },
       "b804543c-e44a-4afc-bfd5-21228022d677": {
         "pa": 6,
@@ -59449,7 +59508,8 @@ const DASHBOARD_DATA = {
         "bb": 1,
         "k": 4,
         "hbp": 0,
-        "sf": 0
+        "sf": 0,
+        "g": 3
       },
       "4e8bed73-155b-474b-85c9-40b9d30c399f": {
         "pa": 6,
@@ -59461,7 +59521,8 @@ const DASHBOARD_DATA = {
         "bb": 1,
         "k": 4,
         "hbp": 0,
-        "sf": 0
+        "sf": 0,
+        "g": 3
       },
       "06a2fce6-13a1-49ed-9592-1c1751d68cb8": {
         "pa": 5,
@@ -59473,7 +59534,8 @@ const DASHBOARD_DATA = {
         "bb": 2,
         "k": 1,
         "hbp": 0,
-        "sf": 0
+        "sf": 0,
+        "g": 3
       },
       "a5c5033e-041d-4fa0-b6b3-f77ae1d8f757": {
         "pa": 5,
@@ -59485,7 +59547,8 @@ const DASHBOARD_DATA = {
         "bb": 1,
         "k": 2,
         "hbp": 0,
-        "sf": 0
+        "sf": 0,
+        "g": 3
       }
     },
     "66764afc-2bdc-430e-b145-1c63ae9a7ef6": {
@@ -59499,7 +59562,8 @@ const DASHBOARD_DATA = {
         "bb": 3,
         "k": 4,
         "hbp": 0,
-        "sf": 0
+        "sf": 0,
+        "g": 4
       },
       "b2b79501-9159-41ec-8bd2-3312e9f462bd": {
         "pa": 12,
@@ -59511,7 +59575,8 @@ const DASHBOARD_DATA = {
         "bb": 2,
         "k": 1,
         "hbp": 0,
-        "sf": 0
+        "sf": 0,
+        "g": 4
       },
       "483c5486-66ca-4930-8605-d7ab51b07c8b": {
         "pa": 11,
@@ -59523,7 +59588,8 @@ const DASHBOARD_DATA = {
         "bb": 2,
         "k": 2,
         "hbp": 0,
-        "sf": 0
+        "sf": 0,
+        "g": 4
       },
       "2f950dbc-da13-43e0-a3c7-130ee45b6f06": {
         "pa": 10,
@@ -59535,7 +59601,8 @@ const DASHBOARD_DATA = {
         "bb": 1,
         "k": 3,
         "hbp": 0,
-        "sf": 0
+        "sf": 0,
+        "g": 4
       },
       "9634bc58-4e8b-4fc0-97ff-6dc206c3a7d3": {
         "pa": 10,
@@ -59547,7 +59614,8 @@ const DASHBOARD_DATA = {
         "bb": 1,
         "k": 0,
         "hbp": 0,
-        "sf": 0
+        "sf": 0,
+        "g": 4
       },
       "2b8d5dff-c78d-40c8-9cf0-db48d3aa9161": {
         "pa": 10,
@@ -59559,7 +59627,8 @@ const DASHBOARD_DATA = {
         "bb": 0,
         "k": 3,
         "hbp": 0,
-        "sf": 0
+        "sf": 0,
+        "g": 4
       },
       "cce2ea9d-547c-48dd-9a7d-8cec46064e69": {
         "pa": 9,
@@ -59571,7 +59640,8 @@ const DASHBOARD_DATA = {
         "bb": 2,
         "k": 1,
         "hbp": 0,
-        "sf": 0
+        "sf": 0,
+        "g": 4
       },
       "2725d19a-f937-4f8e-9cfe-3570ddc4997f": {
         "pa": 9,
@@ -59583,7 +59653,8 @@ const DASHBOARD_DATA = {
         "bb": 2,
         "k": 3,
         "hbp": 0,
-        "sf": 0
+        "sf": 0,
+        "g": 4
       },
       "e750d804-47d0-4035-90ff-b9dac3bd846c": {
         "pa": 7,
@@ -59595,7 +59666,8 @@ const DASHBOARD_DATA = {
         "bb": 1,
         "k": 3,
         "hbp": 0,
-        "sf": 0
+        "sf": 0,
+        "g": 3
       },
       "8dcc4198-a409-422b-b7df-49da45eb7ebb": {
         "pa": 7,
@@ -59607,7 +59679,8 @@ const DASHBOARD_DATA = {
         "bb": 2,
         "k": 1,
         "hbp": 0,
-        "sf": 0
+        "sf": 0,
+        "g": 4
       },
       "b0e00488-6e8e-4cd8-a76a-6b039c4c57cf": {
         "pa": 8,
@@ -59619,7 +59692,8 @@ const DASHBOARD_DATA = {
         "bb": 5,
         "k": 1,
         "hbp": 0,
-        "sf": 0
+        "sf": 0,
+        "g": 4
       },
       "af0570bc-54fa-4641-8abb-681ae0400fca": {
         "pa": 9,
@@ -59631,7 +59705,8 @@ const DASHBOARD_DATA = {
         "bb": 4,
         "k": 1,
         "hbp": 0,
-        "sf": 0
+        "sf": 0,
+        "g": 4
       }
     },
     "4b1830b0-c556-4f04-bfe9-3dc5bf1c6270": {
@@ -59645,7 +59720,8 @@ const DASHBOARD_DATA = {
         "bb": 5,
         "k": 2,
         "hbp": 0,
-        "sf": 0
+        "sf": 0,
+        "g": 3
       },
       "bf80f814-e8fb-4d21-98e3-15aca5de59a6": {
         "pa": 9,
@@ -59657,7 +59733,8 @@ const DASHBOARD_DATA = {
         "bb": 3,
         "k": 2,
         "hbp": 0,
-        "sf": 0
+        "sf": 0,
+        "g": 3
       },
       "44fcb0a0-19cc-4b97-ad23-e96d29a2472f": {
         "pa": 9,
@@ -59669,7 +59746,8 @@ const DASHBOARD_DATA = {
         "bb": 2,
         "k": 1,
         "hbp": 0,
-        "sf": 0
+        "sf": 0,
+        "g": 3
       },
       "96332f51-a3b8-42e5-b1ce-98f4cde7aae4": {
         "pa": 8,
@@ -59681,7 +59759,8 @@ const DASHBOARD_DATA = {
         "bb": 4,
         "k": 0,
         "hbp": 0,
-        "sf": 0
+        "sf": 0,
+        "g": 3
       },
       "7f24e42e-2120-4dbf-97fb-ba16851cd3a7": {
         "pa": 9,
@@ -59693,7 +59772,8 @@ const DASHBOARD_DATA = {
         "bb": 2,
         "k": 1,
         "hbp": 0,
-        "sf": 0
+        "sf": 0,
+        "g": 3
       },
       "977eec85-e563-4754-978e-64c5996f714f": {
         "pa": 9,
@@ -59705,7 +59785,8 @@ const DASHBOARD_DATA = {
         "bb": 5,
         "k": 2,
         "hbp": 0,
-        "sf": 0
+        "sf": 0,
+        "g": 3
       },
       "d6a0fd1f-ced4-48be-a0fd-09871b366c81": {
         "pa": 9,
@@ -59717,7 +59798,8 @@ const DASHBOARD_DATA = {
         "bb": 0,
         "k": 4,
         "hbp": 0,
-        "sf": 0
+        "sf": 0,
+        "g": 3
       },
       "d39b4e9a-063d-4bb9-99c7-68611f0297db": {
         "pa": 8,
@@ -59729,7 +59811,8 @@ const DASHBOARD_DATA = {
         "bb": 5,
         "k": 2,
         "hbp": 0,
-        "sf": 0
+        "sf": 0,
+        "g": 3
       },
       "3bc4e907-81c7-42dc-92dd-b62beb43651d": {
         "pa": 7,
@@ -59741,7 +59824,8 @@ const DASHBOARD_DATA = {
         "bb": 2,
         "k": 2,
         "hbp": 0,
-        "sf": 0
+        "sf": 0,
+        "g": 3
       },
       "878c1185-45cd-40c7-9188-efd0115a9d50": {
         "pa": 7,
@@ -59753,7 +59837,8 @@ const DASHBOARD_DATA = {
         "bb": 1,
         "k": 1,
         "hbp": 0,
-        "sf": 0
+        "sf": 0,
+        "g": 3
       },
       "9265ae33-1b3d-4127-9248-fc387b967391": {
         "pa": 7,
@@ -59765,7 +59850,8 @@ const DASHBOARD_DATA = {
         "bb": 2,
         "k": 3,
         "hbp": 0,
-        "sf": 0
+        "sf": 0,
+        "g": 3
       },
       "f45aa11c-86f6-4f4a-9449-f92b1154d164": {
         "pa": 7,
@@ -59777,7 +59863,8 @@ const DASHBOARD_DATA = {
         "bb": 3,
         "k": 1,
         "hbp": 0,
-        "sf": 0
+        "sf": 0,
+        "g": 2
       }
     },
     "44ba828c-d48e-41f9-b02e-45ef1bff04a9": {
@@ -59791,7 +59878,8 @@ const DASHBOARD_DATA = {
         "bb": 6,
         "k": 3,
         "hbp": 0,
-        "sf": 0
+        "sf": 0,
+        "g": 6
       },
       "2b9e9db3-1c80-4d55-974c-e0bb5525fae9": {
         "pa": 17,
@@ -59803,7 +59891,8 @@ const DASHBOARD_DATA = {
         "bb": 5,
         "k": 2,
         "hbp": 0,
-        "sf": 0
+        "sf": 0,
+        "g": 6
       },
       "cd21ea12-4f3b-4c8f-8a80-4b90996c1122": {
         "pa": 16,
@@ -59815,7 +59904,8 @@ const DASHBOARD_DATA = {
         "bb": 4,
         "k": 4,
         "hbp": 0,
-        "sf": 0
+        "sf": 0,
+        "g": 6
       },
       "ab9e9338-7453-479a-8a71-68c5aa6293bb": {
         "pa": 14,
@@ -59827,7 +59917,8 @@ const DASHBOARD_DATA = {
         "bb": 3,
         "k": 4,
         "hbp": 0,
-        "sf": 0
+        "sf": 0,
+        "g": 5
       },
       "a9d82e7a-9af4-4e4b-a195-26dc21386f5d": {
         "pa": 16,
@@ -59839,7 +59930,8 @@ const DASHBOARD_DATA = {
         "bb": 5,
         "k": 8,
         "hbp": 0,
-        "sf": 0
+        "sf": 0,
+        "g": 6
       },
       "af9492a9-fb0f-4735-be84-4025b7b62fa6": {
         "pa": 17,
@@ -59851,7 +59943,8 @@ const DASHBOARD_DATA = {
         "bb": 4,
         "k": 6,
         "hbp": 0,
-        "sf": 0
+        "sf": 0,
+        "g": 6
       },
       "78f5d29e-6cbd-449a-a417-745d11d5ad69": {
         "pa": 12,
@@ -59863,7 +59956,8 @@ const DASHBOARD_DATA = {
         "bb": 5,
         "k": 5,
         "hbp": 0,
-        "sf": 0
+        "sf": 0,
+        "g": 5
       },
       "05c82266-66d1-4ebb-acc0-d481736e3a7f": {
         "pa": 16,
@@ -59875,7 +59969,8 @@ const DASHBOARD_DATA = {
         "bb": 7,
         "k": 2,
         "hbp": 0,
-        "sf": 1
+        "sf": 1,
+        "g": 6
       },
       "f8bc3ee6-0158-41d1-93e4-edc04ff59ee6": {
         "pa": 12,
@@ -59887,7 +59982,8 @@ const DASHBOARD_DATA = {
         "bb": 1,
         "k": 6,
         "hbp": 0,
-        "sf": 0
+        "sf": 0,
+        "g": 6
       },
       "911d5612-dd0c-43a4-8e58-ac3a1997af63": {
         "pa": 12,
@@ -59899,7 +59995,8 @@ const DASHBOARD_DATA = {
         "bb": 4,
         "k": 4,
         "hbp": 0,
-        "sf": 0
+        "sf": 0,
+        "g": 6
       },
       "3241e5ec-5eea-4e44-aca0-76bb36cbc4b1": {
         "pa": 9,
@@ -59911,7 +60008,8 @@ const DASHBOARD_DATA = {
         "bb": 4,
         "k": 3,
         "hbp": 0,
-        "sf": 0
+        "sf": 0,
+        "g": 4
       },
       "f015a1e5-d7d1-4778-945a-4982303c1b08": {
         "pa": 11,
@@ -59923,7 +60021,8 @@ const DASHBOARD_DATA = {
         "bb": 5,
         "k": 3,
         "hbp": 0,
-        "sf": 0
+        "sf": 0,
+        "g": 6
       }
     },
     "c78f3c71-0de4-42a2-9300-1e54d5ff452e": {
@@ -59937,7 +60036,8 @@ const DASHBOARD_DATA = {
         "bb": 5,
         "k": 1,
         "hbp": 0,
-        "sf": 1
+        "sf": 1,
+        "g": 4
       },
       "d1e98463-5e70-4618-8d89-8e884c41f6e1": {
         "pa": 12,
@@ -59949,7 +60049,8 @@ const DASHBOARD_DATA = {
         "bb": 1,
         "k": 1,
         "hbp": 0,
-        "sf": 0
+        "sf": 0,
+        "g": 4
       },
       "b5e395c5-932b-43ff-8d05-77d3ea2c5677": {
         "pa": 14,
@@ -59961,7 +60062,8 @@ const DASHBOARD_DATA = {
         "bb": 2,
         "k": 3,
         "hbp": 0,
-        "sf": 0
+        "sf": 0,
+        "g": 4
       },
       "9c252463-b893-4ae9-8443-ad14bfff8529": {
         "pa": 13,
@@ -59973,7 +60075,8 @@ const DASHBOARD_DATA = {
         "bb": 4,
         "k": 3,
         "hbp": 0,
-        "sf": 0
+        "sf": 0,
+        "g": 4
       },
       "468f58ed-a340-4f8c-bb4d-616afa49d212": {
         "pa": 12,
@@ -59985,7 +60088,8 @@ const DASHBOARD_DATA = {
         "bb": 3,
         "k": 2,
         "hbp": 0,
-        "sf": 0
+        "sf": 0,
+        "g": 4
       },
       "e16e59d8-f6da-4b83-bd4f-e25230e55ffb": {
         "pa": 11,
@@ -59997,7 +60101,8 @@ const DASHBOARD_DATA = {
         "bb": 3,
         "k": 1,
         "hbp": 0,
-        "sf": 0
+        "sf": 0,
+        "g": 4
       },
       "d623fff7-9e0c-47a7-ae95-66c74265daca": {
         "pa": 12,
@@ -60009,7 +60114,8 @@ const DASHBOARD_DATA = {
         "bb": 2,
         "k": 3,
         "hbp": 0,
-        "sf": 0
+        "sf": 0,
+        "g": 4
       },
       "2861ca14-d6fc-4981-9b4e-356b7193e38d": {
         "pa": 10,
@@ -60021,7 +60127,8 @@ const DASHBOARD_DATA = {
         "bb": 5,
         "k": 3,
         "hbp": 0,
-        "sf": 0
+        "sf": 0,
+        "g": 4
       },
       "5f037989-565f-422a-b641-a4e98e616783": {
         "pa": 6,
@@ -60033,7 +60140,8 @@ const DASHBOARD_DATA = {
         "bb": 3,
         "k": 0,
         "hbp": 0,
-        "sf": 0
+        "sf": 0,
+        "g": 3
       },
       "0b62d5c1-d02c-4546-ada3-714a375caae2": {
         "pa": 9,
@@ -60045,7 +60153,8 @@ const DASHBOARD_DATA = {
         "bb": 3,
         "k": 3,
         "hbp": 0,
-        "sf": 0
+        "sf": 0,
+        "g": 4
       },
       "c2667fe4-e7b4-4d7f-b221-a82a9b87ae6c": {
         "pa": 10,
@@ -60057,7 +60166,8 @@ const DASHBOARD_DATA = {
         "bb": 4,
         "k": 1,
         "hbp": 0,
-        "sf": 0
+        "sf": 0,
+        "g": 4
       },
       "25ee0864-f0ce-4bb8-8847-b4076b416970": {
         "pa": 3,
@@ -60069,7 +60179,8 @@ const DASHBOARD_DATA = {
         "bb": 1,
         "k": 1,
         "hbp": 0,
-        "sf": 0
+        "sf": 0,
+        "g": 1
       }
     },
     "747be81c-797d-4a40-810a-5bb10df8a309": {
@@ -60083,7 +60194,8 @@ const DASHBOARD_DATA = {
         "bb": 4,
         "k": 6,
         "hbp": 0,
-        "sf": 0
+        "sf": 0,
+        "g": 5
       },
       "fd3ed8eb-3de4-456a-9e71-cd17c4b9be81": {
         "pa": 17,
@@ -60095,7 +60207,8 @@ const DASHBOARD_DATA = {
         "bb": 2,
         "k": 7,
         "hbp": 0,
-        "sf": 0
+        "sf": 0,
+        "g": 5
       },
       "416f2526-f2ae-4780-b38a-08517ec471f4": {
         "pa": 16,
@@ -60107,7 +60220,8 @@ const DASHBOARD_DATA = {
         "bb": 3,
         "k": 5,
         "hbp": 0,
-        "sf": 0
+        "sf": 0,
+        "g": 5
       },
       "d46e8621-5ce7-42cd-b79c-b540f18aa0bc": {
         "pa": 10,
@@ -60119,7 +60233,8 @@ const DASHBOARD_DATA = {
         "bb": 1,
         "k": 3,
         "hbp": 0,
-        "sf": 0
+        "sf": 0,
+        "g": 4
       },
       "9a2c1ab4-ca4d-4f65-8e92-bce27e9d1e74": {
         "pa": 13,
@@ -60131,7 +60246,8 @@ const DASHBOARD_DATA = {
         "bb": 3,
         "k": 4,
         "hbp": 0,
-        "sf": 0
+        "sf": 0,
+        "g": 5
       },
       "4d9cc2ed-f355-4069-b7b6-489c26d10bb8": {
         "pa": 14,
@@ -60143,7 +60259,8 @@ const DASHBOARD_DATA = {
         "bb": 3,
         "k": 3,
         "hbp": 0,
-        "sf": 0
+        "sf": 0,
+        "g": 5
       },
       "44fe1916-eb64-454e-9c66-45391100a9fc": {
         "pa": 13,
@@ -60155,7 +60272,8 @@ const DASHBOARD_DATA = {
         "bb": 2,
         "k": 4,
         "hbp": 0,
-        "sf": 0
+        "sf": 0,
+        "g": 5
       },
       "cc4caadf-eaee-4898-af78-d040e5d9edd9": {
         "pa": 13,
@@ -60167,7 +60285,8 @@ const DASHBOARD_DATA = {
         "bb": 4,
         "k": 2,
         "hbp": 0,
-        "sf": 0
+        "sf": 0,
+        "g": 5
       },
       "459f0351-1b95-4595-9f65-c3fa93121de1": {
         "pa": 8,
@@ -60179,7 +60298,8 @@ const DASHBOARD_DATA = {
         "bb": 0,
         "k": 5,
         "hbp": 0,
-        "sf": 0
+        "sf": 0,
+        "g": 3
       },
       "318b551d-4633-4daa-940f-bb9ce2793a3b": {
         "pa": 12,
@@ -60191,7 +60311,8 @@ const DASHBOARD_DATA = {
         "bb": 3,
         "k": 5,
         "hbp": 0,
-        "sf": 0
+        "sf": 0,
+        "g": 5
       },
       "02428265-30f5-4c44-9e1c-2783012eb124": {
         "pa": 12,
@@ -60203,7 +60324,8 @@ const DASHBOARD_DATA = {
         "bb": 4,
         "k": 3,
         "hbp": 0,
-        "sf": 0
+        "sf": 0,
+        "g": 5
       },
       "95fd563b-9666-4017-8421-55bd03a17a2b": {
         "pa": 11,
@@ -60215,7 +60337,8 @@ const DASHBOARD_DATA = {
         "bb": 1,
         "k": 5,
         "hbp": 0,
-        "sf": 0
+        "sf": 0,
+        "g": 5
       }
     },
     "2e6d7d1d-d86b-4a94-a1d2-bec8781dc859": {
@@ -60229,7 +60352,8 @@ const DASHBOARD_DATA = {
         "bb": 2,
         "k": 3,
         "hbp": 0,
-        "sf": 0
+        "sf": 0,
+        "g": 2
       },
       "c7d1b6b7-e4a6-4289-a25e-549ddf582431": {
         "pa": 6,
@@ -60241,7 +60365,8 @@ const DASHBOARD_DATA = {
         "bb": 1,
         "k": 2,
         "hbp": 0,
-        "sf": 0
+        "sf": 0,
+        "g": 2
       },
       "9e63d314-75f8-4ccf-856c-ab2085507ea9": {
         "pa": 5,
@@ -60253,7 +60378,8 @@ const DASHBOARD_DATA = {
         "bb": 1,
         "k": 1,
         "hbp": 0,
-        "sf": 0
+        "sf": 0,
+        "g": 2
       },
       "afe489ec-3001-43ec-b939-1aa7b2498f18": {
         "pa": 5,
@@ -60265,7 +60391,8 @@ const DASHBOARD_DATA = {
         "bb": 0,
         "k": 2,
         "hbp": 0,
-        "sf": 0
+        "sf": 0,
+        "g": 2
       },
       "8148a8a4-35a6-408f-a38a-e2738eadc2df": {
         "pa": 5,
@@ -60277,7 +60404,8 @@ const DASHBOARD_DATA = {
         "bb": 1,
         "k": 0,
         "hbp": 0,
-        "sf": 0
+        "sf": 0,
+        "g": 2
       },
       "133a7186-0866-44cc-8391-448865d242b3": {
         "pa": 5,
@@ -60289,7 +60417,8 @@ const DASHBOARD_DATA = {
         "bb": 2,
         "k": 3,
         "hbp": 0,
-        "sf": 0
+        "sf": 0,
+        "g": 2
       },
       "63b65677-e32a-4eea-ae17-e1539bd0f7e8": {
         "pa": 5,
@@ -60301,7 +60430,8 @@ const DASHBOARD_DATA = {
         "bb": 0,
         "k": 4,
         "hbp": 0,
-        "sf": 0
+        "sf": 0,
+        "g": 2
       },
       "68d6d160-4c1d-4eac-a55d-e40be245fd90": {
         "pa": 5,
@@ -60313,7 +60443,8 @@ const DASHBOARD_DATA = {
         "bb": 2,
         "k": 2,
         "hbp": 0,
-        "sf": 0
+        "sf": 0,
+        "g": 2
       },
       "13121e36-47d1-46a6-b526-0326a5759ad2": {
         "pa": 5,
@@ -60325,7 +60456,8 @@ const DASHBOARD_DATA = {
         "bb": 1,
         "k": 2,
         "hbp": 0,
-        "sf": 0
+        "sf": 0,
+        "g": 2
       },
       "8c262e7e-6f27-4286-a7d7-7988427ded2b": {
         "pa": 4,
@@ -60337,7 +60469,8 @@ const DASHBOARD_DATA = {
         "bb": 1,
         "k": 1,
         "hbp": 0,
-        "sf": 0
+        "sf": 0,
+        "g": 2
       },
       "f409b4db-2a9a-4701-b50a-f77928172810": {
         "pa": 4,
@@ -60349,7 +60482,8 @@ const DASHBOARD_DATA = {
         "bb": 0,
         "k": 1,
         "hbp": 0,
-        "sf": 0
+        "sf": 0,
+        "g": 2
       },
       "b4bfe3ed-508e-46ec-ad9b-fbfc074573d5": {
         "pa": 4,
@@ -60361,19 +60495,20 @@ const DASHBOARD_DATA = {
         "bb": 0,
         "k": 2,
         "hbp": 0,
-        "sf": 0
+        "sf": 0,
+        "g": 2
       }
     }
   },
   "opp_stats_cache": {
-    "_version": "v1",
+    "_version": "v2",
     "8aad0a67-c204-463a-af0a-3c99854a4c56": {
       "processed": [
         "3c22cc69-0668-4335-a584-cf3dda301d77",
+        "bbc4c656-290e-4378-a5a3-df987f55048c",
         "67707aa1-d588-4df3-a833-c5df146b5f17",
-        "5dc6b3ce-e1f1-424d-bebd-545a5a0e6e21",
         "83a29eb5-bb36-453c-abeb-be8199f7dd95",
-        "bbc4c656-290e-4378-a5a3-df987f55048c"
+        "5dc6b3ce-e1f1-424d-bebd-545a5a0e6e21"
       ],
       "players": {
         "edf3a672-2041-46e5-8333-acc9c6cfbc44": {
@@ -60386,7 +60521,8 @@ const DASHBOARD_DATA = {
           "bb": 7,
           "k": 5,
           "hbp": 0,
-          "sf": 0
+          "sf": 0,
+          "g": 4
         },
         "66a6fa77-86da-442f-9890-297935c7195f": {
           "pa": 15,
@@ -60398,7 +60534,8 @@ const DASHBOARD_DATA = {
           "bb": 2,
           "k": 3,
           "hbp": 0,
-          "sf": 0
+          "sf": 0,
+          "g": 5
         },
         "7c35c955-3ffd-4c53-8bad-1d78002dae5b": {
           "pa": 15,
@@ -60410,7 +60547,8 @@ const DASHBOARD_DATA = {
           "bb": 2,
           "k": 4,
           "hbp": 0,
-          "sf": 0
+          "sf": 0,
+          "g": 5
         },
         "1037e357-7c53-4fd6-aa87-bf19f729790f": {
           "pa": 12,
@@ -60422,7 +60560,8 @@ const DASHBOARD_DATA = {
           "bb": 0,
           "k": 5,
           "hbp": 0,
-          "sf": 0
+          "sf": 0,
+          "g": 4
         },
         "fb476fc3-3f1a-4503-aa1e-3b1008a8f18b": {
           "pa": 14,
@@ -60434,7 +60573,8 @@ const DASHBOARD_DATA = {
           "bb": 1,
           "k": 6,
           "hbp": 0,
-          "sf": 0
+          "sf": 0,
+          "g": 5
         },
         "9dfd70d7-97ff-4730-9d3f-6d92934e06e5": {
           "pa": 17,
@@ -60446,7 +60586,8 @@ const DASHBOARD_DATA = {
           "bb": 2,
           "k": 3,
           "hbp": 0,
-          "sf": 0
+          "sf": 0,
+          "g": 5
         },
         "1b3d70c9-84a6-4070-a417-63089bf9cb14": {
           "pa": 14,
@@ -60458,7 +60599,8 @@ const DASHBOARD_DATA = {
           "bb": 2,
           "k": 4,
           "hbp": 0,
-          "sf": 0
+          "sf": 0,
+          "g": 5
         },
         "d14ae687-0948-432c-a68e-b4a5375e37aa": {
           "pa": 12,
@@ -60470,7 +60612,8 @@ const DASHBOARD_DATA = {
           "bb": 2,
           "k": 3,
           "hbp": 0,
-          "sf": 0
+          "sf": 0,
+          "g": 5
         },
         "560fbac6-1c49-42a9-a0e9-9692e96a17ee": {
           "pa": 12,
@@ -60482,7 +60625,8 @@ const DASHBOARD_DATA = {
           "bb": 0,
           "k": 4,
           "hbp": 0,
-          "sf": 0
+          "sf": 0,
+          "g": 5
         },
         "ad7bae24-10ec-429e-835a-47e314437043": {
           "pa": 11,
@@ -60494,7 +60638,8 @@ const DASHBOARD_DATA = {
           "bb": 1,
           "k": 3,
           "hbp": 0,
-          "sf": 0
+          "sf": 0,
+          "g": 5
         },
         "eacd44cd-bb4f-4a71-abd1-9289788d7c7e": {
           "pa": 10,
@@ -60506,7 +60651,8 @@ const DASHBOARD_DATA = {
           "bb": 2,
           "k": 4,
           "hbp": 0,
-          "sf": 0
+          "sf": 0,
+          "g": 5
         },
         "ef3a5973-af33-4938-9c5e-f76a508f19e3": {
           "pa": 7,
@@ -60518,15 +60664,16 @@ const DASHBOARD_DATA = {
           "bb": 3,
           "k": 2,
           "hbp": 0,
-          "sf": 0
+          "sf": 0,
+          "g": 3
         }
       }
     },
     "f2cdea92-b99e-4595-bd8b-ae66eaefa435": {
       "processed": [
-        "bcd35638-f938-4e48-8903-3afcc71fdd7c",
         "ba707318-e4b4-46ec-b97c-fe5e58c72293",
-        "31f11adb-dee7-4baf-ab74-393ab432308e"
+        "31f11adb-dee7-4baf-ab74-393ab432308e",
+        "bcd35638-f938-4e48-8903-3afcc71fdd7c"
       ],
       "players": {
         "1755a481-bfa7-4115-94a0-cf9ab52e1bc7": {
@@ -60539,7 +60686,8 @@ const DASHBOARD_DATA = {
           "bb": 2,
           "k": 1,
           "hbp": 0,
-          "sf": 0
+          "sf": 0,
+          "g": 3
         },
         "6c6e75fd-7f7b-4bf3-9bf0-c4272e77d1c5": {
           "pa": 10,
@@ -60551,7 +60699,8 @@ const DASHBOARD_DATA = {
           "bb": 4,
           "k": 2,
           "hbp": 0,
-          "sf": 0
+          "sf": 0,
+          "g": 3
         },
         "4cf0339f-c86b-421a-bf90-ad1a604573e3": {
           "pa": 8,
@@ -60563,7 +60712,8 @@ const DASHBOARD_DATA = {
           "bb": 1,
           "k": 0,
           "hbp": 0,
-          "sf": 0
+          "sf": 0,
+          "g": 3
         },
         "81553699-d297-4292-88ba-fa453ebbbbee": {
           "pa": 8,
@@ -60575,7 +60725,8 @@ const DASHBOARD_DATA = {
           "bb": 3,
           "k": 1,
           "hbp": 0,
-          "sf": 0
+          "sf": 0,
+          "g": 3
         },
         "3783d55d-f67d-4f21-98f2-a88bbf08c24c": {
           "pa": 7,
@@ -60587,7 +60738,8 @@ const DASHBOARD_DATA = {
           "bb": 2,
           "k": 0,
           "hbp": 0,
-          "sf": 0
+          "sf": 0,
+          "g": 3
         },
         "4dbcec35-58ab-44b4-8017-a78aa1e54a36": {
           "pa": 6,
@@ -60599,7 +60751,8 @@ const DASHBOARD_DATA = {
           "bb": 2,
           "k": 1,
           "hbp": 0,
-          "sf": 0
+          "sf": 0,
+          "g": 3
         },
         "2d96e40f-15a1-44d7-b28d-faf75f4df3ef": {
           "pa": 7,
@@ -60611,7 +60764,8 @@ const DASHBOARD_DATA = {
           "bb": 0,
           "k": 6,
           "hbp": 0,
-          "sf": 0
+          "sf": 0,
+          "g": 3
         },
         "11930c92-ed75-4956-b823-ce67bf4d01f9": {
           "pa": 7,
@@ -60623,7 +60777,8 @@ const DASHBOARD_DATA = {
           "bb": 3,
           "k": 2,
           "hbp": 0,
-          "sf": 0
+          "sf": 0,
+          "g": 3
         },
         "db9a51bf-b90e-40d6-8947-e96f02092d87": {
           "pa": 5,
@@ -60635,7 +60790,8 @@ const DASHBOARD_DATA = {
           "bb": 2,
           "k": 2,
           "hbp": 0,
-          "sf": 0
+          "sf": 0,
+          "g": 3
         },
         "84557836-8689-4207-90d6-058d20942369": {
           "pa": 6,
@@ -60647,7 +60803,8 @@ const DASHBOARD_DATA = {
           "bb": 1,
           "k": 2,
           "hbp": 0,
-          "sf": 0
+          "sf": 0,
+          "g": 3
         },
         "bfbc256c-3416-41f2-8c0b-9047a388f139": {
           "pa": 5,
@@ -60659,7 +60816,8 @@ const DASHBOARD_DATA = {
           "bb": 1,
           "k": 3,
           "hbp": 0,
-          "sf": 0
+          "sf": 0,
+          "g": 3
         },
         "3448bd74-2d75-4144-8c16-1884494f5b7a": {
           "pa": 5,
@@ -60671,15 +60829,16 @@ const DASHBOARD_DATA = {
           "bb": 1,
           "k": 0,
           "hbp": 0,
-          "sf": 0
+          "sf": 0,
+          "g": 2
         }
       }
     },
     "f5e1b457-b39b-4fcc-8f50-888205156226": {
       "processed": [
-        "9610a241-3fde-4f4c-9ba6-60b7d7fa954d",
-        "96b557ed-7056-4874-b0dd-009869f721a0",
         "1b9ef024-ab7c-49f7-b903-5379861d0937",
+        "96b557ed-7056-4874-b0dd-009869f721a0",
+        "9610a241-3fde-4f4c-9ba6-60b7d7fa954d",
         "a879267f-2b55-4c20-ac21-8d3908f0bd50",
         "6af46803-d6c1-4eb6-be62-faebd7846a38"
       ],
@@ -60694,7 +60853,8 @@ const DASHBOARD_DATA = {
           "bb": 3,
           "k": 6,
           "hbp": 0,
-          "sf": 0
+          "sf": 0,
+          "g": 5
         },
         "41480d38-c429-40b2-85c4-1ba3c3486d74": {
           "pa": 12,
@@ -60706,7 +60866,8 @@ const DASHBOARD_DATA = {
           "bb": 4,
           "k": 4,
           "hbp": 0,
-          "sf": 0
+          "sf": 0,
+          "g": 4
         },
         "de1cfe7d-43a7-41f6-ad99-23dd9dd9fcce": {
           "pa": 6,
@@ -60718,7 +60879,8 @@ const DASHBOARD_DATA = {
           "bb": 1,
           "k": 1,
           "hbp": 0,
-          "sf": 0
+          "sf": 0,
+          "g": 3
         },
         "789fa1c4-bd7b-4a42-9ac9-edc46d02d29f": {
           "pa": 17,
@@ -60730,7 +60892,8 @@ const DASHBOARD_DATA = {
           "bb": 2,
           "k": 4,
           "hbp": 0,
-          "sf": 0
+          "sf": 0,
+          "g": 5
         },
         "d9efa12e-3d1d-4563-ba28-a6986ac3834e": {
           "pa": 14,
@@ -60742,7 +60905,8 @@ const DASHBOARD_DATA = {
           "bb": 3,
           "k": 7,
           "hbp": 0,
-          "sf": 0
+          "sf": 0,
+          "g": 5
         },
         "34de90ea-8cc4-4c73-a6c7-917b542e7039": {
           "pa": 8,
@@ -60754,7 +60918,8 @@ const DASHBOARD_DATA = {
           "bb": 2,
           "k": 1,
           "hbp": 0,
-          "sf": 0
+          "sf": 0,
+          "g": 4
         },
         "a45c3233-dcdd-45bd-9738-0e839352ffb4": {
           "pa": 13,
@@ -60766,7 +60931,8 @@ const DASHBOARD_DATA = {
           "bb": 4,
           "k": 4,
           "hbp": 0,
-          "sf": 0
+          "sf": 0,
+          "g": 5
         },
         "47999c58-ec48-426b-9a08-703d7ca6bc52": {
           "pa": 13,
@@ -60778,7 +60944,8 @@ const DASHBOARD_DATA = {
           "bb": 1,
           "k": 6,
           "hbp": 0,
-          "sf": 0
+          "sf": 0,
+          "g": 5
         },
         "dda3de77-d661-47e4-8aba-f40b5b06062c": {
           "pa": 14,
@@ -60790,7 +60957,8 @@ const DASHBOARD_DATA = {
           "bb": 2,
           "k": 6,
           "hbp": 0,
-          "sf": 0
+          "sf": 0,
+          "g": 5
         },
         "e29ae7f7-15f6-4a73-a43f-ce67b20d9c29": {
           "pa": 11,
@@ -60802,7 +60970,8 @@ const DASHBOARD_DATA = {
           "bb": 2,
           "k": 3,
           "hbp": 0,
-          "sf": 0
+          "sf": 0,
+          "g": 5
         },
         "8601cb1c-d121-49d1-abcf-2f1c17e8f8e0": {
           "pa": 8,
@@ -60814,7 +60983,8 @@ const DASHBOARD_DATA = {
           "bb": 0,
           "k": 4,
           "hbp": 0,
-          "sf": 0
+          "sf": 0,
+          "g": 5
         },
         "68e76d69-2da2-4162-8008-e4b12e0c78b1": {
           "pa": 8,
@@ -60826,7 +60996,8 @@ const DASHBOARD_DATA = {
           "bb": 2,
           "k": 2,
           "hbp": 0,
-          "sf": 0
+          "sf": 0,
+          "g": 4
         },
         "264e7c5c-c0b6-43c7-b0ff-b88ab12f62fd": {
           "pa": 3,
@@ -60838,7 +61009,8 @@ const DASHBOARD_DATA = {
           "bb": 2,
           "k": 1,
           "hbp": 0,
-          "sf": 0
+          "sf": 0,
+          "g": 1
         },
         "3e0c497e-aa71-4327-8ad1-3142e392605d": {
           "pa": 2,
@@ -60850,17 +61022,18 @@ const DASHBOARD_DATA = {
           "bb": 1,
           "k": 1,
           "hbp": 0,
-          "sf": 0
+          "sf": 0,
+          "g": 1
         }
       }
     },
     "7e901e85-dd0e-491d-8325-173085cac64e": {
       "processed": [
-        "86316fe2-faba-459c-8c89-6e28b753d197",
-        "8ad6e9b3-2094-42f4-9814-1a3b0ad32486",
-        "c68b5746-8f6d-4be6-97a1-3b536c25f3f5",
         "b7d15ebe-2d46-4bc2-a527-b7809110cb90",
-        "831609ce-5eaf-4c12-8ac5-8d919afb62a2"
+        "831609ce-5eaf-4c12-8ac5-8d919afb62a2",
+        "c68b5746-8f6d-4be6-97a1-3b536c25f3f5",
+        "8ad6e9b3-2094-42f4-9814-1a3b0ad32486",
+        "86316fe2-faba-459c-8c89-6e28b753d197"
       ],
       "players": {
         "9df3d987-7ed0-4527-ac46-67f7872f08e2": {
@@ -60873,7 +61046,8 @@ const DASHBOARD_DATA = {
           "bb": 5,
           "k": 4,
           "hbp": 0,
-          "sf": 0
+          "sf": 0,
+          "g": 5
         },
         "1ec8f661-c112-4732-ae07-048fb5a6bfa9": {
           "pa": 15,
@@ -60885,7 +61059,8 @@ const DASHBOARD_DATA = {
           "bb": 2,
           "k": 1,
           "hbp": 0,
-          "sf": 0
+          "sf": 0,
+          "g": 5
         },
         "7c444a40-dc14-4520-affd-dfa22052eaa2": {
           "pa": 13,
@@ -60897,7 +61072,8 @@ const DASHBOARD_DATA = {
           "bb": 3,
           "k": 5,
           "hbp": 0,
-          "sf": 0
+          "sf": 0,
+          "g": 5
         },
         "12e41391-2096-457a-9142-a4083795ba51": {
           "pa": 14,
@@ -60909,7 +61085,8 @@ const DASHBOARD_DATA = {
           "bb": 5,
           "k": 2,
           "hbp": 0,
-          "sf": 0
+          "sf": 0,
+          "g": 5
         },
         "4eeb6762-b2a0-4348-8d99-4d4734f930a0": {
           "pa": 12,
@@ -60921,7 +61098,8 @@ const DASHBOARD_DATA = {
           "bb": 6,
           "k": 5,
           "hbp": 0,
-          "sf": 0
+          "sf": 0,
+          "g": 5
         },
         "665619a1-a2ed-4bd0-912f-82c05a5d38df": {
           "pa": 13,
@@ -60933,7 +61111,8 @@ const DASHBOARD_DATA = {
           "bb": 4,
           "k": 3,
           "hbp": 0,
-          "sf": 0
+          "sf": 0,
+          "g": 5
         },
         "8290b39e-d6e3-4255-9cf2-adab1cbb9a5d": {
           "pa": 13,
@@ -60945,7 +61124,8 @@ const DASHBOARD_DATA = {
           "bb": 4,
           "k": 3,
           "hbp": 0,
-          "sf": 0
+          "sf": 0,
+          "g": 5
         },
         "300c775a-a188-4529-bcf0-73b2ff32dc8d": {
           "pa": 13,
@@ -60957,7 +61137,8 @@ const DASHBOARD_DATA = {
           "bb": 5,
           "k": 4,
           "hbp": 0,
-          "sf": 0
+          "sf": 0,
+          "g": 5
         },
         "21fabe50-53b9-462f-9ccb-53dc067b2ada": {
           "pa": 10,
@@ -60969,7 +61150,8 @@ const DASHBOARD_DATA = {
           "bb": 2,
           "k": 5,
           "hbp": 0,
-          "sf": 0
+          "sf": 0,
+          "g": 4
         },
         "19ca4179-3dd7-4f14-b1f6-bdf574e6473f": {
           "pa": 12,
@@ -60981,7 +61163,8 @@ const DASHBOARD_DATA = {
           "bb": 4,
           "k": 2,
           "hbp": 0,
-          "sf": 0
+          "sf": 0,
+          "g": 5
         },
         "15a1692d-bb73-44dc-b09d-4f5129e280f1": {
           "pa": 8,
@@ -60993,7 +61176,8 @@ const DASHBOARD_DATA = {
           "bb": 2,
           "k": 3,
           "hbp": 0,
-          "sf": 0
+          "sf": 0,
+          "g": 4
         },
         "6f624eb1-58e1-4b6e-a571-972f9bb83841": {
           "pa": 9,
@@ -61005,7 +61189,8 @@ const DASHBOARD_DATA = {
           "bb": 4,
           "k": 3,
           "hbp": 0,
-          "sf": 0
+          "sf": 0,
+          "g": 3
         },
         "a77ac516-07fe-4e3a-9565-ea1fd2d5f9de": {
           "pa": 3,
@@ -61017,14 +61202,15 @@ const DASHBOARD_DATA = {
           "bb": 3,
           "k": 0,
           "hbp": 0,
-          "sf": 0
+          "sf": 0,
+          "g": 1
         }
       }
     },
     "e56d747a-c602-477e-9723-89ac02ee16cd": {
       "processed": [
-        "b872dc5a-6825-415f-a560-56b65fb3a543",
         "12b8347c-5925-462e-b773-2b1d0761cbbd",
+        "b872dc5a-6825-415f-a560-56b65fb3a543",
         "3421f750-2073-425a-8eba-6e7f08634069"
       ],
       "players": {
@@ -61038,7 +61224,8 @@ const DASHBOARD_DATA = {
           "bb": 0,
           "k": 2,
           "hbp": 0,
-          "sf": 0
+          "sf": 0,
+          "g": 3
         },
         "ef2347de-e636-4a6a-a378-b49dc11d606d": {
           "pa": 7,
@@ -61050,7 +61237,8 @@ const DASHBOARD_DATA = {
           "bb": 1,
           "k": 2,
           "hbp": 0,
-          "sf": 0
+          "sf": 0,
+          "g": 3
         },
         "09feed40-e334-40b8-b185-e684622d2c98": {
           "pa": 8,
@@ -61062,7 +61250,8 @@ const DASHBOARD_DATA = {
           "bb": 3,
           "k": 2,
           "hbp": 0,
-          "sf": 0
+          "sf": 0,
+          "g": 3
         },
         "467d1e1d-bfe6-4d23-a6eb-8e00c9aa74ff": {
           "pa": 8,
@@ -61074,7 +61263,8 @@ const DASHBOARD_DATA = {
           "bb": 1,
           "k": 5,
           "hbp": 0,
-          "sf": 0
+          "sf": 0,
+          "g": 3
         },
         "6f40c537-4b8c-4dd6-a5d8-f99eced87187": {
           "pa": 4,
@@ -61086,7 +61276,8 @@ const DASHBOARD_DATA = {
           "bb": 1,
           "k": 2,
           "hbp": 0,
-          "sf": 0
+          "sf": 0,
+          "g": 2
         },
         "0c158a4d-c557-41c4-b789-a8b89aa4d2fa": {
           "pa": 8,
@@ -61098,7 +61289,8 @@ const DASHBOARD_DATA = {
           "bb": 1,
           "k": 1,
           "hbp": 0,
-          "sf": 0
+          "sf": 0,
+          "g": 3
         },
         "6cec070d-6747-440d-8d2a-1b5f941e5e78": {
           "pa": 4,
@@ -61110,7 +61302,8 @@ const DASHBOARD_DATA = {
           "bb": 0,
           "k": 4,
           "hbp": 0,
-          "sf": 0
+          "sf": 0,
+          "g": 2
         },
         "f06e7b87-2e24-4d82-96af-a2951e8ad095": {
           "pa": 7,
@@ -61122,7 +61315,8 @@ const DASHBOARD_DATA = {
           "bb": 1,
           "k": 6,
           "hbp": 0,
-          "sf": 0
+          "sf": 0,
+          "g": 3
         },
         "b804543c-e44a-4afc-bfd5-21228022d677": {
           "pa": 6,
@@ -61134,7 +61328,8 @@ const DASHBOARD_DATA = {
           "bb": 1,
           "k": 4,
           "hbp": 0,
-          "sf": 0
+          "sf": 0,
+          "g": 3
         },
         "4e8bed73-155b-474b-85c9-40b9d30c399f": {
           "pa": 6,
@@ -61146,7 +61341,8 @@ const DASHBOARD_DATA = {
           "bb": 1,
           "k": 4,
           "hbp": 0,
-          "sf": 0
+          "sf": 0,
+          "g": 3
         },
         "06a2fce6-13a1-49ed-9592-1c1751d68cb8": {
           "pa": 5,
@@ -61158,7 +61354,8 @@ const DASHBOARD_DATA = {
           "bb": 2,
           "k": 1,
           "hbp": 0,
-          "sf": 0
+          "sf": 0,
+          "g": 3
         },
         "a5c5033e-041d-4fa0-b6b3-f77ae1d8f757": {
           "pa": 5,
@@ -61170,16 +61367,17 @@ const DASHBOARD_DATA = {
           "bb": 1,
           "k": 2,
           "hbp": 0,
-          "sf": 0
+          "sf": 0,
+          "g": 3
         }
       }
     },
     "66764afc-2bdc-430e-b145-1c63ae9a7ef6": {
       "processed": [
-        "0c40fd99-d304-499a-8197-fdb1e6a7bc3d",
         "d83368d1-e949-4096-a8f8-9a9e716d793c",
         "0c4aad80-85a8-44aa-8aa4-741022ba6452",
-        "8e4de45c-2db3-40ec-b92c-bb3ec4925f28"
+        "8e4de45c-2db3-40ec-b92c-bb3ec4925f28",
+        "0c40fd99-d304-499a-8197-fdb1e6a7bc3d"
       ],
       "players": {
         "1841aadd-9d63-4b09-90b3-e248f80aa011": {
@@ -61192,7 +61390,8 @@ const DASHBOARD_DATA = {
           "bb": 3,
           "k": 4,
           "hbp": 0,
-          "sf": 0
+          "sf": 0,
+          "g": 4
         },
         "b2b79501-9159-41ec-8bd2-3312e9f462bd": {
           "pa": 12,
@@ -61204,7 +61403,8 @@ const DASHBOARD_DATA = {
           "bb": 2,
           "k": 1,
           "hbp": 0,
-          "sf": 0
+          "sf": 0,
+          "g": 4
         },
         "483c5486-66ca-4930-8605-d7ab51b07c8b": {
           "pa": 11,
@@ -61216,7 +61416,8 @@ const DASHBOARD_DATA = {
           "bb": 2,
           "k": 2,
           "hbp": 0,
-          "sf": 0
+          "sf": 0,
+          "g": 4
         },
         "2f950dbc-da13-43e0-a3c7-130ee45b6f06": {
           "pa": 10,
@@ -61228,7 +61429,8 @@ const DASHBOARD_DATA = {
           "bb": 1,
           "k": 3,
           "hbp": 0,
-          "sf": 0
+          "sf": 0,
+          "g": 4
         },
         "9634bc58-4e8b-4fc0-97ff-6dc206c3a7d3": {
           "pa": 10,
@@ -61240,7 +61442,8 @@ const DASHBOARD_DATA = {
           "bb": 1,
           "k": 0,
           "hbp": 0,
-          "sf": 0
+          "sf": 0,
+          "g": 4
         },
         "2b8d5dff-c78d-40c8-9cf0-db48d3aa9161": {
           "pa": 10,
@@ -61252,7 +61455,8 @@ const DASHBOARD_DATA = {
           "bb": 0,
           "k": 3,
           "hbp": 0,
-          "sf": 0
+          "sf": 0,
+          "g": 4
         },
         "cce2ea9d-547c-48dd-9a7d-8cec46064e69": {
           "pa": 9,
@@ -61264,7 +61468,8 @@ const DASHBOARD_DATA = {
           "bb": 2,
           "k": 1,
           "hbp": 0,
-          "sf": 0
+          "sf": 0,
+          "g": 4
         },
         "2725d19a-f937-4f8e-9cfe-3570ddc4997f": {
           "pa": 9,
@@ -61276,7 +61481,8 @@ const DASHBOARD_DATA = {
           "bb": 2,
           "k": 3,
           "hbp": 0,
-          "sf": 0
+          "sf": 0,
+          "g": 4
         },
         "e750d804-47d0-4035-90ff-b9dac3bd846c": {
           "pa": 7,
@@ -61288,7 +61494,8 @@ const DASHBOARD_DATA = {
           "bb": 1,
           "k": 3,
           "hbp": 0,
-          "sf": 0
+          "sf": 0,
+          "g": 3
         },
         "8dcc4198-a409-422b-b7df-49da45eb7ebb": {
           "pa": 7,
@@ -61300,7 +61507,8 @@ const DASHBOARD_DATA = {
           "bb": 2,
           "k": 1,
           "hbp": 0,
-          "sf": 0
+          "sf": 0,
+          "g": 4
         },
         "b0e00488-6e8e-4cd8-a76a-6b039c4c57cf": {
           "pa": 8,
@@ -61312,7 +61520,8 @@ const DASHBOARD_DATA = {
           "bb": 5,
           "k": 1,
           "hbp": 0,
-          "sf": 0
+          "sf": 0,
+          "g": 4
         },
         "af0570bc-54fa-4641-8abb-681ae0400fca": {
           "pa": 9,
@@ -61324,15 +61533,16 @@ const DASHBOARD_DATA = {
           "bb": 4,
           "k": 1,
           "hbp": 0,
-          "sf": 0
+          "sf": 0,
+          "g": 4
         }
       }
     },
     "4b1830b0-c556-4f04-bfe9-3dc5bf1c6270": {
       "processed": [
         "725f9e84-4466-4a3d-bc9b-284f422a621f",
-        "0382a53f-63b7-4585-8b47-000cda550669",
-        "55c955f8-ce54-482a-93c1-1c31386ef822"
+        "55c955f8-ce54-482a-93c1-1c31386ef822",
+        "0382a53f-63b7-4585-8b47-000cda550669"
       ],
       "players": {
         "2de2bc84-e3d6-4c61-bef5-2f73ffceaa13": {
@@ -61345,7 +61555,8 @@ const DASHBOARD_DATA = {
           "bb": 5,
           "k": 2,
           "hbp": 0,
-          "sf": 0
+          "sf": 0,
+          "g": 3
         },
         "bf80f814-e8fb-4d21-98e3-15aca5de59a6": {
           "pa": 9,
@@ -61357,7 +61568,8 @@ const DASHBOARD_DATA = {
           "bb": 3,
           "k": 2,
           "hbp": 0,
-          "sf": 0
+          "sf": 0,
+          "g": 3
         },
         "44fcb0a0-19cc-4b97-ad23-e96d29a2472f": {
           "pa": 9,
@@ -61369,7 +61581,8 @@ const DASHBOARD_DATA = {
           "bb": 2,
           "k": 1,
           "hbp": 0,
-          "sf": 0
+          "sf": 0,
+          "g": 3
         },
         "96332f51-a3b8-42e5-b1ce-98f4cde7aae4": {
           "pa": 8,
@@ -61381,7 +61594,8 @@ const DASHBOARD_DATA = {
           "bb": 4,
           "k": 0,
           "hbp": 0,
-          "sf": 0
+          "sf": 0,
+          "g": 3
         },
         "7f24e42e-2120-4dbf-97fb-ba16851cd3a7": {
           "pa": 9,
@@ -61393,7 +61607,8 @@ const DASHBOARD_DATA = {
           "bb": 2,
           "k": 1,
           "hbp": 0,
-          "sf": 0
+          "sf": 0,
+          "g": 3
         },
         "977eec85-e563-4754-978e-64c5996f714f": {
           "pa": 9,
@@ -61405,7 +61620,8 @@ const DASHBOARD_DATA = {
           "bb": 5,
           "k": 2,
           "hbp": 0,
-          "sf": 0
+          "sf": 0,
+          "g": 3
         },
         "d6a0fd1f-ced4-48be-a0fd-09871b366c81": {
           "pa": 9,
@@ -61417,7 +61633,8 @@ const DASHBOARD_DATA = {
           "bb": 0,
           "k": 4,
           "hbp": 0,
-          "sf": 0
+          "sf": 0,
+          "g": 3
         },
         "d39b4e9a-063d-4bb9-99c7-68611f0297db": {
           "pa": 8,
@@ -61429,7 +61646,8 @@ const DASHBOARD_DATA = {
           "bb": 5,
           "k": 2,
           "hbp": 0,
-          "sf": 0
+          "sf": 0,
+          "g": 3
         },
         "3bc4e907-81c7-42dc-92dd-b62beb43651d": {
           "pa": 7,
@@ -61441,7 +61659,8 @@ const DASHBOARD_DATA = {
           "bb": 2,
           "k": 2,
           "hbp": 0,
-          "sf": 0
+          "sf": 0,
+          "g": 3
         },
         "878c1185-45cd-40c7-9188-efd0115a9d50": {
           "pa": 7,
@@ -61453,7 +61672,8 @@ const DASHBOARD_DATA = {
           "bb": 1,
           "k": 1,
           "hbp": 0,
-          "sf": 0
+          "sf": 0,
+          "g": 3
         },
         "9265ae33-1b3d-4127-9248-fc387b967391": {
           "pa": 7,
@@ -61465,7 +61685,8 @@ const DASHBOARD_DATA = {
           "bb": 2,
           "k": 3,
           "hbp": 0,
-          "sf": 0
+          "sf": 0,
+          "g": 3
         },
         "f45aa11c-86f6-4f4a-9449-f92b1154d164": {
           "pa": 7,
@@ -61477,18 +61698,19 @@ const DASHBOARD_DATA = {
           "bb": 3,
           "k": 1,
           "hbp": 0,
-          "sf": 0
+          "sf": 0,
+          "g": 2
         }
       }
     },
     "44ba828c-d48e-41f9-b02e-45ef1bff04a9": {
       "processed": [
-        "80053362-9c93-4b90-bf23-bcb7f94b97b7",
-        "06ff2530-8c7e-4e4a-99a0-35e004999fb5",
         "b8ff15c6-300e-4908-9ba3-91704f3e98d6",
-        "5beb62c8-f130-4a38-98f0-d0f4a8bcf4f3",
         "38482b86-2a9d-420a-8ebb-b1a1e5ea5e64",
-        "366ace6d-7e6a-4978-b547-322550d2f824"
+        "80053362-9c93-4b90-bf23-bcb7f94b97b7",
+        "5beb62c8-f130-4a38-98f0-d0f4a8bcf4f3",
+        "366ace6d-7e6a-4978-b547-322550d2f824",
+        "06ff2530-8c7e-4e4a-99a0-35e004999fb5"
       ],
       "players": {
         "a0f8cd9d-f0ab-4cca-86e1-08aa37a073cd": {
@@ -61501,7 +61723,8 @@ const DASHBOARD_DATA = {
           "bb": 6,
           "k": 3,
           "hbp": 0,
-          "sf": 0
+          "sf": 0,
+          "g": 6
         },
         "2b9e9db3-1c80-4d55-974c-e0bb5525fae9": {
           "pa": 17,
@@ -61513,7 +61736,8 @@ const DASHBOARD_DATA = {
           "bb": 5,
           "k": 2,
           "hbp": 0,
-          "sf": 0
+          "sf": 0,
+          "g": 6
         },
         "cd21ea12-4f3b-4c8f-8a80-4b90996c1122": {
           "pa": 16,
@@ -61525,7 +61749,8 @@ const DASHBOARD_DATA = {
           "bb": 4,
           "k": 4,
           "hbp": 0,
-          "sf": 0
+          "sf": 0,
+          "g": 6
         },
         "ab9e9338-7453-479a-8a71-68c5aa6293bb": {
           "pa": 14,
@@ -61537,7 +61762,8 @@ const DASHBOARD_DATA = {
           "bb": 3,
           "k": 4,
           "hbp": 0,
-          "sf": 0
+          "sf": 0,
+          "g": 5
         },
         "a9d82e7a-9af4-4e4b-a195-26dc21386f5d": {
           "pa": 16,
@@ -61549,7 +61775,8 @@ const DASHBOARD_DATA = {
           "bb": 5,
           "k": 8,
           "hbp": 0,
-          "sf": 0
+          "sf": 0,
+          "g": 6
         },
         "af9492a9-fb0f-4735-be84-4025b7b62fa6": {
           "pa": 17,
@@ -61561,7 +61788,8 @@ const DASHBOARD_DATA = {
           "bb": 4,
           "k": 6,
           "hbp": 0,
-          "sf": 0
+          "sf": 0,
+          "g": 6
         },
         "78f5d29e-6cbd-449a-a417-745d11d5ad69": {
           "pa": 12,
@@ -61573,7 +61801,8 @@ const DASHBOARD_DATA = {
           "bb": 5,
           "k": 5,
           "hbp": 0,
-          "sf": 0
+          "sf": 0,
+          "g": 5
         },
         "05c82266-66d1-4ebb-acc0-d481736e3a7f": {
           "pa": 16,
@@ -61585,7 +61814,8 @@ const DASHBOARD_DATA = {
           "bb": 7,
           "k": 2,
           "hbp": 0,
-          "sf": 1
+          "sf": 1,
+          "g": 6
         },
         "f8bc3ee6-0158-41d1-93e4-edc04ff59ee6": {
           "pa": 12,
@@ -61597,7 +61827,8 @@ const DASHBOARD_DATA = {
           "bb": 1,
           "k": 6,
           "hbp": 0,
-          "sf": 0
+          "sf": 0,
+          "g": 6
         },
         "911d5612-dd0c-43a4-8e58-ac3a1997af63": {
           "pa": 12,
@@ -61609,7 +61840,8 @@ const DASHBOARD_DATA = {
           "bb": 4,
           "k": 4,
           "hbp": 0,
-          "sf": 0
+          "sf": 0,
+          "g": 6
         },
         "3241e5ec-5eea-4e44-aca0-76bb36cbc4b1": {
           "pa": 9,
@@ -61621,7 +61853,8 @@ const DASHBOARD_DATA = {
           "bb": 4,
           "k": 3,
           "hbp": 0,
-          "sf": 0
+          "sf": 0,
+          "g": 4
         },
         "f015a1e5-d7d1-4778-945a-4982303c1b08": {
           "pa": 11,
@@ -61633,15 +61866,16 @@ const DASHBOARD_DATA = {
           "bb": 5,
           "k": 3,
           "hbp": 0,
-          "sf": 0
+          "sf": 0,
+          "g": 6
         }
       }
     },
     "c78f3c71-0de4-42a2-9300-1e54d5ff452e": {
       "processed": [
         "fffaeac5-5d97-4f75-adb4-850161f9b6a4",
-        "3b5c2d46-9eca-4782-9a50-2e3a9c832fae",
         "3a477158-ab14-4a60-8965-7e1783b1e678",
+        "3b5c2d46-9eca-4782-9a50-2e3a9c832fae",
         "cc364b74-3bf5-4271-9636-c0ce8ffb7da7"
       ],
       "players": {
@@ -61655,7 +61889,8 @@ const DASHBOARD_DATA = {
           "bb": 5,
           "k": 1,
           "hbp": 0,
-          "sf": 1
+          "sf": 1,
+          "g": 4
         },
         "d1e98463-5e70-4618-8d89-8e884c41f6e1": {
           "pa": 12,
@@ -61667,7 +61902,8 @@ const DASHBOARD_DATA = {
           "bb": 1,
           "k": 1,
           "hbp": 0,
-          "sf": 0
+          "sf": 0,
+          "g": 4
         },
         "b5e395c5-932b-43ff-8d05-77d3ea2c5677": {
           "pa": 14,
@@ -61679,7 +61915,8 @@ const DASHBOARD_DATA = {
           "bb": 2,
           "k": 3,
           "hbp": 0,
-          "sf": 0
+          "sf": 0,
+          "g": 4
         },
         "9c252463-b893-4ae9-8443-ad14bfff8529": {
           "pa": 13,
@@ -61691,7 +61928,8 @@ const DASHBOARD_DATA = {
           "bb": 4,
           "k": 3,
           "hbp": 0,
-          "sf": 0
+          "sf": 0,
+          "g": 4
         },
         "468f58ed-a340-4f8c-bb4d-616afa49d212": {
           "pa": 12,
@@ -61703,7 +61941,8 @@ const DASHBOARD_DATA = {
           "bb": 3,
           "k": 2,
           "hbp": 0,
-          "sf": 0
+          "sf": 0,
+          "g": 4
         },
         "e16e59d8-f6da-4b83-bd4f-e25230e55ffb": {
           "pa": 11,
@@ -61715,7 +61954,8 @@ const DASHBOARD_DATA = {
           "bb": 3,
           "k": 1,
           "hbp": 0,
-          "sf": 0
+          "sf": 0,
+          "g": 4
         },
         "d623fff7-9e0c-47a7-ae95-66c74265daca": {
           "pa": 12,
@@ -61727,7 +61967,8 @@ const DASHBOARD_DATA = {
           "bb": 2,
           "k": 3,
           "hbp": 0,
-          "sf": 0
+          "sf": 0,
+          "g": 4
         },
         "2861ca14-d6fc-4981-9b4e-356b7193e38d": {
           "pa": 10,
@@ -61739,7 +61980,8 @@ const DASHBOARD_DATA = {
           "bb": 5,
           "k": 3,
           "hbp": 0,
-          "sf": 0
+          "sf": 0,
+          "g": 4
         },
         "5f037989-565f-422a-b641-a4e98e616783": {
           "pa": 6,
@@ -61751,7 +61993,8 @@ const DASHBOARD_DATA = {
           "bb": 3,
           "k": 0,
           "hbp": 0,
-          "sf": 0
+          "sf": 0,
+          "g": 3
         },
         "0b62d5c1-d02c-4546-ada3-714a375caae2": {
           "pa": 9,
@@ -61763,7 +62006,8 @@ const DASHBOARD_DATA = {
           "bb": 3,
           "k": 3,
           "hbp": 0,
-          "sf": 0
+          "sf": 0,
+          "g": 4
         },
         "c2667fe4-e7b4-4d7f-b221-a82a9b87ae6c": {
           "pa": 10,
@@ -61775,7 +62019,8 @@ const DASHBOARD_DATA = {
           "bb": 4,
           "k": 1,
           "hbp": 0,
-          "sf": 0
+          "sf": 0,
+          "g": 4
         },
         "25ee0864-f0ce-4bb8-8847-b4076b416970": {
           "pa": 3,
@@ -61787,17 +62032,18 @@ const DASHBOARD_DATA = {
           "bb": 1,
           "k": 1,
           "hbp": 0,
-          "sf": 0
+          "sf": 0,
+          "g": 1
         }
       }
     },
     "747be81c-797d-4a40-810a-5bb10df8a309": {
       "processed": [
-        "7db644b4-3b2a-4860-8515-3b143ab237cf",
-        "ed34c7d7-a6c6-48d8-8f78-f4e2de3e46c9",
-        "805631b6-3187-41f9-966e-00b136921344",
+        "6e7b5892-f065-4738-954a-6c045b509f04",
         "1828ca5d-8e27-4c09-b4cc-786105e2f531",
-        "6e7b5892-f065-4738-954a-6c045b509f04"
+        "805631b6-3187-41f9-966e-00b136921344",
+        "ed34c7d7-a6c6-48d8-8f78-f4e2de3e46c9",
+        "7db644b4-3b2a-4860-8515-3b143ab237cf"
       ],
       "players": {
         "8d8fde80-6388-4ce0-bbc6-be501770504b": {
@@ -61810,7 +62056,8 @@ const DASHBOARD_DATA = {
           "bb": 4,
           "k": 6,
           "hbp": 0,
-          "sf": 0
+          "sf": 0,
+          "g": 5
         },
         "fd3ed8eb-3de4-456a-9e71-cd17c4b9be81": {
           "pa": 17,
@@ -61822,7 +62069,8 @@ const DASHBOARD_DATA = {
           "bb": 2,
           "k": 7,
           "hbp": 0,
-          "sf": 0
+          "sf": 0,
+          "g": 5
         },
         "416f2526-f2ae-4780-b38a-08517ec471f4": {
           "pa": 16,
@@ -61834,7 +62082,8 @@ const DASHBOARD_DATA = {
           "bb": 3,
           "k": 5,
           "hbp": 0,
-          "sf": 0
+          "sf": 0,
+          "g": 5
         },
         "d46e8621-5ce7-42cd-b79c-b540f18aa0bc": {
           "pa": 10,
@@ -61846,7 +62095,8 @@ const DASHBOARD_DATA = {
           "bb": 1,
           "k": 3,
           "hbp": 0,
-          "sf": 0
+          "sf": 0,
+          "g": 4
         },
         "9a2c1ab4-ca4d-4f65-8e92-bce27e9d1e74": {
           "pa": 13,
@@ -61858,7 +62108,8 @@ const DASHBOARD_DATA = {
           "bb": 3,
           "k": 4,
           "hbp": 0,
-          "sf": 0
+          "sf": 0,
+          "g": 5
         },
         "4d9cc2ed-f355-4069-b7b6-489c26d10bb8": {
           "pa": 14,
@@ -61870,7 +62121,8 @@ const DASHBOARD_DATA = {
           "bb": 3,
           "k": 3,
           "hbp": 0,
-          "sf": 0
+          "sf": 0,
+          "g": 5
         },
         "44fe1916-eb64-454e-9c66-45391100a9fc": {
           "pa": 13,
@@ -61882,7 +62134,8 @@ const DASHBOARD_DATA = {
           "bb": 2,
           "k": 4,
           "hbp": 0,
-          "sf": 0
+          "sf": 0,
+          "g": 5
         },
         "cc4caadf-eaee-4898-af78-d040e5d9edd9": {
           "pa": 13,
@@ -61894,7 +62147,8 @@ const DASHBOARD_DATA = {
           "bb": 4,
           "k": 2,
           "hbp": 0,
-          "sf": 0
+          "sf": 0,
+          "g": 5
         },
         "459f0351-1b95-4595-9f65-c3fa93121de1": {
           "pa": 8,
@@ -61906,7 +62160,8 @@ const DASHBOARD_DATA = {
           "bb": 0,
           "k": 5,
           "hbp": 0,
-          "sf": 0
+          "sf": 0,
+          "g": 3
         },
         "318b551d-4633-4daa-940f-bb9ce2793a3b": {
           "pa": 12,
@@ -61918,7 +62173,8 @@ const DASHBOARD_DATA = {
           "bb": 3,
           "k": 5,
           "hbp": 0,
-          "sf": 0
+          "sf": 0,
+          "g": 5
         },
         "02428265-30f5-4c44-9e1c-2783012eb124": {
           "pa": 12,
@@ -61930,7 +62186,8 @@ const DASHBOARD_DATA = {
           "bb": 4,
           "k": 3,
           "hbp": 0,
-          "sf": 0
+          "sf": 0,
+          "g": 5
         },
         "95fd563b-9666-4017-8421-55bd03a17a2b": {
           "pa": 11,
@@ -61942,7 +62199,8 @@ const DASHBOARD_DATA = {
           "bb": 1,
           "k": 5,
           "hbp": 0,
-          "sf": 0
+          "sf": 0,
+          "g": 5
         }
       }
     },
@@ -61962,7 +62220,8 @@ const DASHBOARD_DATA = {
           "bb": 2,
           "k": 3,
           "hbp": 0,
-          "sf": 0
+          "sf": 0,
+          "g": 2
         },
         "c7d1b6b7-e4a6-4289-a25e-549ddf582431": {
           "pa": 6,
@@ -61974,7 +62233,8 @@ const DASHBOARD_DATA = {
           "bb": 1,
           "k": 2,
           "hbp": 0,
-          "sf": 0
+          "sf": 0,
+          "g": 2
         },
         "9e63d314-75f8-4ccf-856c-ab2085507ea9": {
           "pa": 5,
@@ -61986,7 +62246,8 @@ const DASHBOARD_DATA = {
           "bb": 1,
           "k": 1,
           "hbp": 0,
-          "sf": 0
+          "sf": 0,
+          "g": 2
         },
         "afe489ec-3001-43ec-b939-1aa7b2498f18": {
           "pa": 5,
@@ -61998,7 +62259,8 @@ const DASHBOARD_DATA = {
           "bb": 0,
           "k": 2,
           "hbp": 0,
-          "sf": 0
+          "sf": 0,
+          "g": 2
         },
         "8148a8a4-35a6-408f-a38a-e2738eadc2df": {
           "pa": 5,
@@ -62010,7 +62272,8 @@ const DASHBOARD_DATA = {
           "bb": 1,
           "k": 0,
           "hbp": 0,
-          "sf": 0
+          "sf": 0,
+          "g": 2
         },
         "133a7186-0866-44cc-8391-448865d242b3": {
           "pa": 5,
@@ -62022,7 +62285,8 @@ const DASHBOARD_DATA = {
           "bb": 2,
           "k": 3,
           "hbp": 0,
-          "sf": 0
+          "sf": 0,
+          "g": 2
         },
         "63b65677-e32a-4eea-ae17-e1539bd0f7e8": {
           "pa": 5,
@@ -62034,7 +62298,8 @@ const DASHBOARD_DATA = {
           "bb": 0,
           "k": 4,
           "hbp": 0,
-          "sf": 0
+          "sf": 0,
+          "g": 2
         },
         "68d6d160-4c1d-4eac-a55d-e40be245fd90": {
           "pa": 5,
@@ -62046,7 +62311,8 @@ const DASHBOARD_DATA = {
           "bb": 2,
           "k": 2,
           "hbp": 0,
-          "sf": 0
+          "sf": 0,
+          "g": 2
         },
         "13121e36-47d1-46a6-b526-0326a5759ad2": {
           "pa": 5,
@@ -62058,7 +62324,8 @@ const DASHBOARD_DATA = {
           "bb": 1,
           "k": 2,
           "hbp": 0,
-          "sf": 0
+          "sf": 0,
+          "g": 2
         },
         "8c262e7e-6f27-4286-a7d7-7988427ded2b": {
           "pa": 4,
@@ -62070,7 +62337,8 @@ const DASHBOARD_DATA = {
           "bb": 1,
           "k": 1,
           "hbp": 0,
-          "sf": 0
+          "sf": 0,
+          "g": 2
         },
         "f409b4db-2a9a-4701-b50a-f77928172810": {
           "pa": 4,
@@ -62082,7 +62350,8 @@ const DASHBOARD_DATA = {
           "bb": 0,
           "k": 1,
           "hbp": 0,
-          "sf": 0
+          "sf": 0,
+          "g": 2
         },
         "b4bfe3ed-508e-46ec-ad9b-fbfc074573d5": {
           "pa": 4,
@@ -62094,7 +62363,8 @@ const DASHBOARD_DATA = {
           "bb": 0,
           "k": 2,
           "hbp": 0,
-          "sf": 0
+          "sf": 0,
+          "g": 2
         }
       }
     }
@@ -62678,13 +62948,13 @@ const DASHBOARD_DATA = {
       }
     ],
     "_fetched_streams": [
-      "0cbe4d75-dd69-4113-80b4-65869319407f",
+      "593377e0-5706-47c6-8bad-01cd52e85f3b",
       "14cea890-7d37-4ee6-b5bb-5abf01925077",
       "21663cdf-5bd2-4400-9e70-c246dcbe433d",
+      "0cbe4d75-dd69-4113-80b4-65869319407f",
+      "122dfed3-ae5f-4557-b38f-6dabdd6bce4d",
       "9e1c337c-dbc3-4b56-9184-f50c32f9c954",
-      "593377e0-5706-47c6-8bad-01cd52e85f3b",
-      "c90676d2-db37-40dc-bbbc-eb2e1fdebf9a",
-      "122dfed3-ae5f-4557-b38f-6dabdd6bce4d"
+      "c90676d2-db37-40dc-bbbc-eb2e1fdebf9a"
     ]
   }
 };
