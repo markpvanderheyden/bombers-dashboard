@@ -372,8 +372,8 @@ Object.entries(rawP).forEach(([pid, data])=>{
     });
   }
 });
-batRows.sort((a,b)=>a.num-b.num);
-pitRows.sort((a,b)=>a.era-b.era);
+batRows.sort((a,b)=>b.h-a.h);
+pitRows.sort((a,b)=>b.ip-a.ip);
 
 // ── Parse streaks ─────────────────────────────────────────────
 const streaks=[];
