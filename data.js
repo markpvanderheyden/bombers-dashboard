@@ -1,7 +1,7 @@
 const DASHBOARD_DATA = {
   "team_name": "NLSAA3 - Bombers",
   "team_id": "d72d96f1-df57-4a92-8b40-1cdf06723881",
-  "fetched_at": "2026-05-06T10:01:19.176847",
+  "fetched_at": "2026-05-06T10:15:27.950391",
   "stats": {
     "id": "d72d96f1-df57-4a92-8b40-1cdf06723881",
     "team_id": "d72d96f1-df57-4a92-8b40-1cdf06723881",
@@ -60501,14 +60501,14 @@ const DASHBOARD_DATA = {
     }
   },
   "opp_stats_cache": {
-    "_version": "v2",
+    "_version": "v3",
     "8aad0a67-c204-463a-af0a-3c99854a4c56": {
       "processed": [
-        "5dc6b3ce-e1f1-424d-bebd-545a5a0e6e21",
-        "bbc4c656-290e-4378-a5a3-df987f55048c",
         "83a29eb5-bb36-453c-abeb-be8199f7dd95",
-        "67707aa1-d588-4df3-a833-c5df146b5f17",
-        "3c22cc69-0668-4335-a584-cf3dda301d77"
+        "5dc6b3ce-e1f1-424d-bebd-545a5a0e6e21",
+        "3c22cc69-0668-4335-a584-cf3dda301d77",
+        "bbc4c656-290e-4378-a5a3-df987f55048c",
+        "67707aa1-d588-4df3-a833-c5df146b5f17"
       ],
       "players": {
         "edf3a672-2041-46e5-8333-acc9c6cfbc44": {
@@ -60671,9 +60671,9 @@ const DASHBOARD_DATA = {
     },
     "f2cdea92-b99e-4595-bd8b-ae66eaefa435": {
       "processed": [
-        "ba707318-e4b4-46ec-b97c-fe5e58c72293",
         "31f11adb-dee7-4baf-ab74-393ab432308e",
-        "bcd35638-f938-4e48-8903-3afcc71fdd7c"
+        "bcd35638-f938-4e48-8903-3afcc71fdd7c",
+        "ba707318-e4b4-46ec-b97c-fe5e58c72293"
       ],
       "players": {
         "1755a481-bfa7-4115-94a0-cf9ab52e1bc7": {
@@ -60836,10 +60836,10 @@ const DASHBOARD_DATA = {
     },
     "f5e1b457-b39b-4fcc-8f50-888205156226": {
       "processed": [
+        "96b557ed-7056-4874-b0dd-009869f721a0",
+        "a879267f-2b55-4c20-ac21-8d3908f0bd50",
         "6af46803-d6c1-4eb6-be62-faebd7846a38",
         "1b9ef024-ab7c-49f7-b903-5379861d0937",
-        "a879267f-2b55-4c20-ac21-8d3908f0bd50",
-        "96b557ed-7056-4874-b0dd-009869f721a0",
         "9610a241-3fde-4f4c-9ba6-60b7d7fa954d"
       ],
       "players": {
@@ -61029,11 +61029,11 @@ const DASHBOARD_DATA = {
     },
     "7e901e85-dd0e-491d-8325-173085cac64e": {
       "processed": [
+        "8ad6e9b3-2094-42f4-9814-1a3b0ad32486",
         "86316fe2-faba-459c-8c89-6e28b753d197",
         "b7d15ebe-2d46-4bc2-a527-b7809110cb90",
         "831609ce-5eaf-4c12-8ac5-8d919afb62a2",
-        "c68b5746-8f6d-4be6-97a1-3b536c25f3f5",
-        "8ad6e9b3-2094-42f4-9814-1a3b0ad32486"
+        "c68b5746-8f6d-4be6-97a1-3b536c25f3f5"
       ],
       "players": {
         "9df3d987-7ed0-4527-ac46-67f7872f08e2": {
@@ -61209,9 +61209,9 @@ const DASHBOARD_DATA = {
     },
     "e56d747a-c602-477e-9723-89ac02ee16cd": {
       "processed": [
-        "12b8347c-5925-462e-b773-2b1d0761cbbd",
+        "b872dc5a-6825-415f-a560-56b65fb3a543",
         "3421f750-2073-425a-8eba-6e7f08634069",
-        "b872dc5a-6825-415f-a560-56b65fb3a543"
+        "12b8347c-5925-462e-b773-2b1d0761cbbd"
       ],
       "players": {
         "62751e33-e471-48f0-a244-13ce3d623eba": {
@@ -61374,10 +61374,10 @@ const DASHBOARD_DATA = {
     },
     "66764afc-2bdc-430e-b145-1c63ae9a7ef6": {
       "processed": [
-        "d83368d1-e949-4096-a8f8-9a9e716d793c",
         "0c40fd99-d304-499a-8197-fdb1e6a7bc3d",
-        "8e4de45c-2db3-40ec-b92c-bb3ec4925f28",
-        "0c4aad80-85a8-44aa-8aa4-741022ba6452"
+        "d83368d1-e949-4096-a8f8-9a9e716d793c",
+        "0c4aad80-85a8-44aa-8aa4-741022ba6452",
+        "8e4de45c-2db3-40ec-b92c-bb3ec4925f28"
       ],
       "players": {
         "1841aadd-9d63-4b09-90b3-e248f80aa011": {
@@ -61540,9 +61540,9 @@ const DASHBOARD_DATA = {
     },
     "4b1830b0-c556-4f04-bfe9-3dc5bf1c6270": {
       "processed": [
-        "725f9e84-4466-4a3d-bc9b-284f422a621f",
         "55c955f8-ce54-482a-93c1-1c31386ef822",
-        "0382a53f-63b7-4585-8b47-000cda550669"
+        "0382a53f-63b7-4585-8b47-000cda550669",
+        "725f9e84-4466-4a3d-bc9b-284f422a621f"
       ],
       "players": {
         "2de2bc84-e3d6-4c61-bef5-2f73ffceaa13": {
@@ -61705,12 +61705,12 @@ const DASHBOARD_DATA = {
     },
     "44ba828c-d48e-41f9-b02e-45ef1bff04a9": {
       "processed": [
-        "80053362-9c93-4b90-bf23-bcb7f94b97b7",
-        "5beb62c8-f130-4a38-98f0-d0f4a8bcf4f3",
+        "38482b86-2a9d-420a-8ebb-b1a1e5ea5e64",
         "06ff2530-8c7e-4e4a-99a0-35e004999fb5",
+        "5beb62c8-f130-4a38-98f0-d0f4a8bcf4f3",
         "366ace6d-7e6a-4978-b547-322550d2f824",
-        "b8ff15c6-300e-4908-9ba3-91704f3e98d6",
-        "38482b86-2a9d-420a-8ebb-b1a1e5ea5e64"
+        "80053362-9c93-4b90-bf23-bcb7f94b97b7",
+        "b8ff15c6-300e-4908-9ba3-91704f3e98d6"
       ],
       "players": {
         "a0f8cd9d-f0ab-4cca-86e1-08aa37a073cd": {
@@ -61874,8 +61874,8 @@ const DASHBOARD_DATA = {
     "c78f3c71-0de4-42a2-9300-1e54d5ff452e": {
       "processed": [
         "cc364b74-3bf5-4271-9636-c0ce8ffb7da7",
-        "fffaeac5-5d97-4f75-adb4-850161f9b6a4",
         "3b5c2d46-9eca-4782-9a50-2e3a9c832fae",
+        "fffaeac5-5d97-4f75-adb4-850161f9b6a4",
         "3a477158-ab14-4a60-8965-7e1783b1e678"
       ],
       "players": {
@@ -62039,11 +62039,11 @@ const DASHBOARD_DATA = {
     },
     "747be81c-797d-4a40-810a-5bb10df8a309": {
       "processed": [
-        "805631b6-3187-41f9-966e-00b136921344",
         "6e7b5892-f065-4738-954a-6c045b509f04",
+        "7db644b4-3b2a-4860-8515-3b143ab237cf",
         "ed34c7d7-a6c6-48d8-8f78-f4e2de3e46c9",
         "1828ca5d-8e27-4c09-b4cc-786105e2f531",
-        "7db644b4-3b2a-4860-8515-3b143ab237cf"
+        "805631b6-3187-41f9-966e-00b136921344"
       ],
       "players": {
         "8d8fde80-6388-4ce0-bbc6-be501770504b": {
@@ -62206,8 +62206,8 @@ const DASHBOARD_DATA = {
     },
     "2e6d7d1d-d86b-4a94-a1d2-bec8781dc859": {
       "processed": [
-        "a8714797-34aa-41b1-aba5-71a68b07d94c",
-        "6424ec99-1121-470f-acfe-27696371435f"
+        "6424ec99-1121-470f-acfe-27696371435f",
+        "a8714797-34aa-41b1-aba5-71a68b07d94c"
       ],
       "players": {
         "629fcb54-8e58-4e75-a7f7-de951add8c06": {
@@ -62948,13 +62948,13 @@ const DASHBOARD_DATA = {
       }
     ],
     "_fetched_streams": [
-      "0cbe4d75-dd69-4113-80b4-65869319407f",
-      "122dfed3-ae5f-4557-b38f-6dabdd6bce4d",
-      "14cea890-7d37-4ee6-b5bb-5abf01925077",
-      "9e1c337c-dbc3-4b56-9184-f50c32f9c954",
       "593377e0-5706-47c6-8bad-01cd52e85f3b",
+      "c90676d2-db37-40dc-bbbc-eb2e1fdebf9a",
       "21663cdf-5bd2-4400-9e70-c246dcbe433d",
-      "c90676d2-db37-40dc-bbbc-eb2e1fdebf9a"
+      "0cbe4d75-dd69-4113-80b4-65869319407f",
+      "9e1c337c-dbc3-4b56-9184-f50c32f9c954",
+      "122dfed3-ae5f-4557-b38f-6dabdd6bce4d",
+      "14cea890-7d37-4ee6-b5bb-5abf01925077"
     ]
   }
 };
