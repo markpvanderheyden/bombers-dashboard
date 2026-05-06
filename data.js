@@ -1,7 +1,7 @@
 const DASHBOARD_DATA = {
   "team_name": "NLSAA3 - Bombers",
   "team_id": "d72d96f1-df57-4a92-8b40-1cdf06723881",
-  "fetched_at": "2026-05-06T09:22:22.335280",
+  "fetched_at": "2026-05-06T09:33:09.742767",
   "stats": {
     "id": "d72d96f1-df57-4a92-8b40-1cdf06723881",
     "team_id": "d72d96f1-df57-4a92-8b40-1cdf06723881",
@@ -13899,35 +13899,9 @@ const DASHBOARD_DATA = {
         }
       ],
       "record": {
-        "wins": 2,
+        "wins": 5,
         "losses": 3,
-        "games": [
-          {
-            "us": 5,
-            "them": 10,
-            "result": "L"
-          },
-          {
-            "us": 5,
-            "them": 13,
-            "result": "L"
-          },
-          {
-            "us": 7,
-            "them": 6,
-            "result": "W"
-          },
-          {
-            "us": 8,
-            "them": 7,
-            "result": "W"
-          },
-          {
-            "us": 4,
-            "them": 12,
-            "result": "L"
-          }
-        ]
+        "source": "nllb_standings"
       }
     },
     "f2cdea92-b99e-4595-bd8b-ae66eaefa435": {
@@ -18095,25 +18069,9 @@ const DASHBOARD_DATA = {
         }
       ],
       "record": {
-        "wins": 2,
-        "losses": 1,
-        "games": [
-          {
-            "us": 6,
-            "them": 1,
-            "result": "W"
-          },
-          {
-            "us": 8,
-            "them": 6,
-            "result": "W"
-          },
-          {
-            "us": 5,
-            "them": 18,
-            "result": "L"
-          }
-        ]
+        "wins": 4,
+        "losses": 4,
+        "source": "nllb_standings"
       }
     },
     "f5e1b457-b39b-4fcc-8f50-888205156226": {
@@ -22557,35 +22515,9 @@ const DASHBOARD_DATA = {
         }
       ],
       "record": {
-        "wins": 1,
-        "losses": 4,
-        "games": [
-          {
-            "us": 5,
-            "them": 9,
-            "result": "L"
-          },
-          {
-            "us": 4,
-            "them": 9,
-            "result": "L"
-          },
-          {
-            "us": 1,
-            "them": 3,
-            "result": "L"
-          },
-          {
-            "us": 2,
-            "them": 14,
-            "result": "L"
-          },
-          {
-            "us": 14,
-            "them": 7,
-            "result": "W"
-          }
-        ]
+        "wins": 2,
+        "losses": 7,
+        "source": "nllb_standings"
       }
     },
     "7e901e85-dd0e-491d-8325-173085cac64e": {
@@ -27466,35 +27398,9 @@ const DASHBOARD_DATA = {
         }
       ],
       "record": {
-        "wins": 1,
-        "losses": 4,
-        "games": [
-          {
-            "us": 5,
-            "them": 10,
-            "result": "L"
-          },
-          {
-            "us": 9,
-            "them": 15,
-            "result": "L"
-          },
-          {
-            "us": 0,
-            "them": 17,
-            "result": "L"
-          },
-          {
-            "us": 9,
-            "them": 12,
-            "result": "L"
-          },
-          {
-            "us": 11,
-            "them": 1,
-            "result": "W"
-          }
-        ]
+        "wins": 2,
+        "losses": 6,
+        "source": "nllb_standings"
       }
     },
     "e56d747a-c602-477e-9723-89ac02ee16cd": {
@@ -31509,25 +31415,9 @@ const DASHBOARD_DATA = {
         }
       ],
       "record": {
-        "wins": 1,
-        "losses": 2,
-        "games": [
-          {
-            "us": 5,
-            "them": 2,
-            "result": "W"
-          },
-          {
-            "us": 5,
-            "them": 6,
-            "result": "L"
-          },
-          {
-            "us": 1,
-            "them": 3,
-            "result": "L"
-          }
-        ]
+        "wins": 5,
+        "losses": 4,
+        "source": "nllb_standings"
       }
     },
     "66764afc-2bdc-430e-b145-1c63ae9a7ef6": {
@@ -36215,30 +36105,9 @@ const DASHBOARD_DATA = {
         }
       ],
       "record": {
-        "wins": 2,
-        "losses": 2,
-        "games": [
-          {
-            "us": 8,
-            "them": 9,
-            "result": "L"
-          },
-          {
-            "us": 0,
-            "them": 7,
-            "result": "L"
-          },
-          {
-            "us": 8,
-            "them": 7,
-            "result": "W"
-          },
-          {
-            "us": 3,
-            "them": 2,
-            "result": "W"
-          }
-        ]
+        "wins": 4,
+        "losses": 5,
+        "source": "nllb_standings"
       }
     },
     "4b1830b0-c556-4f04-bfe9-3dc5bf1c6270": {
@@ -40607,25 +40476,9 @@ const DASHBOARD_DATA = {
         }
       ],
       "record": {
-        "wins": 2,
-        "losses": 1,
-        "games": [
-          {
-            "us": 6,
-            "them": 4,
-            "result": "W"
-          },
-          {
-            "us": 13,
-            "them": 11,
-            "result": "W"
-          },
-          {
-            "us": 4,
-            "them": 27,
-            "result": "L"
-          }
-        ]
+        "wins": 6,
+        "losses": 2,
+        "source": "nllb_standings"
       }
     },
     "44ba828c-d48e-41f9-b02e-45ef1bff04a9": {
@@ -44105,39 +43958,8 @@ const DASHBOARD_DATA = {
       ],
       "record": {
         "wins": 2,
-        "losses": 4,
-        "games": [
-          {
-            "us": 9,
-            "them": 3,
-            "result": "W"
-          },
-          {
-            "us": 9,
-            "them": 2,
-            "result": "W"
-          },
-          {
-            "us": 1,
-            "them": 8,
-            "result": "L"
-          },
-          {
-            "us": 3,
-            "them": 13,
-            "result": "L"
-          },
-          {
-            "us": 1,
-            "them": 9,
-            "result": "L"
-          },
-          {
-            "us": 10,
-            "them": 16,
-            "result": "L"
-          }
-        ]
+        "losses": 5,
+        "source": "nllb_standings"
       }
     },
     "c78f3c71-0de4-42a2-9300-1e54d5ff452e": {
@@ -50527,30 +50349,9 @@ const DASHBOARD_DATA = {
         }
       ],
       "record": {
-        "wins": 4,
-        "losses": 0,
-        "games": [
-          {
-            "us": 16,
-            "them": 4,
-            "result": "W"
-          },
-          {
-            "us": 10,
-            "them": 3,
-            "result": "W"
-          },
-          {
-            "us": 6,
-            "them": 4,
-            "result": "W"
-          },
-          {
-            "us": 13,
-            "them": 1,
-            "result": "W"
-          }
-        ]
+        "wins": 7,
+        "losses": 1,
+        "source": "nllb_standings"
       }
     },
     "747be81c-797d-4a40-810a-5bb10df8a309": {
@@ -54113,35 +53914,9 @@ const DASHBOARD_DATA = {
         }
       ],
       "record": {
-        "wins": 2,
-        "losses": 3,
-        "games": [
-          {
-            "us": 11,
-            "them": 7,
-            "result": "W"
-          },
-          {
-            "us": 2,
-            "them": 6,
-            "result": "L"
-          },
-          {
-            "us": 7,
-            "them": 14,
-            "result": "L"
-          },
-          {
-            "us": 3,
-            "them": 5,
-            "result": "L"
-          },
-          {
-            "us": 10,
-            "them": 1,
-            "result": "W"
-          }
-        ]
+        "wins": 5,
+        "losses": 4,
+        "source": "nllb_standings"
       }
     },
     "2e6d7d1d-d86b-4a94-a1d2-bec8781dc859": {
@@ -58940,20 +58715,9 @@ const DASHBOARD_DATA = {
         }
       ],
       "record": {
-        "wins": 0,
-        "losses": 2,
-        "games": [
-          {
-            "us": 2,
-            "them": 9,
-            "result": "L"
-          },
-          {
-            "us": 5,
-            "them": 10,
-            "result": "L"
-          }
-        ]
+        "wins": 1,
+        "losses": 5,
+        "source": "nllb_standings"
       }
     }
   },
@@ -59537,12 +59301,12 @@ const DASHBOARD_DATA = {
     ],
     "_fetched_streams": [
       "c90676d2-db37-40dc-bbbc-eb2e1fdebf9a",
-      "593377e0-5706-47c6-8bad-01cd52e85f3b",
-      "122dfed3-ae5f-4557-b38f-6dabdd6bce4d",
-      "0cbe4d75-dd69-4113-80b4-65869319407f",
       "14cea890-7d37-4ee6-b5bb-5abf01925077",
-      "9e1c337c-dbc3-4b56-9184-f50c32f9c954",
-      "21663cdf-5bd2-4400-9e70-c246dcbe433d"
+      "122dfed3-ae5f-4557-b38f-6dabdd6bce4d",
+      "593377e0-5706-47c6-8bad-01cd52e85f3b",
+      "0cbe4d75-dd69-4113-80b4-65869319407f",
+      "21663cdf-5bd2-4400-9e70-c246dcbe433d",
+      "9e1c337c-dbc3-4b56-9184-f50c32f9c954"
     ]
   }
 };
