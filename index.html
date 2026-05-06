@@ -361,7 +361,7 @@ Object.entries(rawP).forEach(([pid, data])=>{
     avg:off.AVG||0, obp:off.OBP||0, slg:off.SLG||0, ops:off.OPS||0,
     qab:off['QAB%']||0,
   });
-  if((def['GP:P']||0)>0 || (def.IP||0)>0) {
+  if((def['#P']||0)>0) {
     pitRows.push({
       num:parseInt(p.num)||99, name:p.name,
       gp:def['GP:P']||0, ip:def.IP||0,
