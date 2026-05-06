@@ -15,12 +15,16 @@
     body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--bg);color:var(--text);min-height:100vh}
 
     /* ── Header ── */
-    header{background:linear-gradient(135deg,var(--navy),var(--navy-dark));color:#fff;padding:18px 24px;display:flex;align-items:center;justify-content:space-between;gap:12px;box-shadow:0 2px 8px rgba(0,0,0,.2)}
+    header{background:linear-gradient(135deg,var(--navy),var(--navy-dark));color:#fff;padding:18px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px;box-shadow:0 2px 8px rgba(0,0,0,.2);flex-wrap:wrap}
     .h-left{display:flex;align-items:center;gap:14px}
     .logo{width:60px;height:60px;border-radius:10px;overflow:hidden;flex-shrink:0;box-shadow:0 2px 8px rgba(0,0,0,.35);background:#fff;display:flex;align-items:center;justify-content:center}
     .logo img{width:100%;height:100%;object-fit:contain}
     .team-title h1{font-size:20px;font-weight:700;letter-spacing:-.3px}
     .team-title .sub{font-size:12px;color:rgba(255,255,255,.6);margin-top:3px}
+    .h-mid{text-align:center;flex:1;min-width:160px}
+    .h-mid .next-label-sm{font-size:10px;text-transform:uppercase;letter-spacing:1.2px;color:rgba(255,255,255,.5);margin-bottom:4px}
+    .h-mid .next-opp-sm{font-size:17px;font-weight:700}
+    .h-mid .next-det-sm{font-size:11px;color:rgba(255,255,255,.65);margin-top:3px}
     .h-right{text-align:right}
     .record{background:#fff;color:var(--navy);padding:7px 18px;border-radius:20px;font-weight:800;font-size:18px;display:inline-block}
     .updated{font-size:11px;color:rgba(255,255,255,.45);margin-top:4px}
@@ -39,7 +43,7 @@
     .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:14px;margin-bottom:22px}
     .card{background:var(--surface);border-radius:12px;padding:16px;text-align:center;box-shadow:0 1px 4px rgba(0,0,0,.07)}
     .card .val{font-size:28px;font-weight:800;color:#111;line-height:1}
-    .card .lbl{font-size:11px;color:var(--muted);margin-top:5px;text-transform:uppercase;letter-spacing:.5px}
+    .card .lbl{font-size:13px;color:var(--muted);margin-top:6px;text-transform:uppercase;letter-spacing:.4px;font-weight:500}
     .card.red .val{color:#111}
 
     /* ── Section headers ── */
@@ -80,10 +84,10 @@
     .sc-w{color:var(--green)}.sc-l{color:var(--loss)}.sc-u{color:var(--muted)}
 
     /* ── Leaders ── */
-    .leaders{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:22px}
+    .leaders{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:22px}
     @media(max-width:560px){.leaders{grid-template-columns:1fr}}
-    .leader{background:var(--surface);border-radius:12px;padding:16px;box-shadow:0 1px 4px rgba(0,0,0,.07)}
-    .leader .cat{font-size:10px;text-transform:uppercase;letter-spacing:.8px;color:var(--muted);font-weight:600}
+    .leader{background:var(--surface);border-radius:12px;padding:16px;box-shadow:0 1px 4px rgba(0,0,0,.07);border-top:4px solid var(--navy)}
+    .leader .cat{font-size:13px;text-transform:uppercase;letter-spacing:.6px;color:var(--muted);font-weight:700}
     .leader .ln{font-size:17px;font-weight:700;color:#111;margin:5px 0 2px}
     .leader .lv{font-size:26px;font-weight:800;color:#111}
     .leader .ru{font-size:11px;color:var(--muted);margin-top:6px}
@@ -126,6 +130,26 @@
     .opp-table tr:hover td{background:#f8fafc}
     .no-data{font-size:12px;color:var(--muted);font-style:italic;padding:8px 0}
 
+    /* ── Scouting report ── */
+    .scout-controls{display:flex;align-items:center;gap:12px;margin-bottom:24px;flex-wrap:wrap}
+    .scout-controls select{padding:9px 14px;border:1px solid var(--border);border-radius:8px;font-size:14px;background:#fff;min-width:220px;cursor:pointer}
+    .scout-controls button{background:var(--navy);color:#fff;border:none;padding:9px 22px;border-radius:8px;font-size:14px;font-weight:600;cursor:pointer}
+    .scout-controls button:hover{background:var(--navy-dark)}
+    .report-wrap{background:var(--surface);border-radius:14px;box-shadow:0 2px 8px rgba(0,0,0,.09);overflow:hidden}
+    .report-header{background:linear-gradient(135deg,var(--navy),var(--navy-dark));color:#fff;padding:22px 24px;display:flex;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;gap:16px}
+    .report-title{font-size:24px;font-weight:800;letter-spacing:-.3px}
+    .report-sub{font-size:12px;color:rgba(255,255,255,.65);margin-top:4px}
+    .report-next{background:rgba(255,255,255,.18);border-radius:10px;padding:2px 9px;font-size:11px;font-weight:600;margin-left:6px}
+    .report-stats-row{display:flex;gap:18px}
+    .report-stat{text-align:center}
+    .report-stat .rv{font-size:22px;font-weight:800}
+    .report-stat .rl{font-size:10px;color:rgba(255,255,255,.6);text-transform:uppercase;letter-spacing:.5px;margin-top:2px}
+    .report-section{padding:20px 24px;border-bottom:1px solid var(--border)}
+    .report-section:last-child{border-bottom:none}
+    .report-section-title{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.6px;color:#111;margin-bottom:12px}
+    .report-commentary{font-size:13px;line-height:1.7;color:#333;background:var(--bg);border-radius:8px;padding:12px 14px;margin-bottom:4px}
+    .report-no-data{padding:30px;color:var(--muted);font-size:13px;background:var(--surface);border-radius:12px;box-shadow:0 1px 4px rgba(0,0,0,.07)}
+
   </style>
 </head>
 <body>
@@ -138,6 +162,7 @@
       <div class="sub" id="seasonSub">2026 Spring · Naperville, IL</div>
     </div>
   </div>
+  <div class="h-mid" id="headerNextGame"></div>
   <div class="h-right">
     <div class="record" id="recordBadge">–</div>
     <div class="updated" id="updatedTime"></div>
@@ -157,7 +182,6 @@
   <!-- OVERVIEW -->
   <div id="tab-overview" class="tab active">
     <div class="cards" id="overviewCards"></div>
-    <div id="nextGameWrap"></div>
     <div class="leaders" id="leadersGrid"></div>
     <div class="two">
       <div>
@@ -193,6 +217,7 @@
           <th data-col="13">SLG</th>
           <th data-col="14">OPS</th>
           <th data-col="15">QAB%</th>
+          <th data-col="16">C%</th>
         </tr></thead>
         <tbody id="tBatBody"></tbody>
       </table>
@@ -227,6 +252,12 @@
           <th data-col="9">BB</th>
           <th data-col="10">K/BB</th>
           <th data-col="11">BAA</th>
+          <th data-col="12">H</th>
+          <th data-col="13">SOL</th>
+          <th data-col="14">P/IP</th>
+          <th data-col="15">P/BF</th>
+          <th data-col="16">S%</th>
+          <th data-col="17">OppC%</th>
         </tr></thead>
         <tbody id="tPitBody"></tbody>
       </table>
@@ -243,11 +274,12 @@
 
   <!-- SCOUTING -->
   <div id="tab-scouting" class="tab">
-    <div class="sh">Scouting Reports — All League Teams</div>
-    <p style="font-size:12px;color:var(--muted);margin-bottom:18px">
-      Stats pulled automatically from GameChanger. Add written notes in <code>scouting.js</code>.
-    </p>
-    <div class="scout-grid" id="scoutGrid"></div>
+    <div class="sh">Scouting Reports</div>
+    <div class="scout-controls">
+      <select id="scoutSelect"><option value="">— Select a team —</option></select>
+      <button onclick="generateScoutingReport()">Generate Scouting Report</button>
+    </div>
+    <div id="scoutOutput"></div>
   </div>
 
 </main>
@@ -344,6 +376,7 @@ nextGames.sort((a,b)=>a.date-b.date);
 // ── Parse stats ───────────────────────────────────────────────
 const rawP = DASHBOARD_DATA.stats?.stats_data?.players || {};
 const teamOff = DASHBOARD_DATA.stats?.stats_data?.stats?.offense || {};
+const teamDef = DASHBOARD_DATA.stats?.stats_data?.stats?.defense || {};
 const rawStreaks = DASHBOARD_DATA.stats?.stats_data?.streaks || {};
 
 const batRows=[], pitRows=[];
@@ -359,7 +392,7 @@ Object.entries(rawP).forEach(([pid, data])=>{
     d2:off['2B']||0, r:off.R||0, rbi:off.RBI||0,
     bb:off.BB||0, so:off.SO||0, sb:off.SB||0,
     avg:off.AVG||0, obp:off.OBP||0, slg:off.SLG||0, ops:off.OPS||0,
-    qab:off['QAB%']||0,
+    qab:off['QAB%']||0, c:off['C%']||0,
   });
   if((def['#P']||0)>0) {
     pitRows.push({
@@ -369,6 +402,10 @@ Object.entries(rawP).forEach(([pid, data])=>{
       era:def.ERA||0, whip:def.WHIP||0,
       k:def.SO||0, bb:def.BB||0,
       kbb:def['K/BB']||0, baa:def.BAA||0,
+      h:def.H||0, sol:def.SOL||0,
+      pip:def['P/IP']||0, pbf:def['P/BF']||0,
+      spct:def['S%']||0,
+      contpct:def['SM%']!=null ? 1-def['SM%'] : null,
     });
   }
 });
@@ -397,12 +434,12 @@ function gameRowHTML(g) {
   const sc = win===null?'sc-u':win?'sc-w':'sc-l';
   const lbl = win===null?'–':win?'W':'L';
   const score = g.score ? `${g.score.us}–${g.score.them}` : fmtTime(g.date,g.tz);
-  const ha = g.home_away==='home' ? '🏠 Home' : `✈️ ${g.location||'Away'}`;
+  const loc = g.location || '';
   return `<div class="game-row">
     <div class="result-dot ${dc}">${lbl}</div>
     <div class="g-info">
       <div class="g-opp">${stripLeague(g.opponent)}</div>
-      <div class="g-meta">${fmtDate(g.date,g.tz)} · ${ha}</div>
+      <div class="g-meta">${fmtDate(g.date,g.tz)}${loc ? ' · ' + loc : ''}</div>
     </div>
     <div class="g-score ${sc}">${score}</div>
   </div>`;
@@ -423,34 +460,34 @@ document.getElementById('teamName').textContent = DASHBOARD_DATA.team_name || 'B
 document.getElementById('recordBadge').textContent = `${wins}–${losses}`;
 
 document.getElementById('overviewCards').innerHTML = [
-  {v:`${wins}–${losses}`,l:'Record',red:true},
-  {v:rs,l:'Runs Scored'},
-  {v:ra,l:'Runs Allowed'},
-  {v:ba(teamOff.AVG),l:'Team AVG'},
-  {v:ba(teamOff.OBP),l:'Team OBP'},
-  {v:teamOff.SB||0,l:'Stolen Bases'},
-  {v:`${((teamOff['SB%']||1)*100).toFixed(0)}%`,l:'SB Success'},
-].map(c=>`<div class="card${c.red?' red':''}"><div class="val">${c.v}</div><div class="lbl">${c.l}</div></div>`).join('');
+  {v:`${wins}–${losses}`,l:'Record',    color:'#C8102E'},
+  {v:rs,               l:'Runs Scored', color:'#10B981'},
+  {v:ra,               l:'Runs Allowed',color:'#F59E0B'},
+  {v:ba(teamOff.AVG),  l:'Team AVG',   color:'#3B82F6'},
+  {v:ba(teamOff.OBP),  l:'Team OBP',   color:'#8B5CF6'},
+  {v:ba(teamOff.SLG),  l:'Team SLG',   color:'#14B8A6'},
+  {v:dec(teamDef.ERA||0),l:'Team ERA',  color:'#C8102E'},
+].map(c=>`<div class="card" style="border-top:4px solid var(--navy)">
+  <div class="val" style="color:var(--navy)">${c.v}</div>
+  <div class="lbl">${c.l}</div>
+</div>`).join('');
 
-// Next game
+// Next game — inject into header
 const next = nextGames[0];
-document.getElementById('nextGameWrap').innerHTML = next ? `
-  <div class="next-card">
-    <div class="next-label">⚾ Next Game</div>
-    <div class="next-opp">${stripLeague(next.opponent)}</div>
-    <div class="next-det">
-      <span class="ha-pill">${next.home_away==='home'?'Home':'Away'}</span>
-      ${fmtDate(next.date,next.tz)} at ${fmtTime(next.date,next.tz)}
-      ${next.location?' · '+next.location:''}
-    </div>
-  </div>` : '';
+document.getElementById('headerNextGame').innerHTML = next ? `
+  <div class="next-label-sm">⚾ Next Game</div>
+  <div class="next-opp-sm">${stripLeague(next.opponent)}</div>
+  <div class="next-det-sm">${fmtDate(next.date,next.tz)} at ${fmtTime(next.date,next.tz)}${next.location?' · '+next.location:''}</div>
+` : '';
 
 // Leaders
 const qual = batRows.filter(r=>r.ab>=5);
+const qualPit = pitRows.filter(r=>r.ip>=1);
 [
   {cat:'Batting Avg',rows:[...qual].sort((a,b)=>b.avg-a.avg),val:r=>ba(r.avg)},
   {cat:'RBI',rows:[...batRows].sort((a,b)=>b.rbi-a.rbi),val:r=>r.rbi},
   {cat:'OPS',rows:[...qual].sort((a,b)=>b.ops-a.ops),val:r=>ba(r.ops)},
+  {cat:'ERA',rows:[...qualPit].sort((a,b)=>a.era-b.era),val:r=>dec(r.era)},
 ].forEach(({cat,rows,val})=>{
   const [top,...rest]=rows;
   document.getElementById('leadersGrid').innerHTML+=`
@@ -490,6 +527,7 @@ document.getElementById('tBatBody').innerHTML=batRows.map(r=>`<tr>
   <td data-v="${r.slg}">${ba(r.slg)}</td>
   <td data-v="${r.ops}" class="bold">${ba(r.ops)}</td>
   <td data-v="${r.qab}">${pct(r.qab)}</td>
+  <td data-v="${r.c}">${pct(r.c)}</td>
 </tr>`).join('');
 
 const t=teamOff;
@@ -514,6 +552,12 @@ document.getElementById('tPitBody').innerHTML=pitRows.map(r=>`<tr>
   <td data-v="${r.bb}">${r.bb}</td>
   <td data-v="${r.kbb}">${dec(r.kbb,1)}</td>
   <td data-v="${r.baa}">${ba(r.baa)}</td>
+  <td data-v="${r.h}">${r.h}</td>
+  <td data-v="${r.sol}">${r.sol}</td>
+  <td data-v="${r.pip}">${dec(r.pip)}</td>
+  <td data-v="${r.pbf}">${dec(r.pbf)}</td>
+  <td data-v="${r.spct}">${pct(r.spct)}</td>
+  <td data-v="${r.contpct!=null?r.contpct:-1}">${r.contpct!=null?pct(r.contpct):'—'}</td>
 </tr>`).join('');
 
 // ── SCHEDULE ──────────────────────────────────────────────────
@@ -524,64 +568,6 @@ document.getElementById('upcomingList').innerHTML=nextGames.length?nextGames.map
 const SD = typeof SCOUTING_DATA!=='undefined' ? SCOUTING_DATA : {};
 const oppData = DASHBOARD_DATA.opponent_data || {};
 
-function oppStatsHTML(oppId) {
-  const opp = oppData[oppId];
-  if (!opp?.stats) return `<div class="no-data">Stats not yet fetched — run refresh.command to load opponent data.</div>`;
-
-  const players = {};
-  (opp.roster||[]).forEach(p => { players[p.id] = `${p.first_name} ${p.last_name}`; });
-
-  const rawP = opp.stats?.stats_data?.players || {};
-  const teamOff = opp.stats?.stats_data?.stats?.offense || {};
-  const teamDef = opp.stats?.stats_data?.stats?.defense || {};
-
-  // Team stat cards
-  const cardHTML = `
-    <div class="opp-stats-grid">
-      <div class="opp-stat"><div class="v">${ba(teamOff.AVG)}</div><div class="l">Team AVG</div></div>
-      <div class="opp-stat"><div class="v">${ba(teamOff.OBP)}</div><div class="l">Team OBP</div></div>
-      <div class="opp-stat"><div class="v">${dec(teamDef.ERA)}</div><div class="l">Team ERA</div></div>
-      <div class="opp-stat"><div class="v">${teamOff.SB||0}</div><div class="l">Stolen Bases</div></div>
-    </div>`;
-
-  // Top hitters (min 5 AB, sorted by AVG)
-  const batters = Object.entries(rawP).map(([pid, d]) => {
-    const off = d.stats?.offense || {};
-    return { name: players[pid]||'Unknown', ab: off.AB||0, h: off.H||0, avg: off.AVG||0, obp: off.OBP||0, ops: off.OPS||0, rbi: off.RBI||0, sb: off.SB||0 };
-  }).filter(r => r.ab >= 3).sort((a,b) => b.avg - a.avg).slice(0,5);
-
-  const batHTML = batters.length ? `
-    <div class="scout-section">
-      <h4>🏏 Top Hitters</h4>
-      <table class="opp-table">
-        <thead><tr><th>Player</th><th>AB</th><th>AVG</th><th>OBP</th><th>OPS</th><th>RBI</th><th>SB</th></tr></thead>
-        <tbody>${batters.map(r=>`<tr>
-          <td>${r.name}</td><td>${r.ab}</td><td>${ba(r.avg)}</td><td>${ba(r.obp)}</td><td>${ba(r.ops)}</td><td>${r.rbi}</td><td>${r.sb}</td>
-        </tr>`).join('')}</tbody>
-      </table>
-    </div>` : '';
-
-  // Pitchers
-  const pitchers = Object.entries(rawP).map(([pid, d]) => {
-    const def = d.stats?.defense || {};
-    return { name: players[pid]||'Unknown', ip: def.IP||0, era: def.ERA||0, whip: def.WHIP||0, k: def.SO||0, bb: def.BB||0, w: def.W||0, l: def.L||0 };
-  }).filter(r => r.ip > 0).sort((a,b) => b.ip - a.ip).slice(0,4);
-
-  const pitHTML = pitchers.length ? `
-    <div class="scout-section">
-      <h4>⚾ Pitchers</h4>
-      <table class="opp-table">
-        <thead><tr><th>Player</th><th>IP</th><th>ERA</th><th>WHIP</th><th>K</th><th>BB</th></tr></thead>
-        <tbody>${pitchers.map(r=>`<tr>
-          <td>${r.name}</td><td>${ip(r.ip)}</td><td>${dec(r.era)}</td><td>${dec(r.whip)}</td><td>${r.k}</td><td>${r.bb}</td>
-        </tr>`).join('')}</tbody>
-      </table>
-    </div>` : '';
-
-  return cardHTML + batHTML + pitHTML;
-}
-
-// Build full opponent map from schedule (all teams, past + upcoming)
 const allOpponents = {};
 (DASHBOARD_DATA.events||[]).forEach(item => {
   const pre = item.pregame_data || {};
@@ -590,36 +576,310 @@ const allOpponents = {};
   }
 });
 
-// Build upcoming game dates per opponent for reference
 const oppNextGame = {};
 nextGames.forEach(g => {
   const pre = (DASHBOARD_DATA.events||[]).find(e => e.event?.id === g.id)?.pregame_data || {};
   if (pre.opponent_id && !oppNextGame[pre.opponent_id]) oppNextGame[pre.opponent_id] = g;
 });
 
-// Sort teams alphabetically by short name
 const sortedOpponents = Object.entries(allOpponents)
   .sort((a,b) => stripLeague(a[1]).localeCompare(stripLeague(b[1])));
 
-document.getElementById('scoutGrid').innerHTML = sortedOpponents.map(([oppId, oppName]) => {
-  const opp = stripLeague(oppName);
-  const r = SD[oppId] || {};
-  const hasNotes = r.pitching||r.hitting||r.defense||r.general;
-  const nextG = oppNextGame[oppId];
-  const nextLabel = nextG
-    ? `<span style="background:#e8f5e9;color:#2e7d32;padding:2px 8px;border-radius:10px;font-size:10px;font-weight:600;margin-left:6px">Next: ${fmtDate(nextG.date, nextG.tz)}</span>`
-    : `<span style="background:var(--border);color:var(--muted);padding:2px 8px;border-radius:10px;font-size:10px;font-weight:600;margin-left:6px">Season complete</span>`;
+const scoutSel = document.getElementById('scoutSelect');
+sortedOpponents.forEach(([oppId, oppName]) => {
+  const opt = document.createElement('option');
+  opt.value = oppId;
+  opt.textContent = stripLeague(oppName);
+  scoutSel.appendChild(opt);
+});
 
-  return `<div class="scout-card">
-    <h3>${opp} ${nextLabel}</h3>
-    <div class="scout-date" style="margin-bottom:10px">${oppName}</div>
-    ${oppStatsHTML(oppId)}
-    ${r.pitching?`<div class="scout-section"><h4>📋 Pitching Notes</h4><div class="scout-notes">${r.pitching}</div></div>`:''}
-    ${r.hitting?`<div class="scout-section"><h4>📋 Hitting Notes</h4><div class="scout-notes">${r.hitting}</div></div>`:''}
-    ${r.general?`<div class="scout-section"><h4>📋 General Notes</h4><div class="scout-notes">${r.general}</div></div>`:''}
-    ${!hasNotes?`<div class="scout-section"><div class="no-scout">Add notes in scouting.js using opponent id: <code style="font-size:10px">${oppId}</code></div></div>`:''}
+function threatLabel(ops) {
+  if (ops >= 0.850) return '<span style="background:#fee2e2;color:#b91c1c;padding:1px 7px;border-radius:8px;font-size:10px;font-weight:700">HIGH</span>';
+  if (ops >= 0.580) return '<span style="background:#fef9c3;color:#92400e;padding:1px 7px;border-radius:8px;font-size:10px;font-weight:700">MED</span>';
+  return '<span style="background:#f0f0f0;color:#555;padding:1px 7px;border-radius:8px;font-size:10px;font-weight:700">LOW</span>';
+}
+
+function pitcherRole(pitcher, allPitchers) {
+  const maxIp = Math.max(...allPitchers.map(p=>p.ip));
+  if (pitcher.ip === maxIp && pitcher.era < 5) return '<span style="background:#fee2e2;color:#b91c1c;padding:1px 7px;border-radius:8px;font-size:10px;font-weight:700">ACE</span>';
+  if (pitcher.ip >= 4 && pitcher.era < 7) return '<span style="background:#fef9c3;color:#92400e;padding:1px 7px;border-radius:8px;font-size:10px;font-weight:700">STARTER</span>';
+  if (pitcher.ip >= 1) return '<span style="background:#e0f2fe;color:#0369a1;padding:1px 7px;border-radius:8px;font-size:10px;font-weight:700">RELIEF</span>';
+  return '<span style="background:#f0f0f0;color:#555;padding:1px 7px;border-radius:8px;font-size:10px;font-weight:700">EMRG</span>';
+}
+
+function generateScoutingReport() {
+  const sel = document.getElementById('scoutSelect');
+  const oppId = sel.value;
+  const output = document.getElementById('scoutOutput');
+
+  if (!oppId) {
+    output.innerHTML = '<p style="color:var(--muted);padding:16px">Please select a team first.</p>';
+    return;
+  }
+
+  const fullName = allOpponents[oppId] || '';
+  const shortName = stripLeague(fullName);
+  const opp = oppData[oppId];
+  const notes = SD[oppId] || {};
+  const nextG = oppNextGame[oppId];
+
+  if (!opp?.stats) {
+    output.innerHTML = `<div class="report-no-data">No stats available for <strong>${shortName}</strong>.<br>Run <strong>refresh.command</strong> to fetch opponent data.</div>`;
+    return;
+  }
+
+  const oppPlayers = {};
+  (opp.roster||[]).forEach(p => { oppPlayers[p.id] = `${p.first_name} ${p.last_name}`; });
+
+  const rawP = opp.stats?.stats_data?.players || {};
+  const tOff = opp.stats?.stats_data?.stats?.offense || {};
+  const tDef = opp.stats?.stats_data?.stats?.defense || {};
+
+  // Opponent batters
+  const batters = Object.entries(rawP).map(([pid,d]) => {
+    const off = d.stats?.offense || {};
+    const pa = off.PA || (off.AB||0) + (off.BB||0);
+    return { name: oppPlayers[pid]||'Unknown', g:off.GP||0, pa, ab:off.AB||0, h:off.H||0,
+      bb:off.BB||0, so:off.SO||0, rbi:off.RBI||0, xbh:off.XBH||0, sb:off.SB||0,
+      avg:off.AVG||0, obp:off.OBP||0, slg:off.SLG||0, ops:off.OPS||0,
+      kpct:pa>0?(off.SO||0)/pa:0, bbpct:pa>0?(off.BB||0)/pa:0 };
+  }).filter(r=>r.ab>=3).sort((a,b)=>b.ops-a.ops);
+
+  // Opponent pitchers
+  const oppPitchers = Object.entries(rawP).map(([pid,d]) => {
+    const def = d.stats?.defense || {};
+    const bf = def.BF||1;
+    return { name: oppPlayers[pid]||'Unknown', g:def['GP:P']||0, ip:def.IP||0, h:def.H||0,
+      era:def.ERA||0, whip:def.WHIP||0, k:def.SO||0, bb:def.BB||0, spct:def['S%']||0,
+      kpct:bf>0?(def.SO||0)/bf:0, bbpct:bf>0?(def.BB||0)/bf:0 };
+  }).filter(r=>r.ip>0).sort((a,b)=>b.ip-a.ip);
+
+  // Core stats
+  const teamAvg=tOff.AVG||0, teamObp=tOff.OBP||0, teamSb=tOff.SB||0, teamEra=tDef.ERA||0;
+  const teamW=tDef.W||0, teamL=tDef.L||0;
+  const teamRecord=`${teamW}-${teamL}`;
+  const teamSlg=tOff.SLG||0, teamH=tOff.H||0, teamPA=tOff.PA||1;
+  const teamKpct=(tOff.SO||0)/teamPA, teamBBpct=(tOff.BB||0)/teamPA;
+  const iso=teamSlg-teamAvg; // isolated power
+  const highThreat=batters.filter(b=>b.ops>=0.850);
+  const ace=oppPitchers[0];
+
+  // H2H record vs us
+  let h2hW=0, h2hL=0;
+  (DASHBOARD_DATA.events||[]).forEach(item=>{
+    const ev=item.event||item;
+    const pre=item.pregame_data||{};
+    if(pre.opponent_id!==oppId) return;
+    const sc=scoreMap[ev.id];
+    if(!sc||sc.status!=='completed') return;
+    if(sc.us>sc.them) h2hW++; else if(sc.us<sc.them) h2hL++;
+  });
+  const h2hStr=h2hW+h2hL>0?`${h2hW}-${h2hL} vs us`:'Not yet played';
+
+  // Threat level — properly scaled composite score
+  let threatScore=0;
+  if(teamAvg>=0.370) threatScore+=3; else if(teamAvg>=0.320) threatScore+=2; else if(teamAvg>=0.270) threatScore+=1;
+  if(teamObp>=0.440) threatScore+=2; else if(teamObp>=0.390) threatScore+=1;
+  if(iso>=0.150) threatScore+=2; else if(iso>=0.090) threatScore+=1;
+  if(highThreat.length>=4) threatScore+=3; else if(highThreat.length>=2) threatScore+=2; else if(highThreat.length>=1) threatScore+=1;
+  if(ace&&ace.era<=3.5) threatScore+=2; else if(ace&&ace.era<=5.5) threatScore+=1;
+  const threatLevel=threatScore>=9?'HIGH':threatScore>=5?'MEDIUM':'LOW';
+  const tCol=threatLevel==='HIGH'?'#b91c1c':threatLevel==='MEDIUM'?'#92400e':'#166534';
+  const tBg =threatLevel==='HIGH'?'#fee2e2':threatLevel==='MEDIUM'?'#fef9c3':'#dcfce7';
+
+  // ── Lineup analysis ──────────────────────────────────────────
+  const top3H=batters.slice(0,3).reduce((s,b)=>s+b.h,0);
+  const concRatio=teamH>0?top3H/teamH:0;
+  let lineupNote;
+  if(concRatio>=0.65){
+    const names=batters.slice(0,2).map(b=>b.name.split(' ')[0]).join(' and ');
+    lineupNote=`Their offense runs almost entirely through ${names} — the top 3 batters account for ${Math.round(concRatio*100)}% of team hits. Neutralize those bats and the lineup falls apart quickly. Don't let the damage compound by walking in front of them.`;
+  } else if(concRatio>=0.48){
+    const names=batters.slice(0,3).map(b=>b.name.split(' ')[0]).join(', ');
+    lineupNote=`Hits are moderately concentrated in the top of their order (${names} carry ${Math.round(concRatio*100)}% of team hits), but the middle of the lineup can still hurt you. There are no automatic outs in positions 4–6.`;
+  } else {
+    lineupNote=`Hits are distributed throughout the entire lineup — no easy outs from top to bottom. ${Math.round(concRatio*100)}% of hits come from the top 3, which is relatively balanced. Expect contributions from anywhere in the order and don't let your guard down late in the lineup.`;
+  }
+
+  // ── Power vs finesse ─────────────────────────────────────────
+  let styleNote;
+  if(iso>=0.150){
+    styleNote=`Power-oriented offense (ISO: ${ba(iso)}, SLG: ${ba(teamSlg)}). They're hunting extra-base hits — don't leave pitches middle-middle, especially with runners on. Keep the ball down and away.`;
+  } else if(iso>=0.090){
+    styleNote=`Balanced attack (ISO: ${ba(iso)}) — capable of hitting for average and occasional power. They're not a pure slugging team but can hurt you with the gap shot. Mix locations and don't let them sit on one pitch.`;
+  } else {
+    styleNote=`Finesse / contact team (ISO: ${ba(iso)}, SLG: ${ba(teamSlg)}). Very little extra-base power — they beat you with singles and putting the ball in play. Defense must be sharp; they'll create runs by stringing hits rather than hitting for power.`;
+  }
+
+  // ── Plate discipline quadrant ────────────────────────────────
+  let pdNote;
+  const hiK=teamKpct>=0.28, hiB=teamBBpct>=0.18;
+  if(hiK&&hiB){
+    pdNote=`Bimodal plate approach (K%: ${(teamKpct*100).toFixed(0)}%, BB%: ${(teamBBpct*100).toFixed(0)}%) — they either walk or strikeout, rarely making soft contact. They're looking for their pitch and willing to take a free pass. Don't nibble — establish strikes early and make them swing on your terms, not theirs. Falling behind in the count hands them the at-bat.`;
+  } else if(hiK&&!hiB){
+    pdNote=`Free-swinging lineup (K%: ${(teamKpct*100).toFixed(0)}%, BB%: ${(teamBBpct*100).toFixed(0)}%). They'll chase early and often — attack the zone and dare them to put it in play. Strikeout rate is high enough that first-pitch strikes and quality off-speed can generate quick outs. Avoid working too fine; just throw strikes and let them beat themselves.`;
+  } else if(!hiK&&hiB){
+    pdNote=`Disciplined contact team (K%: ${(teamKpct*100).toFixed(0)}%, BB%: ${(teamBBpct*100).toFixed(0)}%) — the most difficult offensive profile to pitch against. They put the ball in play AND work deep counts. Walks compound quickly with this lineup. Throw quality strikes, trust your defense, and don't let free passes turn into crooked numbers.`;
+  } else {
+    pdNote=`Aggressive contact hitters (K%: ${(teamKpct*100).toFixed(0)}%, BB%: ${(teamBBpct*100).toFixed(0)}%). They swing early, make contact, and rarely walk. First-pitch strike efficiency is critical — get ahead and put them away before the count gets even. They won't give you free outs by walking, so your defense needs to be ready from pitch one.`;
+  }
+
+  // ── Pitching ─────────────────────────────────────────────────
+  const pitchNote=teamEra<=3.5?'a quality staff — patience and contact matter.':teamEra<=6.0?'an average staff — look for pitches to drive.':'a hittable staff — be aggressive on strikes in the zone.';
+
+  const bullets=[
+    `<strong>Lineup Structure:</strong> ${lineupNote}`,
+    `<strong>Offensive Style:</strong> ${styleNote}`,
+    `<strong>Plate Discipline:</strong> ${pdNote}`,
+    `<strong>Pitching:</strong> ${shortName} has ${pitchNote}${ace?` Primary arm: ${ace.name.split(' ')[0]} (${ip(ace.ip)} IP, ${dec(ace.era)} ERA).`:''}`,
+    `<strong>Overall Threat Level:</strong> <span style="background:${tBg};color:${tCol};padding:1px 8px;border-radius:8px;font-weight:700">${threatLevel}</span> (Score: ${threatScore}/12)`,
+  ];
+
+  // Pitcher matchup helpers
+  const ourPitchers=[...pitRows].sort((a,b)=>a.era-b.era);
+  const recPitcher=b=>b.ops>=0.850?ourPitchers[0]:b.ops>=0.600?ourPitchers[Math.min(1,ourPitchers.length-1)]:ourPitchers[ourPitchers.length-1];
+  const pitApproach=b=>{
+    if(b.ops>=0.900) return 'Attack early; pitch around with RISP. Power threat.';
+    if(b.kpct>=0.35) return 'Attack the zone. High K% — they\'ll expand and chase.';
+    if(b.bbpct>=0.30) return 'Throw strike one. They want the walk — don\'t give it.';
+    if(b.ops>=0.600) return 'Mix speeds. Don\'t let them sit on one pitch.';
+    return 'Attack zone. Free out — save your bullets for the top of order.';
+  };
+  const batApproach=p=>{
+    if(p.bbpct>=0.25) return `Take pitches (${(p.bbpct*100).toFixed(0)}% BB rate). Walks are free — make them earn every out.`;
+    if((p.spct||0)<0.50) return `Patient approach — only ${pct(p.spct)} strikes. Work counts and force them to come to you.`;
+    if(p.era>=7) return `Aggressive on strikes. ERA of ${dec(p.era)} — big innings available.`;
+    if(p.kpct>=0.28) return `Shorten your swing. Strikeout pitcher (${(p.kpct*100).toFixed(0)}% K rate) — put the ball in play.`;
+    return `Attack first-pitch strikes. ${dec(p.era)} ERA — be ready to drive pitches in the zone.`;
+  };
+  const contactLeaders=[...batRows].sort((a,b)=>b.c-a.c).slice(0,3).map(r=>r.name.split(' ')[0]);
+  const walkLeaders=[...batRows].sort((a,b)=>b.bb-a.bb).slice(0,3).map(r=>r.name.split(' ')[0]);
+  const bestBats=p=>p.kpct>=0.28?`Contact hitters: ${contactLeaders.join(', ')} — protect against the K.`:p.bbpct>=0.25?`Patient hitters: ${walkLeaders.join(', ')} — they\'ll draw the walk.`:`Whole lineup — attack the zone aggressively.`;
+
+  // Game plan
+  const sp=ourPitchers[0], rp=ourPitchers[1];
+  const gamePlan=[
+    {label:'STARTING PITCHER', val:sp?.name||'—', note:`Best ERA on staff (${dec(sp?.era||0)}). Deploy against their top bats.`},
+    {label:'RELIEF / CLOSER',  val:rp?.name||'—', note:`Secondary arm. Target their weaker middle of order.`},
+    {label:'BASERUNNING',      val:'Be Aggressive', note:`Put pressure on their defense. Take extra bases and force throws.`},
+    {label:'PITCH COUNT TARGET',val:ace?`Work ${ace.name.split(' ')[0]}'s count`:'Drive up counts', note:ace?`Drive up their ace's count early. Once they go to the bullpen, walk rates climb.`:`Force them to throw strikes every inning.`},
+    {label:'DEFENSIVE FOCUS',  val:'No Free Bases', note:`Limit walks and stay sharp in the field. Prevent big innings from compounding errors.`},
+  ];
+
+  // Things to watch
+  const watchItems=[];
+  const topThreat=batters.find(b=>b.ops>=0.850);
+  if(topThreat) watchItems.push(`<strong>${topThreat.name}</strong> is their top threat (${ba(topThreat.ops)} OPS, ${ba(topThreat.avg)} AVG). Be strategic in big spots — don't give him anything to hit with runners on base.`);
+  const highWalker=batters.find(b=>b.bbpct>=0.30);
+  if(highWalker) watchItems.push(`<strong>${highWalker.name}</strong> walks ${(highWalker.bbpct*100).toFixed(0)}% of plate appearances. Throw strike one — he wants the base on balls, not the hit.`);
+  const highK=batters.filter(b=>b.kpct>=0.40&&b.ab>=5);
+  if(highK.length>0) watchItems.push(`High-K batters in their lineup: ${highK.map(b=>b.name.split(' ')[0]).join(', ')} (K% ≥ 40%). Save your best pitches for the dangerous bats at the top.`);
+  if(ace&&ace.era<4.0) watchItems.push(`Their ace <strong>${ace.name}</strong> (${ip(ace.ip)} IP, ${dec(ace.era)} ERA) is legitimate. Drive up his pitch count early — work counts, take pitches, and grind at-bats. Once he's out, the ERA climbs sharply.`);
+  const weakBullpen=oppPitchers.filter(p=>p.era>=7);
+  if(weakBullpen.length>0) watchItems.push(`Their bullpen (${weakBullpen.map(p=>p.name.split(' ')[0]).join(', ')}) has ERA above 7.00. Patience against their ace early creates big-inning opportunities in the late innings.`);
+  watchItems.push(`Overall threat: <strong style="color:${tCol}">${threatLevel}</strong>. ${threatLevel==='HIGH'?'Play tight, mistake-free baseball. Their best bats can punish errors.':threatLevel==='MEDIUM'?'Clean fundamentals and smart at-bats should win this game.':'Play your game. Minimize walks, throw strikes, and put the ball in play.'}`);
+
+  const nextLabel=nextG?`<span class="report-next">Next: ${fmtDate(nextG.date,nextG.tz)}</span>`:'';
+
+  output.innerHTML=`<div class="report-wrap">
+    <div class="report-header">
+      <div>
+        <div class="report-title">${shortName} — Scouting Report</div>
+        <div class="report-sub">${fullName} ${nextLabel}</div>
+        <div style="margin-top:8px;background:rgba(255,255,255,0.15);border-radius:7px;padding:6px 10px;font-size:11px;color:rgba(255,255,255,0.85)">⚠️ Stats reflect the team's full season across all leagues — not NLSAA3 games only. GP, IP, and record may be higher than their actual NLSAA3 numbers.</div>
+      </div>
+      <div class="report-stats-row">
+        <div class="report-stat"><div class="rv">${ba(teamAvg)}</div><div class="rl">Team AVG</div></div>
+        <div class="report-stat"><div class="rv">${ba(teamObp)}</div><div class="rl">Team OBP</div></div>
+        <div class="report-stat"><div class="rv">${dec(teamEra)}</div><div class="rl">Team ERA</div></div>
+        <div class="report-stat"><div class="rv">${teamRecord}</div><div class="rl">Record</div></div>
+      </div>
+    </div>
+
+    <div class="report-section">
+      <div class="report-section-title">1. Executive Summary</div>
+      <div class="report-commentary">${bullets.map(b=>`• ${b}`).join('<br><br>')}</div>
+    </div>
+
+    <div class="report-section">
+      <div class="report-section-title">2. Team Hitting</div>
+      ${batters.length?`<table class="opp-table">
+        <thead><tr><th>Player</th><th>G</th><th>AB</th><th>H</th><th>AVG</th><th>OBP</th><th>OPS</th><th>XBH</th><th>RBI</th><th>SB</th><th>K%</th><th>BB%</th><th>Threat</th></tr></thead>
+        <tbody>${batters.map(r=>`<tr>
+          <td>${r.name}</td><td>${r.g}</td><td>${r.ab}</td><td>${r.h}</td>
+          <td>${ba(r.avg)}</td><td>${ba(r.obp)}</td><td class="bold">${ba(r.ops)}</td>
+          <td>${r.xbh}</td><td>${r.rbi}</td><td>${r.sb}</td>
+          <td>${pct(r.kpct)}</td><td>${pct(r.bbpct)}</td><td>${threatLabel(r.ops)}</td>
+        </tr>`).join('')}</tbody>
+      </table>`:'<div class="no-data">No batting data available.</div>'}
+    </div>
+
+    <div class="report-section">
+      <div class="report-section-title">3. Team Pitching</div>
+      ${oppPitchers.length?`<table class="opp-table">
+        <thead><tr><th>Pitcher</th><th>G</th><th>IP</th><th>H</th><th>ERA</th><th>WHIP</th><th>K</th><th>BB</th><th>K%</th><th>BB%</th><th>S%</th><th>Role</th></tr></thead>
+        <tbody>${oppPitchers.map(r=>`<tr>
+          <td>${r.name}</td><td>${r.g}</td><td>${ip(r.ip)}</td><td>${r.h}</td>
+          <td class="bold">${dec(r.era)}</td><td>${dec(r.whip)}</td>
+          <td>${r.k}</td><td>${r.bb}</td>
+          <td>${pct(r.kpct)}</td><td>${pct(r.bbpct)}</td><td>${pct(r.spct)}</td>
+          <td>${pitcherRole(r,oppPitchers)}</td>
+        </tr>`).join('')}</tbody>
+      </table>`:'<div class="no-data">No pitching data available.</div>'}
+    </div>
+
+    <div class="report-section">
+      <div class="report-section-title">4. Our Pitching → Their Batters</div>
+      <div class="report-commentary" style="margin-bottom:12px">${highThreat.length>0?`Save your best arm for their top ${highThreat.length} threat${highThreat.length>1?'s':''}. Attack their high-K bottom-order hitters with back-end starters to preserve pitch counts for key matchups.`:'No dominant threats in their lineup. Spread the pitching load evenly and attack the zone throughout.'}</div>
+      ${batters.length&&ourPitchers.length?`<table class="opp-table">
+        <thead><tr><th>Their Batter</th><th>OPS</th><th>K%</th><th>BB%</th><th>Rec. Pitcher</th><th style="text-align:left">Approach</th></tr></thead>
+        <tbody>${batters.map(b=>`<tr>
+          <td>${b.name}</td><td class="bold">${ba(b.ops)}</td><td>${pct(b.kpct)}</td><td>${pct(b.bbpct)}</td>
+          <td>${(recPitcher(b)||{}).name?.split(' ')[0]||'—'}</td>
+          <td style="text-align:left;font-size:11px">${pitApproach(b)}</td>
+        </tr>`).join('')}</tbody>
+      </table>`:'<div class="no-data">Insufficient data for matchup analysis.</div>'}
+    </div>
+
+    <div class="report-section">
+      <div class="report-section-title">5. Our Batting → Their Pitchers</div>
+      <div class="report-commentary" style="margin-bottom:12px">${ace&&ace.era<4.5?`Be disciplined against their ace — grind at-bats and drive up pitch counts. Once they turn to the bullpen${oppPitchers.filter(p=>p.era>=6).length>0?` (${oppPitchers.filter(p=>p.era>=6).map(p=>p.name.split(' ')[0]).join(', ')} have ERA above 6.00)`:''},  big innings become available.`:'Their pitching is beatable throughout. Be aggressive on strikes and look for pitches to drive.'}</div>
+      ${oppPitchers.length?`<table class="opp-table">
+        <thead><tr><th>Their Pitcher</th><th>ERA</th><th>BB%</th><th>K%</th><th>S%</th><th style="text-align:left">Our Approach</th><th style="text-align:left">Best-Suited Bats</th></tr></thead>
+        <tbody>${oppPitchers.map(p=>`<tr>
+          <td>${p.name}</td><td class="bold">${dec(p.era)}</td><td>${pct(p.bbpct)}</td><td>${pct(p.kpct)}</td><td>${pct(p.spct)}</td>
+          <td style="text-align:left;font-size:11px">${batApproach(p)}</td>
+          <td style="text-align:left;font-size:11px">${bestBats(p)}</td>
+        </tr>`).join('')}</tbody>
+      </table>`:'<div class="no-data">No opponent pitching data available.</div>'}
+    </div>
+
+    <div class="report-section">
+      <div class="report-section-title">6. Game Plan</div>
+      <table class="opp-table">
+        <thead><tr><th style="text-align:left;white-space:nowrap">Focus Area</th><th style="text-align:left">Target</th><th style="text-align:left">Notes</th></tr></thead>
+        <tbody>${gamePlan.map(g=>`<tr>
+          <td style="text-align:left;font-weight:700;font-size:11px;white-space:nowrap">${g.label}</td>
+          <td style="text-align:left;font-weight:600">${g.val}</td>
+          <td style="text-align:left;font-size:11px">${g.note}</td>
+        </tr>`).join('')}</tbody>
+      </table>
+    </div>
+
+    <div class="report-section">
+      <div class="report-section-title">7. Things to Watch</div>
+      <div class="report-commentary">${watchItems.map(w=>`• ${w}`).join('<br><br>')}</div>
+    </div>
+
+    ${notes.pitching||notes.hitting||notes.general?`
+    <div class="report-section">
+      <div class="report-section-title">8. Coaching Notes</div>
+      ${notes.pitching?`<div style="margin-bottom:10px"><strong>Pitching:</strong><div class="report-commentary">${notes.pitching}</div></div>`:''}
+      ${notes.hitting?`<div style="margin-bottom:10px"><strong>Hitting:</strong><div class="report-commentary">${notes.hitting}</div></div>`:''}
+      ${notes.general?`<div><strong>General:</strong><div class="report-commentary">${notes.general}</div></div>`:''}
+    </div>`:''}
   </div>`;
-}).join('');
+}
 
 // ── Init sort on all tables ───────────────────────────────────
 ['tBat','tPit'].forEach(initSort);
